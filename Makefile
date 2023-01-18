@@ -1,7 +1,5 @@
 CC = @gcc
-CFLAGS = -I -Wall -Werror -Wextra
-READLINE_FLAGS = CC = @gcc
-CFLAGS = -I -Wall -Werror -Wextra
+CFLAGS = # -I -Wall -Werror -Wextra
 READLINE_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
 INCLUDES = $(shell find . -name "*.h" -print)

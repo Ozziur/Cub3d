@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 17:17:10 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 18:42:04 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "incl/cub3d.h"
-
 
 int	arg_check(int ac, char **av)
 {
@@ -30,13 +29,13 @@ int	arg_check(int ac, char **av)
 
 int	main(int ac, char **av)
 {
-	t_rules rules;
-	
+	t_rules	rules;
+
 	if (arg_check(ac, av) == 0)
 		return (0);
 	init_rules(&rules);
 	init_mlx(&rules.mlx);
-	ft_parsing(av[1], &rules);
+	// ft_parsing(av[1], &rules);
 
 	mlx_loop(&rules.mlx.mlx);
 }

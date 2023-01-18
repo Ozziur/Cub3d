@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 17:35:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 18:36:07 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,23 @@
 # include <stdio.h>
 # include <unistd.h>
 
+typedef struct s_image
+{
+	void	*img;
+	char	*addr;
+	// int		bpp; da capire
+	// int		line_length; da capire
+	// int		endian; da capire
+	int		width;
+	int		height;
+}				t_image;
+
 typedef struct	s_inputmap
 {
-	char	*north_path;
-	char	*south_path;
-	char	*east_path;
-	char	*west_path;
+	t_image	*north_path;
+	t_image	*south_path;
+	t_image	*east_path;
+	t_image	*west_path;
 	char	*f_color;
 	char	*c_color;
 	char	**map;
@@ -43,7 +54,7 @@ typedef struct s_mlx
 typedef struct s_rules
 {
 	t_mlx	mlx;
-	t_inputmap	inpmap;
+	t_inputmap	*inpmap;
 }				t_rules;
 
 
