@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 14:40:36 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
+/*   Updated: 2023/01/18 15:01:47 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-#define CUB3D_H
+#include "cub3d.h"
 
-#include <math.h>
-#include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
-
-typedef struct	s_inputmap
+ft_parsing(char *input, t_inputmap *map)
 {
-	char	*north_path;
-	char	*south_path;
-	char	*east_path;
-	char	*west_path;
-	char	*f_color;
-	char	*c_color;
-	char	**map;
-}	t_inputmap;
+	char	*buf;
 
 
-#endif
+}

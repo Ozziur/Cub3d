@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 12:26:43 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 13:33:54 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 	
 	if (arg_check(ac, av) == 0)
 		return (0);
-	printf("culo ok");
+	if (!)
 	if (!ft_parsing(av[1], input_map))
 		return (0);
 }
