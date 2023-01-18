@@ -45,6 +45,7 @@ fclean: clean
 re: fclean all
 
 git:
+	make fclean
 	git add .
 	git commit -m cub3d
 	git push
