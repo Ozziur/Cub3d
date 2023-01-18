@@ -37,7 +37,7 @@ clean:
 
 fclean: clean
 	@printf "removing program executable...\n"
-	@/bin/rm -f ./minishell
+	@/bin/rm -f ./cub3d
 	@/bin/rm -rf bin
 	@printf "\033[0;35mExecutable removed!\n"
 	@echo "\033[0;37m"
