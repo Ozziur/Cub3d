@@ -1,4 +1,5 @@
 *----------------- TESTIMONIANZE DEL MAGO ------------------*
+=======
 Giorno 1:
 Ho visto e scoperto che alcuni, molti cub3d sono penosi, buggati e poco magici. non mi trasmettono niente e io con uno schiocco di dita lo potrei fare in un attimo, ma per non far sentire stupidi quei poveri senza-magia mi asterrò.
 il piano di battaglia è innanzitutto il check dell'input, fatto con una formula magica chiamata arg_check();
