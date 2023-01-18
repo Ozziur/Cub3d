@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 17:07:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:17:10 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 		return (0);
 	init_rules(&rules);
 	init_mlx(&rules.mlx);
-	if (!ft_parsing(av[1]))
-		return (0);
+	ft_parsing(av[1], &rules);
+
 	mlx_loop(&rules.mlx.mlx);
 }

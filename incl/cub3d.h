@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 15:55:13 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:35:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <math.h>
 # include "libft.h"
 # include <stdlib.h>
+# include <fcntl.h>
 # include <stdio.h>
 # include <unistd.h>
 
@@ -42,6 +43,7 @@ typedef struct s_mlx
 typedef struct s_rules
 {
 	t_mlx	mlx;
+	t_inputmap	inpmap;
 }				t_rules;
 
 
@@ -49,6 +51,9 @@ typedef struct s_rules
 //	init.c
 void init_mlx(t_mlx *mlx);
 void init_rules(t_rules *rules);
+/*		PARSING    */
+//	parse_map.c
+void ft_parsing(char *input, t_rules *rules);
 
 
 #endif

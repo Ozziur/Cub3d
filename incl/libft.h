@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:22:59 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 12:25:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:26:55 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <unistd.h>
+#include "get_next_line.h"
 
 
 int ft_strlen(char *str);
