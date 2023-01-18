@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 13:33:54 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/18 17:07:02 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ int	arg_check(int ac, char **av)
 	return (1);
 }
 
-
-
 int	main(int ac, char **av)
 {
-	t_inputmap *input_map;
+	t_rules rules;
 	
 	if (arg_check(ac, av) == 0)
 		return (0);
-	if (!)
-	if (!ft_parsing(av[1], input_map))
+	init_rules(&rules);
+	init_mlx(&rules.mlx);
+	if (!ft_parsing(av[1]))
 		return (0);
+	mlx_loop(&rules.mlx.mlx);
 }
