@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:22:59 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 17:26:55 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:15:32 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 #include "get_next_line.h"
 
 
-int ft_strlen(char *str);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strlen(char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlcpy(char *dest, char *src, size_t dstsize);
 
 
 #endif

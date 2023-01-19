@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 19:29:34 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/19 13:39:27 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 static void inpmap_init(t_rules *rules)
 {
-	rules->inpmap.c_color = NULL;
-	rules->inpmap.f_color = NULL;
 	rules->inpmap.north_wall = NULL;
 	rules->inpmap.south_wall = NULL;
 	rules->inpmap.east_wall = NULL;
 	rules->inpmap.west_wall = NULL;
+	//rules->inpmap.east_wall = ;
 }
 
 void init_rules(t_rules *rules)

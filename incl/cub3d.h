@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 19:35:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/19 13:39:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct s_image
 {
 	void	*img;
 	char	*addr;
-	// int		bpp; da capire
-	// int		line_length; da capire
-	// int		endian; da capire
+	int		bpp; //mlx_get_data_addr
+	int		line_length; //mlx_get_data_addr
+	int		endian; //mlx_get_data_addr
 	int		width;
 	int		height;
 }				t_image;
@@ -38,8 +38,8 @@ typedef struct	s_inputmap
 	t_image	*south_wall;
 	t_image	*east_wall;
 	t_image	*west_wall;
-	char	*f_color;//forse da modificare
-	char	*c_color;//forse da modificare
+	char	f_color[3];//forse da modificare
+	char	c_color[3];//forse da modificare
 	char	**map;
 }				t_inputmap;
 
@@ -60,11 +60,13 @@ typedef struct s_rules
 
 /*     UTILS      */
 //	init.c
-void init_mlx(t_mlx *mlx);
-void init_rules(t_rules *rules);
+void	init_mlx(t_mlx *mlx);
+void	init_rules(t_rules *rules);
 /*		PARSING    */
 //	parse_map.c
-void ft_parsing(char *input, t_rules *rules);
+void	ft_parsing(char *input, t_rules *rules);
+//	get_rules.c
+void	save_rule(char *buf, t_rules *rules);
 
 
 #endif

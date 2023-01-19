@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:24:05 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/18 15:53:40 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:15:16 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,27 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	return (s11[i] - s22[i]);
+}
+
+size_t	ft_strlcpy(char *dest, char *src, size_t dstsize)
+{
+	unsigned int	i;
+	int				k;
+
+	i = 0;
+	k = 0;
+	while (src[k] != '\0')
+		k++;
+	if (dstsize != 0)
+	{
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (k);
 }
 
 int ft_strlen(char *str)
