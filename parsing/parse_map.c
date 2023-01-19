@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 18:46:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 19:21:54 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,14 +124,17 @@ void	ft_parsing(char *input, t_rules *rules)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	if (!rules_status(rules))
-		exit(-1);//aggiungere stampa
+	if (rules_status(rules))
+	{
+		printf("älice si droga");
+			exit(-1);//aggiungere stampa
+	}
 	while (ft_strncmp("\n", buf, 1))
 	{
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	save_map(fd, rules, input);
+	//save_map(fd, rules, input);
 	free(buf);
 	close(fd);
 }
