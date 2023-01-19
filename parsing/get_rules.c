@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:05:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:40:43 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:54:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,23 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	return (image);
 }
 
-void	get_color()
+static int	get_color(char *str, t_rules rules)
 {
+	int	i;
+	int	j;
+	int temp;
+
+	i = 0;
+	j = 0;
+	while (str[i] && !ft_isdigit(str[i]))
+	{
+		i++;
+		temp = ft_atoi(str[i]);
+		if (temp > 255 || temp < 0)
+		{
+			
+		}
+	}
 	
 }
 
@@ -72,5 +87,5 @@ void	save_rule(char *buf, t_rules *rules)
 	if (ft_strncmp(buf, "EA", 2) == 0)
 		rules->inpmap.east_wall = get_rule(buf, rules, rules->inpmap.west_wall);
 	if (ft_strncmp(buf, "C", 1) == 0)
-
+		rules->inpmap.ceiling = get_color(buf, rules);
 }
