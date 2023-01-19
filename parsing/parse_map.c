@@ -6,13 +6,13 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:05:36 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:12:05 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/cub3d.h"
 
-static int	rules_status(t_rules *rules)
+int	rules_status(t_rules *rules)
 {
 	if (!rules->inpmap.north_wall || !rules->inpmap.south_wall
 		|| !rules->inpmap.east_wall || !rules->inpmap.west_wall

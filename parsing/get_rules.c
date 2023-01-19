@@ -6,11 +6,11 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:05:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 14:05:30 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:44:37 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../incl/cub3d.h"
 
 static char *get_path(char *str)
 {
@@ -82,6 +82,7 @@ static int	get_color(char *str, char *rgb)
 		perror("invalid color format\n");
 		exit(-1);
 	}
+	return(temp);
 }
 
 void	save_rule(char *buf, t_rules *rules)
