@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/01/19 14:12:05 by anovelli         ###   ########.fr       */
+=======
+/*   Updated: 2023/01/19 14:44:48 by mruizzo          ###   ########.fr       */
+>>>>>>> e40b01585934820db43a411ed9a652ba9c5575af
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +34,14 @@ void	ft_parsing(char *input, t_rules *rules)
 	if (fd < 0)
 		exit(-1);//aggiungere stampa
 	buf = get_next_line(fd);
-	while (buf && !rule_status(rules))
+	while (buf && !rules_status(rules))
 	{
 		// rules->line_offset++; chiedere delucidazioni a giorgio o davide
 		save_rule(buf, rules);
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	if (!rule_status(rules))
+	if (!rules_status(rules))
 		exit(-1);//aggiungere stampa
 	
 	/*
