@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/01/19 14:58:12 by anovelli         ###   ########.fr       */
+=======
+/*   Updated: 2023/01/19 14:51:15 by mruizzo          ###   ########.fr       */
+>>>>>>> 5416c716916bf11501177418ffc6eadc5279caa0
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/cub3d.h"
 
-int	rules_status(t_rules *rules)
+static int	rules_status(t_rules *rules)
 {
 	if (!rules->inpmap.north_wall || !rules->inpmap.south_wall
 		|| !rules->inpmap.east_wall || !rules->inpmap.west_wall
