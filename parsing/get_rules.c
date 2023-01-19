@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_rules.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 19:08:48 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 19:18:32 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ static int	get_color(char *str, unsigned char rgb[3])
 
 	i = 0;
 	j = 0;
-	printf("str %s\n", str);
 	while (str[i] && !ft_isdigit(str[i]))
 	{
 		i++;
@@ -77,18 +76,16 @@ static int	get_color(char *str, unsigned char rgb[3])
 				exit(-1);
 			}
 			rgb[j++] = (unsigned char)temp;
-			if (str[i] && ft_isdigit(str[i]))
+			while(str[i] && ft_isdigit(str[i]))
 				i++;
 		}
 	}
-	printf(" porca madonna %d", j);
-
 	if (j != 3)
 	{
 		perror("invalid color format");
 		exit(-1);
 	}
-	return(temp);
+	return(1);
 }
 
 void	save_rule(char *buf, t_rules *rules)
