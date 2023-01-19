@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 17:16:24 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:38:24 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,7 @@ void	ft_parsing(char *input, t_rules *rules)
 	}
 	if (!rules_status(rules))
 		exit(-1);//aggiungere stampa
-	//while (!is_map(buf))
-	//{
-	//	//rules->line_offset++;
-	//	insert_rule(tmp, rules);
-	//	free(tmp);
-	//	tmp = get_next_line(fd);
-	//}
+	
 	free(buf);
+	fclose(fd);
 }
