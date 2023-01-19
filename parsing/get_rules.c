@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 15:06:42 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:58:52 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 		&image->width, &image->height);
 	if (!image->img)
 	{
-		perror("Error: can't open xpm file\n");
+		perror("Error: can't open xpm file");
 		exit(1);
 	}
 	image->addr = mlx_get_data_addr(image->img, &image->bpp,
@@ -70,7 +70,7 @@ static int	get_color(char *str, char *rgb)
 		temp = ft_atoi(&str[i]);
 		if (temp > 255 || temp < 0)
 		{
-			perror("color not valid\n");
+			perror("color not valid");
 			exit(-1);
 		}
 		rgb[j++] = (unsigned char)temp;
@@ -79,7 +79,7 @@ static int	get_color(char *str, char *rgb)
 	}
 	if (j != 3)
 	{
-		perror("invalid color format\n");
+		perror("invalid color format");
 		exit(-1);
 	}
 	return(temp);
