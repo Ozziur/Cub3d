@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:45:23 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/19 14:01:35 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 # include <mlx.h>
 # include <math.h>
 # include "libft.h"
-# include <stdlib.h>
 # include <fcntl.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 typedef struct s_image
 {
@@ -34,15 +35,15 @@ typedef struct s_image
 
 typedef struct	s_inputmap
 {
-	t_image	*north_wall;
-	t_image	*south_wall;
-	t_image	*east_wall;
-	t_image	*west_wall;
-	char	f_color[3];
-	bool	floor;
-	char	c_color[3];
-	bool	ceiling;	
-	char	**map;
+	t_image			*north_wall;
+	t_image			*south_wall;
+	t_image			*east_wall;
+	t_image			*west_wall;
+	unsigned char	f_color[3];
+	bool			floor;
+	unsigned char	c_color[3];
+	bool			ceiling;	
+	char			**map;
 }				t_inputmap;
 
 typedef struct s_mlx

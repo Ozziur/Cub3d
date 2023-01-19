@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:05:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:54:12 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:05:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 		&image->width, &image->height);
 	if (!image)
 	{
-		perror("Error: can't open xpm file");
+		perror("Error: can't open xpm file\n");
 		exit(-1);
 	}
 	image->addr = mlx_get_data_addr(image->img, &image->bpp,
@@ -56,7 +56,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	return (image);
 }
 
-static int	get_color(char *str, t_rules rules)
+static int	get_color(char *str, char *rgb)
 {
 	int	i;
 	int	j;
@@ -67,13 +67,21 @@ static int	get_color(char *str, t_rules rules)
 	while (str[i] && !ft_isdigit(str[i]))
 	{
 		i++;
-		temp = ft_atoi(str[i]);
+		temp = ft_atoi(&str[i]);
 		if (temp > 255 || temp < 0)
 		{
-			
+			perror("color not valid\n");
+			exit(-1);
 		}
+		rgb[j++] = (unsigned char)temp;
+		if (str[i] || ft_isdigit(str[i]))
+			i++;
 	}
-	
+	if (j != 3)
+	{
+		perror("invalid color format\n");
+		exit(-1);
+	}
 }
 
 void	save_rule(char *buf, t_rules *rules)
@@ -87,5 +95,7 @@ void	save_rule(char *buf, t_rules *rules)
 	if (ft_strncmp(buf, "EA", 2) == 0)
 		rules->inpmap.east_wall = get_rule(buf, rules, rules->inpmap.west_wall);
 	if (ft_strncmp(buf, "C", 1) == 0)
-		rules->inpmap.ceiling = get_color(buf, rules);
+		rules->inpmap.ceiling = get_color(buf, rules->inpmap.c_color);
+	if (ft_strncmp(buf, "F", 1) == 0)
+		rules->inpmap.ceiling = get_color(buf, rules->inpmap.f_color);
 }
