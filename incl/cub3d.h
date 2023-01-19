@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:39:12 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 13:45:23 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,10 @@ typedef struct	s_inputmap
 	t_image	*south_wall;
 	t_image	*east_wall;
 	t_image	*west_wall;
-	char	f_color[3];//forse da modificare
-	char	c_color[3];//forse da modificare
+	char	f_color[3];
+	bool	floor;
+	char	c_color[3];
+	bool	ceiling;	
 	char	**map;
 }				t_inputmap;
 
