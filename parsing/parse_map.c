@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 14:47:39 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 14:58:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,21 @@ int	rules_status(t_rules *rules)
 		|| !rules->inpmap.east_wall || !rules->inpmap.west_wall
 		|| !rules->inpmap.f_color || !rules->inpmap.c_color)
 		return (0);
+	return (1);
+}
+
+static int	is_map(char *line)
+{
+	int	i;
+
+	i = -1;
+	while (line[++i])
+	{
+		if (line[i] != '0' && line[i] != '1'
+			&& line[i] != 'N' && line[i] != 'S' && line[i] != 'W'
+			&& line[i] != 'E' && line[i] != ' ' && line[i] != '\n')
+			return (0);
+	}
 	return (1);
 }
 
@@ -39,15 +54,12 @@ void	ft_parsing(char *input, t_rules *rules)
 	}
 	if (!rules_status(rules))
 		exit(-1);//aggiungere stampa
-	
-	/*
-	while (!is_map(tmp))
-	{
-		rules->line_offset++;
-		insert_rule(tmp, rules);
-		free(tmp);
-		tmp = get_next_line(fd);
-	}
-	free(tmp);
-	*/
+	//while (!is_map(buf))
+	//{
+	//	//rules->line_offset++;
+	//	insert_rule(tmp, rules);
+	//	free(tmp);
+	//	tmp = get_next_line(fd);
+	//}
+	free(buf);
 }

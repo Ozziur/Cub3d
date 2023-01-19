@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 14:49:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:06:42 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 		return (NULL);
 	image->img = mlx_xpm_file_to_image(rules->mlx.mlx, path,
 		&image->width, &image->height);
-	if (!image)
+	if (!image->img)
 	{
 		perror("Error: can't open xpm file\n");
-		exit(-1);
+		exit(1);
 	}
 	image->addr = mlx_get_data_addr(image->img, &image->bpp,
 		&image->line_length, &image->endian);
