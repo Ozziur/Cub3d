@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:22:59 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:55:28 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 19:11:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 
 int		ft_strlen(char *str);
+int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dest, char *src, size_t dstsize);

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 19:06:14 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 19:08:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ static int	get_color(char *str, unsigned char rgb[3])
 
 	i = 0;
 	j = 0;
+	printf("str %s\n", str);
 	while (str[i] && !ft_isdigit(str[i]))
 	{
 		i++;
