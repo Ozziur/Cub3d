@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 14:01:35 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:43:31 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ typedef struct	s_inputmap
 	unsigned char	c_color[3];
 	bool			ceiling;	
 	char			**map;
+	int				map_height_len[2];
+	int				line_offset;
 }				t_inputmap;
 
 typedef struct s_mlx

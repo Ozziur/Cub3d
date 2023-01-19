@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 16:58:52 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/19 19:06:14 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	return (image);
 }
 
-static int	get_color(char *str, char *rgb)
+static int	get_color(char *str, unsigned char rgb[3])
 {
 	int	i;
 	int	j;
@@ -67,16 +67,21 @@ static int	get_color(char *str, char *rgb)
 	while (str[i] && !ft_isdigit(str[i]))
 	{
 		i++;
-		temp = ft_atoi(&str[i]);
-		if (temp > 255 || temp < 0)
-		{
-			perror("color not valid");
-			exit(-1);
+		if(str[i] && (ft_isdigit(str[i]) || str[i] == '-'))
+		{	
+			temp = ft_atoi(&str[i]);
+			if (temp > 255 || temp < 0)
+			{
+				perror("color not valid");
+				exit(-1);
+			}
+			rgb[j++] = (unsigned char)temp;
+			if (str[i] && ft_isdigit(str[i]))
+				i++;
 		}
-		rgb[j++] = (unsigned char)temp;
-		if (str[i] || ft_isdigit(str[i]))
-			i++;
 	}
+	printf(" porca madonna %d", j);
+
 	if (j != 3)
 	{
 		perror("invalid color format");
