@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 18:43:31 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/20 23:12:55 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,12 @@ void	init_rules(t_rules *rules);
 void	ft_parsing(char *input, t_rules *rules);
 //	get_rules.c
 void	save_rule(char *buf, t_rules *rules);
+
+
+
+//debug
+void printrules(t_rules *rules);
+
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 19:42:38 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/20 23:15:10 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,7 @@ void	ft_parsing(char *input, t_rules *rules)
 		/*
 			inserire la letture di rules
 		*/
-		printf("älice si droga");
+				printrules(rules);
 			exit(-1);//aggiungere stampa
 	}
 	while (ft_strncmp("\n", buf, 1))
