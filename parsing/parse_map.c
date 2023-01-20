@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/20 23:15:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/20 23:19:00 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ void	ft_parsing(char *input, t_rules *rules)
 				printrules(rules);
 			exit(-1);//aggiungere stampa
 	}
-	while (ft_strncmp("\n", buf, 1))
+	while (ft_strncmp("\n", buf, 1) == 0)
 	{
 		free(buf);
 		buf = get_next_line(fd);
