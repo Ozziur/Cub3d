@@ -9,6 +9,7 @@ Successivamente, ogni 0 che trovo nella mappa controllo che sia circondato da qu
 
 
 *------ Diario di bordo del Capitano ------*
+
 Giorno 4:
 A quanto pare il giorno della nuova missione è arrivato. A dirla tutta mi sarei preso qualche giorno in più per studiare la rotta, capire il percorso e fare rifornimento di rum e vettovaglie ma la maga era già partita. Il giorno in cui una maga sarà più volenterosa e ambiziosa di un vero lupo di mare come me sarà il giorno in cui dovrò affrontare l'ira di Nettuno e fare i conti con tutti i miei creditori e sono troppi. Davvero troppi. Quindi ho raccolto quattro cianfrusaglie e due vestiti e a bordo del Sea's Boar siamo salpati. Spero di aver portato abbastanza mutande... o almeno una in più.
 Fratello Claudio ci raggiungerà dopo aver finito di trascrivere un trattoto su C++. Credo che in un paio di giorni riuscirà a raggiungerci.
