@@ -6,16 +6,11 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 16:19:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:20:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
-
-void	raycast(t_rules *rules, t_image	*view, t_image	*minimap)
-{
-	
-}
 
 void	game(t_rules *rules)
 {
