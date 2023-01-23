@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 11:05:18 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:59:43 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ static int	get_color(char *str, unsigned char rgb[3])
 				i++;
 		}
 	}
+
 	if (j != 3)
 		ft_exit("Invalid color format");
 	return(1);

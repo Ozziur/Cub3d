@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 16:09:13 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 17:02:01 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 static void	draw_ceiling(t_rules *rules, t_image *view)
 {
 	int	x;
-	int	y;
+	int	y;    
+	printf( "c color-> %d  %d %d \n" , rules->inpmap.c_color[0],rules->inpmap.c_color[1],rules->inpmap.c_color[2]);
 
 	x = -1;
-	while (++x < rules->mlx.win_width - 1)
+	while (++x < rules->mlx.win_width)
 	{
 		y = 0;
 		while (y < rules->mlx.win_height / 2)
@@ -29,7 +30,8 @@ static void	draw_ceiling(t_rules *rules, t_image *view)
 static void	draw_floor(t_rules *rules, t_image *view)
 {
 	int	x;
-	int	y;
+	int	y;						
+	printf( "f color -> %d  %d %d \n" , rules->inpmap.f_color[0],rules->inpmap.f_color[1],rules->inpmap.f_color[2]);
 
 	x = -1;
 	while (++x < rules->mlx.win_width)
@@ -42,6 +44,6 @@ static void	draw_floor(t_rules *rules, t_image *view)
 
 void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 {
-	draw_ceiling(rules, view);
 	draw_floor(rules, view);
+	draw_ceiling(rules, view);
 }

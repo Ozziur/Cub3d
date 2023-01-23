@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 16:21:01 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:38:20 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ typedef struct	s_inputmap
 	t_image			*east_wall;
 	t_image			*west_wall;
 	unsigned char	f_color[3];
-	bool			floor;
 	unsigned char	c_color[3];
+	bool			floor;
 	bool			ceiling;	
 	char			**map;
 	int				map_height_len[2];
 	int				line_offset;
-	
+
 	float			block_width; //parametro float per rayc
 	float			mini_block_width; //parametro float per rayc della minimappa
 }				t_inputmap;
@@ -94,12 +94,11 @@ void	save_rule(char *buf, t_rules *rules);
 
 /*     GAME      */
 // loop_event.c
-int	loop_events(t_rules *rules);
+int		loop_events(t_rules *rules);
 // game
 void	game(t_rules *rules);
 //raycast.c
 void	raycast(t_rules *rules, t_image *view, t_image *minimap);
-
 //debug
 void	debug(char *s);
 void	ft_exit(char *str);
