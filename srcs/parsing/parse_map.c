@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 13:06:48 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 14:32:02 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void save_len(int fd, t_rules *rules)
 	rules->inpmap.map_height_len[0] = 0;
 	rules->inpmap.map_height_len[1] = 1;
 	buf = get_next_line(fd);
-	while (buf && is_map(buf) == 0)
+	while (buf && is_map(buf))
 	{
 		if (ft_strlen(buf) > rules->inpmap.map_height_len[0])
 			rules->inpmap.map_height_len[0] = ft_strlen(buf);
@@ -69,9 +69,8 @@ static void	write_matrix(t_rules *rules, int fd)
 		buf = get_next_line(fd);
 	}
 	i = -1;
-	while (rules->inpmap.map[++i] && buf && is_map(buf)) //qua va in seg
+	while (rules->inpmap.map[++i] && buf && is_map(buf))
 	{
-		printf("buf-> %s", buf);
 		j = ft_strlen(buf);
 		if (!is_map(buf))
 			ft_exit("write_matrix: Map not valid");
@@ -98,7 +97,7 @@ void	save_map(int fd, t_rules *rules, char *file)
 	while (i < rules->inpmap.map_height_len[1])
 	{
 		rules->inpmap.map[i++] = malloc(sizeof(char *) * rules->inpmap.map_height_len[0] + 1);
-		//protezione
+		//printf("i-> %d\n", i);
 	}
 	fd = open(file, 'r');
 	rules->inpmap.map[i]= NULL;
@@ -121,17 +120,13 @@ void	ft_parsing(char *input, t_rules *rules)
 		buf = get_next_line(fd);
 	}
 	if (!rules_status(rules))
-	{
-		printrules(rules);
 		ft_exit("ft_parsing: Map not valid");
-	}
 	while (ft_strncmp(buf, "\n", 1) == 0)
 	{
 		rules->inpmap.line_offset++;
 		free(buf);
 		buf = get_next_line(fd);
 	}
-													rules->inpmap.line_offset++;
 	save_map(fd, rules, input);
 	free(buf);
 	close(fd);

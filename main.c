@@ -6,7 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/01/23 14:03:46 by mruizzo          ###   ########.fr       */
+=======
+/*   Updated: 2023/01/23 13:18:45 by anovelli         ###   ########.fr       */
+>>>>>>> a22854500924e0c23663a95c5fedffa888fd16a3
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +30,8 @@ int	arg_check(int ac, char **av)
 	}
 	return (1);
 }
+
+
 
 int	main(int ac, char **av)
 {
