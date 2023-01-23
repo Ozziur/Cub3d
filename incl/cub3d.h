@@ -6,11 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/01/23 15:54:29 by anovelli         ###   ########.fr       */
-=======
-/*   Updated: 2023/01/23 16:13:06 by mruizzo          ###   ########.fr       */
->>>>>>> b3fc95bda86c883c3b18d03d243c29316c19f67b
+/*   Updated: 2023/01/23 16:19:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +43,6 @@ typedef struct s_image
 	int		height;
 }				t_image;
 
-typedef	struct	s_player
-{
-	float	x;
-	float	y;
-}	t_player;
-
 typedef struct	s_inputmap
 {
 	t_image			*north_wall;
@@ -81,10 +71,6 @@ typedef struct s_mlx
 
 typedef struct s_rules
 {
-<<<<<<< HEAD
-	t_player	player;
-=======
->>>>>>> b3fc95bda86c883c3b18d03d243c29316c19f67b
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_player	player;
