@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 14:41:42 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:35:06 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	loop_events(t_rules *rules)
 {
 	//creare condidione che si basa sul numero di frame da vedere
+	printf("cielo-> %d   %d  %d  \n", rules->inpmap.c_color[0], rules->inpmap.c_color[1], rules->inpmap.c_color[2]);
 	game(rules);
 	
 	return (0);

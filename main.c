@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 17:00:44 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:36:17 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	main(int ac, char **av)
 	ft_parsing(av[1], &rules);
 	ultimate_check(&rules);
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
-	print_mat(rules.inpmap.map);
+	// print_mat(rules.inpmap.map);
 	mlx_loop(&rules.mlx.mlx);
 	//free_all();
+	// printf("cielo-> %d   %d  %d  \n", rules.inpmap.c_color[0], rules.inpmap.c_color[1], rules.inpmap.c_color[2]);
 }

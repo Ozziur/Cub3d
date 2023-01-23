@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 17:02:01 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:36:36 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	draw_ceiling(t_rules *rules, t_image *view)
 {
 	int	x;
 	int	y;    
-	printf( "c color-> %d  %d %d \n" , rules->inpmap.c_color[0],rules->inpmap.c_color[1],rules->inpmap.c_color[2]);
+	printf( "c color-> %d  %d %d \n" , rules->inpmap.c_color[0],rules->inpmap.c_color[1],rules->inpmap.c_color[1]);
 
 	x = -1;
 	while (++x < rules->mlx.win_width)
@@ -44,6 +44,6 @@ static void	draw_floor(t_rules *rules, t_image *view)
 
 void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 {
-	draw_floor(rules, view);
-	draw_ceiling(rules, view);
+	draw_floor(&rules, view);
+	draw_ceiling(&rules, view);
 }
