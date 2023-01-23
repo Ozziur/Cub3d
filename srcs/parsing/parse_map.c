@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 16:16:53 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:34:10 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,11 +73,10 @@ void	find_player(t_rules *rules)
 			{
 				rules->player.x = j;
 				rules->player.y = i;
-				//return ;
+				return ;
 			}
 		}
 	}
-	printf("x-> %f , y-> %f\n", rules->player.x, rules->player.y );
 }
 
 
@@ -94,8 +93,8 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	i = -1;
-	while (rules->inpmap.map[++i] && buf && is_map(buf))
+	i = 0;
+	while (rules->inpmap.map[i] && buf && is_map(buf))
 	{
 		j = ft_strlen(buf);
 		if (!is_map(buf))
@@ -106,6 +105,7 @@ static void	write_matrix(t_rules *rules, int fd)
 		rules->inpmap.map[i][j++] = '\0';
 		free(buf);
 		buf = get_next_line(fd);
+		i++;
 	}
 	find_player(rules);
 }

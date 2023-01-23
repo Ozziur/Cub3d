@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 14:13:07 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:30:23 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void inpmap_init(t_rules *rules)
 	rules->inpmap.west_wall = NULL;
 	rules->inpmap.ceiling = 0;
 	rules->inpmap.floor = 0;
+	rules->inpmap.line_offset = 0;
 }
 
 void init_rules(t_rules *rules)
