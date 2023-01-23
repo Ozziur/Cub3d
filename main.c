@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 17:47:55 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 20:19:32 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,5 @@ int	main(int ac, char **av)
 	ft_parsing(av[1], &rules);
 	ultimate_check(&rules);
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
-	// print_mat(rules.inpmap.map);
-	mlx_loop(&rules.mlx.mlx);
-	//free_all();
-	// printf("cielo-> %d   %d  %d  \n", rules.inpmap.c_color[0], rules.inpmap.c_color[1], rules.inpmap.c_color[2]);
+	mlx_loop(rules.mlx.mlx);
 }

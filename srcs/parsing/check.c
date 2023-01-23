@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 14:34:08 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:26:22 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ int	valid_zero(char c)
 
 int	check_zero(t_rules *rules, int i, int j)
 {
-	if (valid_zero(rules->inpmap.map[i + 1][j]) == 0 
+	if (valid_zero(rules->inpmap.map[i + 1][j]) == 0
 	|| valid_zero(rules->inpmap.map[i - 1][j]) == 0
-	|| valid_zero(rules->inpmap.map[i][j + 1]) == 0 
+	|| valid_zero(rules->inpmap.map[i][j + 1]) == 0
 	|| valid_zero(rules->inpmap.map[i][j - 1]) == 0)
-
 		return (0);
 	return (1);
 }
@@ -44,9 +43,9 @@ int	one_player(t_rules *rules)
 		while (j < rules->inpmap.map_height_len[0])
 		{
 			if (rules->inpmap.map[i][j] == 'N'
-			|| rules->inpmap.map[i][j]  == 'S'
-			|| rules->inpmap.map[i][j]  == 'E'
-			|| rules->inpmap.map[i][j]  == 'W')
+			|| rules->inpmap.map[i][j] == 'S'
+			|| rules->inpmap.map[i][j] == 'E'
+			|| rules->inpmap.map[i][j] == 'W')
 			flag++;
 			j++;
 		}

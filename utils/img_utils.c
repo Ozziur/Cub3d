@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   img_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:10:38 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 17:33:43 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:29:56 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	easy_pxl(t_image *image, int x, int y, int color)
 
 unsigned int	get_color_arr(unsigned char arr[3])
 {
-	return ((arr[0] & 0xff) << 16) + ((arr[1] & 0xff) << 8) + (arr[2] & 0xff);
+	return (((arr[0] & 0xff) << 16) + ((arr[1] & 0xff) << 8) + (arr[2] & 0xff));
 }

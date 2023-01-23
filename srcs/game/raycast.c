@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 17:48:29 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 20:24:39 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 static void	draw_ceiling(t_rules *rules, t_image *view)
 {
 	int	x;
-	int	y;    
-	printf( "c color-> %d  %d %d \n" , rules->inpmap.c_color[0],rules->inpmap.c_color[1],rules->inpmap.c_color[1]);
+	int	y;
 
 	x = -1;
 	while (++x < rules->mlx.win_width)
@@ -31,7 +30,6 @@ static void	draw_floor(t_rules *rules, t_image *view)
 {
 	int	x;
 	int	y;						
-	printf( "f color -> %d  %d %d \n" , rules->inpmap.f_color[0],rules->inpmap.f_color[1],rules->inpmap.f_color[2]);
 
 	x = -1;
 	while (++x < rules->mlx.win_width)
@@ -44,6 +42,14 @@ static void	draw_floor(t_rules *rules, t_image *view)
 
 void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 {
-	draw_floor(&rules, view);
-	draw_ceiling(&rules, view);
+	t_bres_data	data;
+
+	data.ray_angle = increment_angle(rules->player.dir,
+			rules->mlx.win_width / 2);
+	data.x = 0;
+	data.color = 0x00FFFFFF;
+	draw_floor(rules, view);
+	draw_ceiling(rules, view);
+	while (data.x++ < rules->mlx.win_width - 1)
+		raycast_calc(&data, rules, view, minimap);
 }

@@ -15,3 +15,8 @@ A quanto pare il giorno della nuova missione è arrivato. A dirla tutta mi sarei
 Fratello Claudio ci raggiungerà dopo aver finito di trascrivere un trattoto su C++. Credo che in un paio di giorni riuscirà a raggiungerci.
 Il viaggio procede bene, ieri abbiamo pescato un bel ft_parsing. all'inizio ha fatto un pò di capricci ma con l'eleganza e l'acume di un marinaio che ne ha viste troppe gli ho fatto capire chi comanda mentre raccontavo a chi stava assistendo alle mie gesta di come mio patre guida una Clio e mia madre porta una gonna.
 Il viaggio è appena iniziato ma la ciurma mi sembra motivata e contenta. Spero che il morale sia così alto per tutto il viaggio e che i tre condottieri di questa missione, Fratello Claudio, Maga Alice e il sottoscritto, riusciranno a chidere questa avventura nel modo pi celere possibile.
+
+Giorno 5:
+Allora: abbiamo trovato delle antiche mappe sciamaniche che fanno robe e stiamo provando a seguirle.
+Abbiamo anche usato anche strumenti Geniali Potenti Taumaturgici ma c'é della matematica. 
+Quindi bho, male che va navighiamo verso nord e dobbiamo andare verso sud, ci consoleremo pensando che su 360° ne abbiamo sbagliati solo la metá.

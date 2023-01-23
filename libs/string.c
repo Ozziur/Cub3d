@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:24:05 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/19 13:55:12 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:23:19 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ size_t	ft_strlcpy(char *dest, char *src, size_t dstsize)
 	return (k);
 }
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
