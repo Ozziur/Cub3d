@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/20 23:12:55 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 11:33:23 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,10 @@ void	save_rule(char *buf, t_rules *rules);
 
 
 //debug
-void printrules(t_rules *rules);
+void	debug(char *s);
+void	ft_exit(char *str);
+void	print_mat(char **mat);
+void	printrules(t_rules *rules);
 
 
 

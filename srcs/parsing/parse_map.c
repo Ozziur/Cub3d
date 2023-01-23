@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/20 23:19:00 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 11:35:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/cub3d.h"
+#include "../../incl/cub3d.h"
 
 static int	rules_status(t_rules *rules)
 {
@@ -62,8 +62,10 @@ static void	write_matrix(t_rules *rules, int fd)
 	char	*buf;
 
 	i = 0;
+	debug("cazzo");
 	buf = get_next_line(fd);
-	while (i++ < rules->inpmap.line_offset++)
+	printf("map    %s\n", buf);
+	while (i++ < rules->inpmap.line_offset)
 	{
 		free(buf);
 		buf = get_next_line(fd);
@@ -73,10 +75,7 @@ static void	write_matrix(t_rules *rules, int fd)
 	{
 		j = ft_strlen(buf);
 		if (!is_map(buf))
-		{
-			perror("not valid map");
-			exit(1);
-		}
+			ft_exit("Map not valid");
 		ft_strlcpy(rules->inpmap.map[i], buf, j-- + 1);
 		while (j < rules->inpmap.map_height_len[0])
 			rules->inpmap.map[i][j++] = ' ';
@@ -93,7 +92,8 @@ void	save_map(int fd, t_rules *rules, char *file)
 
 	save_len(fd, rules);
 	rules->inpmap.map = malloc(sizeof(char *) * rules->inpmap.map_height_len[1] + 1);
-	//protezione
+	if (!rules->inpmap.map)
+		ft_exit("can't allocate");
 	i = 0;
 	while (i < rules->inpmap.map_height_len[1])
 	{
@@ -109,13 +109,9 @@ void	ft_parsing(char *input, t_rules *rules)
 {
 	int			fd;
 	char		*buf;
-
 	fd = open(input, 'r');
 	if (fd < 0)
-	{
-		perror("can't open the file");
-		exit(49);//aggiungere stampa
-	}
+		ft_exit("can't open the file");
 	buf = get_next_line(fd);
 	while (buf && !rules_status(rules))
 	{
@@ -125,19 +121,13 @@ void	ft_parsing(char *input, t_rules *rules)
 		buf = get_next_line(fd);
 	}
 	if (!rules_status(rules))
-	{
-		/*
-			inserire la letture di rules
-		*/
-				printrules(rules);
-			exit(-1);//aggiungere stampa
-	}
+		ft_exit("Map not valid");
 	while (ft_strncmp("\n", buf, 1) == 0)
 	{
 		free(buf);
 		buf = get_next_line(fd);
+		save_map(fd, rules, input);
 	}
-	//save_map(fd, rules, input);
 	free(buf);
 	close(fd);
 }

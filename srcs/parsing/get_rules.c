@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_rules.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/20 23:16:28 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 11:05:18 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/cub3d.h"
+#include "../../incl/cub3d.h"
 
 static char *get_path(char *str)
 {
@@ -35,10 +35,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	t_image	*image;
 
 	if (WindRose != NULL)
-	{
-		perror("Error in one of the directions");
-		exit(-1);
-	}
+		ft_exit("Error in one of the directions");
 	path = get_path(buf);
 	image = malloc(sizeof(t_image));
 	if (!image)
@@ -46,10 +43,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	image->img = mlx_xpm_file_to_image(rules->mlx.mlx, path,
 		&image->width, &image->height);
 	if (!image->img)
-	{
-		perror("Error: can't open xpm file");
-		exit(1);
-	}
+		ft_exit("Error: can't open xpm file");
 	image->addr = mlx_get_data_addr(image->img, &image->bpp,
 		&image->line_length, &image->endian);
 	free(path);
@@ -71,20 +65,14 @@ static int	get_color(char *str, unsigned char rgb[3])
 		{	
 			temp = ft_atoi(&str[i]);
 			if (temp > 255 || temp < 0)
-			{
-				perror("color not valid");
-				exit(-1);
-			}
+				ft_exit("Color not valid");
 			rgb[j++] = (unsigned char)temp;
 			while(str[i] && ft_isdigit(str[i]))
 				i++;
 		}
 	}
 	if (j != 3)
-	{
-		perror("invalid color format");
-		exit(-1);
-	}
+		ft_exit("Invalid color format");
 	return(1);
 }
 
