@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 13:19:52 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:06:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	ft_exit(char *str);
 void	print_mat(char **mat);
 void	printrules(t_rules *rules);
 //	check.c
-void	utlimate_check(t_rules *rules);
+void	ultimate_check(t_rules *rules);
 
 
 
