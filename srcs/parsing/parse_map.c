@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 12:42:32 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 13:06:48 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void save_len(int fd, t_rules *rules)
 static void	write_matrix(t_rules *rules, int fd)
 {
 	int		j;
-	int 	i;
+	int 	i;			int x=0;
 	char	*buf;
 
 	i = 0;
@@ -68,22 +68,20 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	while (buf && is_map(buf)) //qua va in seg
+	i = -1;
+	while (rules->inpmap.map[++i] && buf && is_map(buf)) //qua va in seg
 	{
-		i = 0;
 		printf("buf-> %s", buf);
 		j = ft_strlen(buf);
 		if (!is_map(buf))
-		{
 			ft_exit("write_matrix: Map not valid");
-		}
 		ft_strlcpy(rules->inpmap.map[i], buf, j-- + 1);
 		while (j < rules->inpmap.map_height_len[0])
 			rules->inpmap.map[i][j++] = ' ';
 		rules->inpmap.map[i][j++] = '\0';
-		i++;
 		free(buf);
 		buf = get_next_line(fd);
+					printf("%d\n", i);
 	}
 	//print_mat(rules->inpmap.map);
 }

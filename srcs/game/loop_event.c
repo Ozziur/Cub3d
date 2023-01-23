@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   signals.c                                          :+:      :+:    :+:   */
+/*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 10:04:32 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 10:40:48 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
+/*   Updated: 2023/01/23 14:08:43 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
 
-//void	esc_porkodyo(t_map *map)
-//{
-//	mlx_destroy_window(map->win.mlx, map->win.win);
-//	free_matrix(map->mat);
-//	exit(0);
-//}
-
-//void	signals()
-//{
-
-//}
+int	loop_events(t_rules *rules)
+{
+	
+	//creare condidione che si basa sul numero di frame da vedere
+	game(rules);
+	
+	return (0);
+}

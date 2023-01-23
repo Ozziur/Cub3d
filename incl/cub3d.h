@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 11:33:23 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:24:20 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ typedef struct	s_inputmap
 	char			**map;
 	int				map_height_len[2];
 	int				line_offset;
+	
+	float			block_width; //parametro float per rayc
+	float			mini_block_width; //parametro float per rayc della minimappa
 }				t_inputmap;
 
 typedef struct s_mlx
@@ -67,13 +70,18 @@ typedef struct s_rules
 //	init.c
 void	init_mlx(t_mlx *mlx);
 void	init_rules(t_rules *rules);
+void	init_img(t_rules *rules, t_image *img, int w, int h);
 /*		PARSING    */
 //	parse_map.c
 void	ft_parsing(char *input, t_rules *rules);
 //	get_rules.c
 void	save_rule(char *buf, t_rules *rules);
 
-
+/*     GAME      */
+// loop_event.c
+int	loop_events(t_rules *rules);
+// game
+void	game(t_rules *rules);
 
 //debug
 void	debug(char *s);
