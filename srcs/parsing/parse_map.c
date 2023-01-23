@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 12:08:54 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 12:42:32 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,21 +68,15 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	debug("cazzo");
-	i = 0;
-	while (buf)
+	while (buf && is_map(buf)) //qua va in seg
 	{
-		printf("%d -> %s", i, );
-	}
-	i = 0;
-	while (buf) //qua va in seg
-	{
-		debug("ciao"); // fa due cicli
+		i = 0;
+		printf("buf-> %s", buf);
 		j = ft_strlen(buf);
 		if (!is_map(buf))
-			ft_exit("Map not valid");
-		printf("0-> %s \n",rules->inpmap.map[0]);
-		printf("1-> %s \n",rules->inpmap.map[1]);
+		{
+			ft_exit("write_matrix: Map not valid");
+		}
 		ft_strlcpy(rules->inpmap.map[i], buf, j-- + 1);
 		while (j < rules->inpmap.map_height_len[0])
 			rules->inpmap.map[i][j++] = ' ';
@@ -91,7 +85,7 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	print_mat(rules->inpmap.map);
+	//print_mat(rules->inpmap.map);
 }
 
 void	save_map(int fd, t_rules *rules, char *file)
@@ -129,14 +123,18 @@ void	ft_parsing(char *input, t_rules *rules)
 		buf = get_next_line(fd);
 	}
 	if (!rules_status(rules))
-		ft_exit("Map not valid");
-	while (ft_strncmp(buf, "\n", 1))
 	{
-		debug("cavolo");
+		printrules(rules);
+		ft_exit("ft_parsing: Map not valid");
+	}
+	while (ft_strncmp(buf, "\n", 1) == 0)
+	{
+		rules->inpmap.line_offset++;
 		free(buf);
 		buf = get_next_line(fd);
-		save_map(fd, rules, input);
 	}
+													rules->inpmap.line_offset++;
+	save_map(fd, rules, input);
 	free(buf);
 	close(fd);
 }
