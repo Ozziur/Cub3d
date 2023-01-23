@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/01/23 15:39:42 by anovelli         ###   ########.fr       */
-=======
-/*   Updated: 2023/01/23 16:04:18 by mruizzo          ###   ########.fr       */
->>>>>>> b3fc95bda86c883c3b18d03d243c29316c19f67b
+/*   Updated: 2023/01/23 16:20:15 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
-
-void	raycast(t_rules *rules, t_image	*view, t_image	*minimap)
-{
-	
-}
 
 void	game(t_rules *rules)
 {
