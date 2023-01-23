@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 13:17:50 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:32:02 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void save_len(int fd, t_rules *rules)
 static void	write_matrix(t_rules *rules, int fd)
 {
 	int		j;
-	int 	i;
+	int 	i;			int x=0;
 	char	*buf;
 
 	i = 0;
@@ -80,6 +80,7 @@ static void	write_matrix(t_rules *rules, int fd)
 		rules->inpmap.map[i][j++] = '\0';
 		free(buf);
 		buf = get_next_line(fd);
+					printf("%d\n", i);
 	}
 	//print_mat(rules->inpmap.map);
 }
