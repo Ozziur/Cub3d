@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 14:32:02 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:16:53 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,32 @@ void save_len(int fd, t_rules *rules)
 	close(fd);
 }
 
+void	find_player(t_rules *rules)
+{
+	int	i; // y
+	int	j; // x
+
+	i = -1;
+	while (rules->inpmap.map[++i])
+	{
+		j = -1;
+		while (rules->inpmap.map[i][++j])
+		{
+			if (rules->inpmap.map[i][j] == 'N'
+				|| rules->inpmap.map[i][j] == 'W'
+				|| rules->inpmap.map[i][j] == 'S'
+				|| rules->inpmap.map[i][j] == 'E')
+			{
+				rules->player.x = j;
+				rules->player.y = i;
+				//return ;
+			}
+		}
+	}
+	printf("x-> %f , y-> %f\n", rules->player.x, rules->player.y );
+}
+
+
 static void	write_matrix(t_rules *rules, int fd)
 {
 	int		j;
@@ -80,9 +106,8 @@ static void	write_matrix(t_rules *rules, int fd)
 		rules->inpmap.map[i][j++] = '\0';
 		free(buf);
 		buf = get_next_line(fd);
-					printf("%d\n", i);
 	}
-	//print_mat(rules->inpmap.map);
+	find_player(rules);
 }
 
 void	save_map(int fd, t_rules *rules, char *file)
@@ -95,10 +120,7 @@ void	save_map(int fd, t_rules *rules, char *file)
 		ft_exit("can't allocate");
 	i = 0;
 	while (i < rules->inpmap.map_height_len[1])
-	{
 		rules->inpmap.map[i++] = malloc(sizeof(char *) * rules->inpmap.map_height_len[0] + 1);
-		//printf("i-> %d\n", i);
-	}
 	fd = open(file, 'r');
 	rules->inpmap.map[i]= NULL;
 	write_matrix(rules, fd);

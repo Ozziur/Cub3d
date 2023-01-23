@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 14:35:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 15:54:29 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ typedef struct s_image
 	int		width;
 	int		height;
 }				t_image;
+
+typedef	struct	s_player
+{
+	float	x;
+	float	y;
+}	t_player;
 
 typedef struct	s_inputmap
 {
@@ -61,7 +67,8 @@ typedef struct s_mlx
 
 typedef struct s_rules
 {
-	t_mlx	mlx;
+	t_player	player;
+	t_mlx		mlx;
 	t_inputmap	inpmap;
 }				t_rules;
 
