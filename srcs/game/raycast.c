@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 17:02:01 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 17:33:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ static void	draw_floor(t_rules *rules, t_image *view)
 void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 {
 	draw_floor(rules, view);
+	debug ("porchodyo");
 	draw_ceiling(rules, view);
 }
