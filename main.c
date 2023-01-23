@@ -42,16 +42,9 @@ int	main(int ac, char **av)
 	init_rules(&rules);
 	init_mlx(&rules.mlx);
 	ft_parsing(av[1], &rules);
-<<<<<<< HEAD
 					//print_mat(rules.inpmap.map);
 	ultimate_check(&rules);
 	//signals();
 	//free_all();
 	//mlx_loop(&rules.mlx.mlx);
-=======
-	//print_mat(rules.inpmap.map);
-	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
-	print_mat(rules.inpmap.map);
-	// mlx_loop(&rules.mlx.mlx);
->>>>>>> 6aaa3af74e59a1edef155c7909c8e6bf1d1860cf
 }
