@@ -6,11 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/01/23 14:24:20 by mruizzo          ###   ########.fr       */
-=======
-/*   Updated: 2023/01/23 13:19:52 by anovelli         ###   ########.fr       */
->>>>>>> a22854500924e0c23663a95c5fedffa888fd16a3
+/*   Updated: 2023/01/23 14:33:03 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,15 +77,12 @@ void	ft_parsing(char *input, t_rules *rules);
 //	get_rules.c
 void	save_rule(char *buf, t_rules *rules);
 
-<<<<<<< HEAD
 /*     GAME      */
 // loop_event.c
 int	loop_events(t_rules *rules);
 // game
 void	game(t_rules *rules);
 
-=======
->>>>>>> a22854500924e0c23663a95c5fedffa888fd16a3
 //debug
 void	debug(char *s);
 void	ft_exit(char *str);

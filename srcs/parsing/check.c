@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 13:19:31 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:33:27 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../../incl/cub3d.h"
 
 void	utlimate_check(t_rules *rules)
 {
