@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 11:35:03 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 12:08:54 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,27 @@ static void	write_matrix(t_rules *rules, int fd)
 	char	*buf;
 
 	i = 0;
-	debug("cazzo");
 	buf = get_next_line(fd);
-	printf("map    %s\n", buf);
 	while (i++ < rules->inpmap.line_offset)
 	{
 		free(buf);
 		buf = get_next_line(fd);
 	}
+	debug("cazzo");
 	i = 0;
 	while (buf)
 	{
+		printf("%d -> %s", i, );
+	}
+	i = 0;
+	while (buf) //qua va in seg
+	{
+		debug("ciao"); // fa due cicli
 		j = ft_strlen(buf);
 		if (!is_map(buf))
 			ft_exit("Map not valid");
+		printf("0-> %s \n",rules->inpmap.map[0]);
+		printf("1-> %s \n",rules->inpmap.map[1]);
 		ft_strlcpy(rules->inpmap.map[i], buf, j-- + 1);
 		while (j < rules->inpmap.map_height_len[0])
 			rules->inpmap.map[i][j++] = ' ';
@@ -84,6 +91,7 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
+	print_mat(rules->inpmap.map);
 }
 
 void	save_map(int fd, t_rules *rules, char *file)
@@ -122,8 +130,9 @@ void	ft_parsing(char *input, t_rules *rules)
 	}
 	if (!rules_status(rules))
 		ft_exit("Map not valid");
-	while (ft_strncmp("\n", buf, 1) == 0)
+	while (ft_strncmp(buf, "\n", 1))
 	{
+		debug("cavolo");
 		free(buf);
 		buf = get_next_line(fd);
 		save_map(fd, rules, input);
