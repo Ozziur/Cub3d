@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/01/23 14:29:13 by anovelli         ###   ########.fr       */
-=======
-/*   Updated: 2023/01/23 14:33:09 by mruizzo          ###   ########.fr       */
->>>>>>> 6aaa3af74e59a1edef155c7909c8e6bf1d1860cf
+/*   Updated: 2023/01/23 14:39:15 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +38,9 @@ int	main(int ac, char **av)
 	init_rules(&rules);
 	init_mlx(&rules.mlx);
 	ft_parsing(av[1], &rules);
-					//print_mat(rules.inpmap.map);
 	ultimate_check(&rules);
-	//signals();
+	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
+	print_mat(rules.inpmap.map);
+	// mlx_loop(&rules.mlx.mlx);
 	//free_all();
-	//mlx_loop(&rules.mlx.mlx);
 }
