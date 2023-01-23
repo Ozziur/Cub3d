@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:29:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 11:33:13 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 12:51:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	print_mat(char **mat)
 	int	i;
 
 	i = 0;
-	printf("\nMAPPA\n");
 	while (mat[i] != NULL)
 	{
 		printf("%d -> %s\n", i, mat[i]);

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 12:42:32 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 13:17:50 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void save_len(int fd, t_rules *rules)
 	rules->inpmap.map_height_len[0] = 0;
 	rules->inpmap.map_height_len[1] = 1;
 	buf = get_next_line(fd);
-	while (buf && is_map(buf) == 0)
+	while (buf && is_map(buf))
 	{
 		if (ft_strlen(buf) > rules->inpmap.map_height_len[0])
 			rules->inpmap.map_height_len[0] = ft_strlen(buf);
@@ -68,20 +68,16 @@ static void	write_matrix(t_rules *rules, int fd)
 		free(buf);
 		buf = get_next_line(fd);
 	}
-	while (buf && is_map(buf)) //qua va in seg
+	i = -1;
+	while (rules->inpmap.map[++i] && buf && is_map(buf))
 	{
-		i = 0;
-		printf("buf-> %s", buf);
 		j = ft_strlen(buf);
 		if (!is_map(buf))
-		{
 			ft_exit("write_matrix: Map not valid");
-		}
 		ft_strlcpy(rules->inpmap.map[i], buf, j-- + 1);
 		while (j < rules->inpmap.map_height_len[0])
 			rules->inpmap.map[i][j++] = ' ';
 		rules->inpmap.map[i][j++] = '\0';
-		i++;
 		free(buf);
 		buf = get_next_line(fd);
 	}
@@ -100,7 +96,7 @@ void	save_map(int fd, t_rules *rules, char *file)
 	while (i < rules->inpmap.map_height_len[1])
 	{
 		rules->inpmap.map[i++] = malloc(sizeof(char *) * rules->inpmap.map_height_len[0] + 1);
-		//protezione
+		//printf("i-> %d\n", i);
 	}
 	fd = open(file, 'r');
 	rules->inpmap.map[i]= NULL;
@@ -123,17 +119,13 @@ void	ft_parsing(char *input, t_rules *rules)
 		buf = get_next_line(fd);
 	}
 	if (!rules_status(rules))
-	{
-		printrules(rules);
 		ft_exit("ft_parsing: Map not valid");
-	}
 	while (ft_strncmp(buf, "\n", 1) == 0)
 	{
 		rules->inpmap.line_offset++;
 		free(buf);
 		buf = get_next_line(fd);
 	}
-													rules->inpmap.line_offset++;
 	save_map(fd, rules, input);
 	free(buf);
 	close(fd);
