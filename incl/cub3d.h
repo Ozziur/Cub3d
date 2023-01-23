@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 14:35:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:13:06 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,16 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdbool.h>
+
+typedef struct s_player
+{
+	float	x;
+	float	y;
+	double	d_x;
+	double	d_y;
+	double	dir;
+	float	speed;
+}				t_player;
 
 typedef struct s_image
 {
@@ -61,8 +71,9 @@ typedef struct s_mlx
 
 typedef struct s_rules
 {
-	t_mlx	mlx;
+	t_mlx		mlx;
 	t_inputmap	inpmap;
+	t_player	player;
 }				t_rules;
 
 
@@ -71,6 +82,10 @@ typedef struct s_rules
 void	init_mlx(t_mlx *mlx);
 void	init_rules(t_rules *rules);
 void	init_img(t_rules *rules, t_image *img, int w, int h);
+//img utils
+void	easy_pxl(t_image *image, int x, int y, int color);
+unsigned int	get_color_arr(unsigned char arr[3]);
+
 /*		PARSING    */
 //	parse_map.c
 void	ft_parsing(char *input, t_rules *rules);
@@ -82,6 +97,8 @@ void	save_rule(char *buf, t_rules *rules);
 int	loop_events(t_rules *rules);
 // game
 void	game(t_rules *rules);
+//raycast.c
+void	raycast(t_rules *rules, t_image *view, t_image *minimap);
 
 //debug
 void	debug(char *s);

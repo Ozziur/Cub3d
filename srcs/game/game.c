@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/23 14:27:45 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/23 16:04:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	game(t_rules *rules)
 	init_img(rules, &minimap,
 			rules->inpmap.map_height_len[0] * rules->inpmap.mini_block_width,
 			rules->inpmap.map_height_len[1] * rules->inpmap.mini_block_width);
-	//raycast(rules, &view, &minimap);
+	raycast(rules, &view, &minimap);
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, view.img, 0, 0);
 }
