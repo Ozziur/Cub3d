@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 14:15:05 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 14:19:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	release(int key, t_rules *rules)
 		rules->keys.l_pressed = 0;
 	if (key == 124)
 		rules->keys.r_pressed = 0;
-	if (key == 257 || key = 258)
+	if (key == 257 || key == 258)
 		rules->keys.shift_pressed = 0;
 	return (0);
 }
