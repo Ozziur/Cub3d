@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:48:40 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 15:58:54 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	let_keys_work(t_rules *rules)
 
 int	loop_events(t_rules *rules)
 {
-	//let_keys_work(rules);
+	let_keys_work(rules);
 	//creare condidione che si basa sul numero di frame da vedere
 	game(rules);
 	return (0);
