@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 14:23:00 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:00:31 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,7 @@ void			game(t_rules *rules);
 void			raycast(t_rules *rules, t_image *view, t_image *minimap);
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
-			t_image *view, t_image *minimap);
+					t_image *view, t_image *minimap);
 //			debug
 void			debug(char *s);
 void			ft_exit(char *str);
