@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 16:16:02 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:14:57 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,28 @@ void	let_keys_aux(t_rules *rules)
 		rules->player.d_y = -sin(rules->player.dir); 
 }
 
-void	let_keys_work(t_rules *rules)
-{
-	if (rules->keys.a_pressed)
-		moves(rules, 'a');
-	if (rules->keys.s_pressed)
-		moves(rules, 's');	
-	if (rules->keys.d_pressed)
-		moves(rules, 'd');	
-	if (rules->keys.w_pressed)
-		moves(rules, 'w');
-	if (rules->keys.shift_pressed)
-		rules->player.speed = SPEED * 2;
-	if (!rules->keys.shift_pressed)
-		rules->player.speed = SPEED;
-	let_keys_aux(rules);
-}
+// void	let_keys_work(t_rules *rules)
+// {
+// 	if (rules->keys.a_pressed)
+// 		moves(rules, 'a');
+// 	if (rules->keys.s_pressed)
+// 		moves(rules, 's');	
+// 	if (rules->keys.d_pressed)
+// 		moves(rules, 'd');	
+// 	if (rules->keys.w_pressed)
+// 		moves(rules, 'w');
+// 	if (rules->keys.shift_pressed)
+// 		rules->player.speed = SPEED * 2;
+// 	if (!rules->keys.shift_pressed)
+// 		rules->player.speed = SPEED;
+// 	let_keys_aux(rules);
+// }
 
 int	loop_events(t_rules *rules)
 {
 	if (!(rules->n_frames % 170))
 	{
-		let_keys_work(rules);
+		// let_keys_work(rules);
 		game(rules);
 		rules->n_frames++;
 	}

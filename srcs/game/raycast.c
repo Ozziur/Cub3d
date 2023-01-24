@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 16:13:52 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:18:13 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ int	virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir)
 	int	map_y;
 
 	if (!dir)
-		map_x = ray_x / (int)rules->inpmap.block_width;
+		map_x = ray_x / rules->inpmap.block_width;
 	else
-		map_x = ray_x / (int)rules->inpmap.block_width - 1;
-	map_y = ray_y / (int)rules->inpmap.block_width;
+		map_x = ray_x / rules->inpmap.block_width - 1;
+	map_y = ray_y / rules->inpmap.block_width;
 	if (map_x < 0 || map_y < 0
 		|| map_x > rules->inpmap.map_height_len[0] - 1
 		|| map_y > rules->inpmap.map_height_len[1] - 1)

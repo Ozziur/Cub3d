@@ -1,5 +1,5 @@
 CC = @gcc
-CFLAGS = -O# -I -Wall -Werror -Wextra
+CFLAGS = -g# -I -Wall -Werror -Wextra
 READLINE_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
 INCLUDES = $(shell find . -name "*.h" -print)

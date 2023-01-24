@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 17:00:22 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:14:26 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,5 +184,12 @@ void			printrules(t_rules *rules);
 void			ultimate_check(t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
+
+
+
+////test alla veloce
+void    find_player(t_rules *rules);
+void	bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
+void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
 
 #endif
