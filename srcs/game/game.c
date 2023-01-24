@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:41:44 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 15:43:02 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	game(t_rules *rules)
 	init_img(rules, &minimap,
 		rules->inpmap.map_height_len[0] * rules->inpmap.mini_block_width,
 		rules->inpmap.map_height_len[1] * rules->inpmap.mini_block_width);
-	//raycast(rules, &view, &minimap);
+	raycast(rules, &view, &minimap);
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, view.img, 0, 0);
 }

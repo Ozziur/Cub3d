@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:42:13 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 15:42:45 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 	data.color = 0x00FFFFFF;
 	draw_floor(rules, view);
 	draw_ceiling(rules, view);
-	//while (data.x++ < rules->mlx.win_width - 1)
-	//	raycast_calc(&data, rules, view, minimap);
+	while (data.x++ < rules->mlx.win_width - 1)
+		raycast_calc(&data, rules, view, minimap);
 }
