@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/01/24 16:00:31 by anovelli         ###   ########.fr       */
+=======
+/*   Updated: 2023/01/24 16:00:34 by mruizzo          ###   ########.fr       */
+>>>>>>> 8b6f524b764cc50b420ee904b5beaac42ea13dd2
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +107,25 @@ typedef struct s_mlx
 	int			win_height;
 }				t_mlx;
 
+typedef struct s_bres_info
+{
+	int				swap;
+	double			ab[2];
+	double			d;
+	int				sq[2];
+	int				axy[2];
+	unsigned int	color;
+}				t_bres_info;
+
+typedef struct s_draw_info
+{
+	t_bres_data	d;
+	t_image		*view;
+	t_image		*tex;
+	double		l_h;
+	double		off;
+}				t_draw_info;
+
 typedef struct s_rules
 {
 	t_keys		keys;
@@ -119,6 +142,7 @@ void			init_img(t_rules *rules, t_image *img, int w, int h);
 //img utils
 void			easy_pxl(t_image *image, int x, int y, int color);
 unsigned int	get_color_arr(unsigned char arr[3]);
+unsigned int	color_pxl(t_image *tex, int x, int y, t_rules *rules);
 //math_stuf.c
 double			decrement_angle(double angle, int t);
 double			increment_angle(double angle, int t);
@@ -131,6 +155,10 @@ double			get_abs_double(double n);
 double			our_modulo(double x, double y);
 double			get_dist(t_rules *rules, t_bres_data *d);
 double			get_fix(double angle);
+//choose
+t_image			*choose_texture(t_rules *rules, t_bres_data *d);
+int				choose_x(t_draw_info *info, float ref, t_rules *rules);
+int				choose_y(int var, t_draw_info *info);
 
 /*		PARSING    */
 //	parse_map.c
@@ -141,13 +169,26 @@ void			save_rule(char *buf, t_rules *rules);
 /*     GAME      */
 // 			loop_event.c
 int				loop_events(t_rules *rules);
-// 			game
+// 			game.c
 void			game(t_rules *rules);
 //			raycast.c
 void			raycast(t_rules *rules, t_image *view, t_image *minimap);
+int				virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
+int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
+<<<<<<< HEAD
 					t_image *view, t_image *minimap);
+=======
+			t_image *view, t_image *minimap);
+//bres_algo.c
+void			bresenham(t_bres_data *d, t_image *min, t_image *view,
+					t_rules *rules);
+// render.c
+void			draw_view(t_bres_data *d, t_image *view,
+					t_rules *rules, t_image *tex);
+			
+>>>>>>> 8b6f524b764cc50b420ee904b5beaac42ea13dd2
 //			debug
 void			debug(char *s);
 void			ft_exit(char *str);
