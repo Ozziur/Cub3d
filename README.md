@@ -20,3 +20,9 @@ Giorno 5:
 Allora: abbiamo trovato delle antiche mappe sciamaniche che fanno robe e stiamo provando a seguirle.
 Abbiamo anche usato anche strumenti Geniali Potenti Taumaturgici ma c'é della matematica. 
 Quindi bho, male che va navighiamo verso nord e dobbiamo andare verso sud, ci consoleremo pensando che su 360° ne abbiamo sbagliati solo la metá.
+
+*-------------------- TESTIMONIANZA SECONDA DEL MAGO ----------------------*
+In realtà la magia è scienza e matematica, e mi piace. La magia oscura, però, mi risulta incomprensibile e la sua base sono seni e coseni.
+Fuoriesce della magia dal check e dalla "cattura" dei tasti, sono semplici e incantesimi di basso livello. Il mago ha ancora tanto da imparare, diventare il più potente del mondo non è una scelta che si può permettere di fare ma un vincolo, un patto fatto col sangue alla sua nascita e ora si trova col peso di essere il secondo mago più potente della terra, secondo solo a seno e coseno.
+E allora con grande rammarico lascerà questa faccenda della magia oscura al pirata e al fratello in viaggio con lei, sperando riescano a superare i segfault e vari errori che incontreranno nella strada e lei intanto si darà a cose più magia-friendly.
+quindi cercherà di capire come non far sbattere il nostro giocatore ai muri, che in gergo tecnico si dice "flashare sul muro".
