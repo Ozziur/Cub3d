@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:34:35 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:58:22 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 18:26:09 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	adjust_var(double var[2], t_rules *rules)
 
 static void	draw_walls(double var[2], t_rules *rules, t_draw_info *info)
 {
-	var[0] = rules->mlx.win_height / 2 - info->l_h /2;
+	var[0] = rules->mlx.win_height / 2 - info->l_h / 2;
 	if (var[0] < 0)
 		var[0] = 0;
 	while (var[0] < var[1])
@@ -37,7 +37,6 @@ static void	draw_walls(double var[2], t_rules *rules, t_draw_info *info)
 						info), rules));
 		var[0]++;
 	}
-	
 }
 
 void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex)

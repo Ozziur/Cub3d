@@ -26,3 +26,8 @@ In realtà la magia è scienza e matematica, e mi piace. La magia oscura, però,
 Fuoriesce della magia dal check e dalla "cattura" dei tasti, sono semplici e incantesimi di basso livello. Il mago ha ancora tanto da imparare, diventare il più potente del mondo non è una scelta che si può permettere di fare ma un vincolo, un patto fatto col sangue alla sua nascita e ora si trova col peso di essere il secondo mago più potente della terra, secondo solo a seno e coseno.
 E allora con grande rammarico lascerà questa faccenda della magia oscura al pirata e al fratello in viaggio con lei, sperando riescano a superare i segfault e vari errori che incontreranno nella strada e lei intanto si darà a cose più magia-friendly.
 quindi cercherà di capire come non far sbattere il nostro giocatore ai muri, che in gergo tecnico si dice "flashare sul muro" (che ha comunque magia oscura).
+
+*------ Diario di bordo del Capitano ------*
+Giorno 6:
+Oggi é stata una giornata fruttosa e finalmente vediamo qualcosa.Non qualcosa di troppo bello ma io sono un pirata, non un pittore.
+Stiamo riuscendo a chiudere le giornate con dei risultati ogni volta, il cantante e lo sciamano fanno salti puntuali dandoci spesso una mano e tutto prosegue per il meglio. Probabilmente la legnata sta prendendo la rincorsa per farci sputare i denti piú tardi.

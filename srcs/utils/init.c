@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 16:11:26 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 18:43:38 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.ceiling = 0;
 	rules->inpmap.floor = 0;
 	rules->inpmap.line_offset = 0;
+	rules->inpmap.block_width = 64;
+	rules->inpmap.mini_block_width = rules->inpmap.block_width /4;
 }
 
 void	init_rules(t_rules *rules)

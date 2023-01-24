@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:59:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 18:23:43 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_image	*choose_texture(t_rules *rules, t_bres_data *d)
 		&& (d->ray_angle >= M_PI_2 || d->ray_angle <= 3 * M_PI_2))
 		return (rules->inpmap.west_wall);
 	else if (!our_modulo(d->xy2[1], rules->inpmap.block_width)
-		&& (d->ray_angle <= M_PI_2 || d->ray_angle >= 0))
+		&& (d->ray_angle <= M_PI || d->ray_angle >= 0))
 		return (rules->inpmap.south_wall);
 	else if (!our_modulo(d->xy2[1], rules->inpmap.block_width)
 		&& (d->ray_angle > M_PI || d->ray_angle <= 2 * M_PI))
