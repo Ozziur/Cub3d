@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:58:54 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 15:59:27 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	let_keys_aux(t_rules *rules)
 		rules->player.dir = increment_angle(rules->player.dir, 40);
 	if (rules->keys.r_pressed)
 		rules->player.dir = decrement_angle(rules->player.dir, 40);
-	rules->player.d_x = cos(rules->player.dir); // odio la matematica
-	if (rules->player.dir == (double)M_PI) // la odio da morire
+	rules->player.d_x = cos(rules->player.dir);
+	if (rules->player.dir == (double)M_PI)
 		rules->player.d_y = 0;
 	else
 		rules->player.d_y = -sin(rules->player.dir); 
