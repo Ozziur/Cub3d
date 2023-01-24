@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 20:26:22 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:07:57 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,5 @@ void	ultimate_check(t_rules *rules)
 		}
 		i++;
 	}
+	find_player(rules);
 }

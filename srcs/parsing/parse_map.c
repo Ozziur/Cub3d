@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 16:22:36 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:07:42 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void	find_player(t_rules *rules)
 			}
 		}
 	}
-	player
 }
 
 static void	write_matrix(t_rules *rules, int fd)
@@ -107,7 +106,6 @@ static void	write_matrix(t_rules *rules, int fd)
 		buf = get_next_line(fd);
 		i++;
 	}
-	find_player(rules);
 }
 
 void	save_map(int fd, t_rules *rules, char *file)

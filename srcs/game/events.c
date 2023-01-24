@@ -6,12 +6,11 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 15:40:05 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:01:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
-
 
 static int	press(int key, t_rules *rules)
 {
@@ -65,7 +64,7 @@ static int	eexit(t_rules *rules)
 
 void	events(t_rules *rules)
 {
-	//mlx_hook(rules->mlx.mlx_win, 2, 1L << 0, press, rules);
-	//mlx_hook(rules->mlx.mlx_win, 3, 1L << 1, release, rules);
+	mlx_hook(rules->mlx.mlx_win, 2, 1L << 0, press, rules);
+	mlx_hook(rules->mlx.mlx_win, 3, 1L << 1, release, rules);
 	mlx_hook(rules->mlx.mlx_win, 17, 0, eexit, rules);
 }

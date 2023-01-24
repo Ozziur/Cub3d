@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 16:11:07 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:00:22 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,14 +174,7 @@ int				virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir)
 int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
-			t_image *view, t_image *minimap);
-//bres_algo.c
-void			bresenham(t_bres_data *d, t_image *min, t_image *view,
-					t_rules *rules);
-// render.c
-void			draw_view(t_bres_data *d, t_image *view,
-					t_rules *rules, t_image *tex);
-			
+					t_image *view, t_image *minimap);
 //			debug
 void			debug(char *s);
 void			ft_exit(char *str);
