@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 13:38:44 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 14:09:18 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,17 @@ typedef struct s_ray
 	float		y;
 	float		xyoff[2];
 }				t_ray;
+
+typedef struct s_keys
+{
+	int	w_pressed;
+	int	a_pressed;
+	int	s_pressed;
+	int	d_pressed;
+	int	l_pressed; //freccia sinistra
+	int	r_pressed; //freccia destra
+	int	shift_pressed;
+}				t_keys;
 
 typedef struct s_player
 {
@@ -94,6 +105,7 @@ typedef struct s_mlx
 
 typedef struct s_rules
 {
+	t_keys		keys;
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_player	player;
