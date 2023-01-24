@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:59:27 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 16:16:02 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,13 @@ void	let_keys_work(t_rules *rules)
 
 int	loop_events(t_rules *rules)
 {
-	let_keys_work(rules);
-	//creare condidione che si basa sul numero di frame da vedere
-	game(rules);
+	if (!(rules->n_frames % 170))
+	{
+		let_keys_work(rules);
+		game(rules);
+		rules->n_frames++;
+	}
+	else
+		rules->n_frames++;
 	return (0);
 }

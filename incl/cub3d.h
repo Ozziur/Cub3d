@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 16:00:34 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 16:11:07 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ typedef struct s_rules
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_player	player;
+	int				n_frames;
 }				t_rules;
 
 /*     UTILS      */
