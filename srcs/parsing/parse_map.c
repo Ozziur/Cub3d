@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 17:07:42 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:11:21 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,30 +55,50 @@ void	save_len(int fd, t_rules *rules)
 	close(fd);
 }
 
-void	find_player(t_rules *rules)
+void    init_player_pos(t_rules *rules, int i, int j, char pos)
 {
-	int	i; // y
-	int	j; // x
-
-	i = -1;
-	while (rules->inpmap.map[++i])
-	{
-		j = -1;
-		while (rules->inpmap.map[i][++j])
-		{
-			if (rules->inpmap.map[i][j] == 'N'
-				|| rules->inpmap.map[i][j] == 'W'
-				|| rules->inpmap.map[i][j] == 'S'
-				|| rules->inpmap.map[i][j] == 'E')
-			{
-				rules->player.x = j;
-				rules->player.y = i;
-				return ;
-			}
-		}
-	}
+    if (pos == 'N')
+        rules->player.dir = M_PI / 2;
+    else if (pos == 'W')
+        rules->player.dir = M_PI;
+    else if (pos == 'S')
+        rules->player.dir = M_PI * 3 / 2;
+    else if (pos == 'E')
+        rules->player.dir = 0;
+    rules->inpmap.map[i][j] = '0';
+    rules->player.x = ++j * rules->inpmap.block_width
+        - (rules->inpmap.block_width / 2); //se non funziona ++j
+    rules->player.y = ++i * rules->inpmap.block_width
+        - (rules->inpmap.block_width / 2);
+    rules->player.d_x = cos(rules->player.dir);
+    if (rules->player.dir == (double)M_PI)
+        rules->player.d_y = 0;
+    else
+        rules->player.d_y = -sin(rules->player.dir);
 }
 
+void    find_player(t_rules *rules)
+{
+    int i;
+    int j;
+    i = -1;
+    while (rules->inpmap.map[++i])
+    {
+        j = -1;
+        while (rules->inpmap.map[i][++j])
+        {
+            if (rules->inpmap.map[i][j] == 'N'
+                || rules->inpmap.map[i][j] == 'W'
+                || rules->inpmap.map[i][j] == 'S'
+                || rules->inpmap.map[i][j] == 'E')
+            {
+                printf("porcoddio\n");
+                //init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
+                //rules->player.speed = SPEED;
+            }
+        }
+    }
+}
 static void	write_matrix(t_rules *rules, int fd)
 {
 	int		j;
