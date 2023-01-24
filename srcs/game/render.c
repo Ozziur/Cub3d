@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:34:35 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 18:26:09 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 22:48:21 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex)
 	info.l_h = rules->inpmap.block_width * rules->mlx.win_height / dist;
 	var[0] = rules->mlx.win_height / 2 - info.l_h / 2;
 	var[1] = info.l_h + var[0];
+	info.off = var[0];
 	info.view = view;
 	info.tex = tex;
 	info.d = *d;

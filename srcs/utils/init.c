@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 18:43:38 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 22:30:47 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,24 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.mini_block_width = rules->inpmap.block_width /4;
 }
 
+static void	init_keys(t_rules *rules)
+{
+	rules->keys.w_pressed = 0;
+	rules->keys.a_pressed = 0;
+	rules->keys.s_pressed = 0;
+	rules->keys.d_pressed = 0;
+	rules->keys.l_pressed = 0;
+	rules->keys.r_pressed = 0;
+	rules->keys.shift_pressed = 0;
+}
+
 void	init_rules(t_rules *rules)
 {
 	rules->mlx.win_width = 1024;
 	rules->mlx.win_height = 768;
 	rules->n_frames = 1;
 	inpmap_init(rules);
+	init_keys(rules);
 }
 
 void	init_mlx(t_mlx *mlx)

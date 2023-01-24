@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 20:27:47 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 22:37:05 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static char	*get_path(char *str)
 		i++;
 	ret = malloc(sizeof(char) * (ft_strlen(&str[i])));
 	if (!ret)
-		return (NULL);
+		ft_exit("Malloc Error");
 	ft_strlcpy(ret, &str[i], (ft_strlen(&str[i])));
 	return (ret);
 }
@@ -34,7 +34,7 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	char	*path;
 	t_image	*image;
 
-	if (WindRose != NULL)
+	if (WindRose)
 		ft_exit("Error in one of the directions");
 	path = get_path(buf);
 	image = malloc(sizeof(t_image));

@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:10:25 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 14:20:41 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 22:46:53 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,8 +66,8 @@ void	bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules)
 	t_image		*tex;
 
 	info.swap = 0;
-	delta_x = d->xy2[0] -d->xy[0];
-	delta_y = d->xy2[1] -d->xy[1];
+	delta_x = d->xy2[0] - d->xy[0];
+	delta_y = d->xy2[1] - d->xy[1];
 	bres_swap(&delta_x, &delta_y, &info.swap);
 	info.ab[0] = get_abs(delta_y);
 	info.ab[1] = -get_abs(delta_x);
