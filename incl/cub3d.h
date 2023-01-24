@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 15:59:49 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 16:00:34 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,17 @@ typedef struct s_ray
 	float		y;
 	float		xyoff[2];
 }				t_ray;
+
+typedef struct s_keys
+{
+	int	w_pressed;
+	int	a_pressed;
+	int	s_pressed;
+	int	d_pressed;
+	int	l_pressed; //freccia sinistra
+	int	r_pressed; //freccia destra
+	int	shift_pressed;
+}				t_keys;
 
 typedef struct s_player
 {
@@ -113,6 +124,7 @@ typedef struct s_draw_info
 
 typedef struct s_rules
 {
+	t_keys		keys;
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_player	player;
@@ -176,5 +188,7 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+//			events.c
+void			events(t_rules *rules);
 
 #endif
