@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 17:11:21 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/24 17:19:38 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,8 @@ void    find_player(t_rules *rules)
                 || rules->inpmap.map[i][j] == 'S'
                 || rules->inpmap.map[i][j] == 'E')
             {
-                printf("porcoddio\n");
-                //init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
-                //rules->player.speed = SPEED;
+                init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
+                rules->player.speed = SPEED;
             }
         }
     }
