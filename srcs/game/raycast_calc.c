@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_calc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:42:27 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 13:27:08 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:49:05 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,29 @@ static void	vertical_lines_check(double angle,	t_rules *rules, float ret[3])
 	}
 	ret[0] = ray.x;
 	ret[1] = ray.y;
+}
+
+static int	define_hor_ray_and_offset(t_rules *rules, t_ray *ray,
+	double co_tan, float xy[2])
+{
+	if (ray->angle < M_PI)
+	{
+		ray->y = xy[1] - (rules->inpmap.block_width - (rules->inpmap.block_width
+					- our_modulo(xy[1], rules->inpmap.block_width)));
+		ray->x = (xy[1] - ray->y) * co_tan + xy[0];
+		ray->xyoff[1] = -rules->inpmap.block_width;
+		ray->xyoff[0] = -ray->xyoff[1] * co_tan;
+		return (0);
+	}
+	else
+	{
+		ray->y = xy[1] + (rules->inpmap.block_width - our_modulo(xy[1],
+					rules->inpmap.block_width));
+		ray->x = (xy[1] - ray->y) * co_tan + xy[0];
+		ray->xyoff[1] = rules->inpmap.block_width;
+		ray->xyoff[0] = -ray->xyoff[1] * co_tan;
+		return (1);
+	}
 }
 
 /*Questo codice rappresenta una funzione statica che controlla le linee orizzontali per il calcolo del raggio. La funzione prende in input un angolo double chiamato "angle", un puntatore a una struttura dati chiamata "t_rules" e un array di float chiamato "ret" che verrà utilizzato per archiviare i punti calcolati.
