@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 14:09:18 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 14:23:00 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,5 +155,7 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+//			events.c
+void			events(t_rules *rules);
 
 #endif

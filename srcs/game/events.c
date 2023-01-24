@@ -6,14 +6,14 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 14:19:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 14:23:13 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
 
 
-int	press(int key, t_rules *rules)
+static int	press(int key, t_rules *rules)
 {
 	if (key == 53)
 	{
@@ -37,7 +37,7 @@ int	press(int key, t_rules *rules)
 	return (0);
 }
 
-int	release(int key, t_rules *rules)
+static int	release(int key, t_rules *rules)
 {
 	if (key == 13)
 		rules->keys.w_pressed = 0;
@@ -56,7 +56,7 @@ int	release(int key, t_rules *rules)
 	return (0);
 }
 
-int	exit(t_rules *rules)
+static int	exit(t_rules *rules)
 {
 	mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
 	exit(0);
