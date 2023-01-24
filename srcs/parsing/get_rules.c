@@ -3,30 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   get_rules.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 16:59:43 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:27:47 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
 
-static char *get_path(char *str)
+static char	*get_path(char *str)
 {
-    char    *ret;
-    int     i;
+	char	*ret;
+	int		i;
 
-    i = 0;
-    while (str[i] != ' ')
-        i++;
-    while (str[i] == ' ')
-        i++;
-    ret = malloc(sizeof(char) * (ft_strlen(&str[i])));
-    if (!ret)
-        return (NULL);
-    ft_strlcpy(ret, &str[i], (ft_strlen(&str[i])));
-    return (ret);
+	i = 0;
+	while (str[i] != ' ')
+		i++;
+	while (str[i] == ' ')
+		i++;
+	ret = malloc(sizeof(char) * (ft_strlen(&str[i])));
+	if (!ret)
+		return (NULL);
+	ft_strlcpy(ret, &str[i], (ft_strlen(&str[i])));
+	return (ret);
 }
 
 static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
@@ -41,11 +41,11 @@ static t_image	*get_rule(char *buf, t_rules *rules, t_image *WindRose)
 	if (!image)
 		return (NULL);
 	image->img = mlx_xpm_file_to_image(rules->mlx.mlx, path,
-		&image->width, &image->height);
+			&image->width, &image->height);
 	if (!image->img)
 		ft_exit("Error: can't open xpm file");
 	image->addr = mlx_get_data_addr(image->img, &image->bpp,
-		&image->line_length, &image->endian);
+			&image->line_length, &image->endian);
 	free(path);
 	return (image);
 }
@@ -54,27 +54,26 @@ static int	get_color(char *str, unsigned char rgb[3])
 {
 	int	i;
 	int	j;
-	int temp;
+	int	temp;
 
 	i = 0;
 	j = 0;
 	while (str[i] && !ft_isdigit(str[i]))
 	{
 		i++;
-		if(str[i] && (ft_isdigit(str[i]) || str[i] == '-'))
+		if (str[i] && (ft_isdigit(str[i]) || str[i] == '-'))
 		{	
 			temp = ft_atoi(&str[i]);
 			if (temp > 255 || temp < 0)
 				ft_exit("Color not valid");
 			rgb[j++] = (unsigned char)temp;
-			while(str[i] && ft_isdigit(str[i]))
+			while (str[i] && ft_isdigit(str[i]))
 				i++;
 		}
 	}
-
 	if (j != 3)
 		ft_exit("Invalid color format");
-	return(1);
+	return (1);
 }
 
 void	save_rule(char *buf, t_rules *rules)

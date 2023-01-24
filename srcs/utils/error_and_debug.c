@@ -6,11 +6,11 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:29:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 12:51:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/24 13:25:04 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/cub3d.h"
+#include "../../incl/cub3d.h"
 
 void printrules(t_rules *rules)
 {

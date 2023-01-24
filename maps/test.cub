@@ -5,8 +5,8 @@ SO ./textures/64/sud.xpm
 EA ./textures/64/EW.xpm
 
 
-F 0,150,42
-C 150,42,30
+F 30, 200,70
+C 0,150,150
 
 
 

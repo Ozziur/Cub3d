@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/23 16:34:10 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/23 20:29:03 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	is_map(char *line)
 	return (1);
 }
 
-void save_len(int fd, t_rules *rules)
+void	save_len(int fd, t_rules *rules)
 {
 	char	*buf;
 
@@ -78,7 +78,6 @@ void	find_player(t_rules *rules)
 		}
 	}
 }
-
 
 static void	write_matrix(t_rules *rules, int fd)
 {
@@ -122,7 +121,7 @@ void	save_map(int fd, t_rules *rules, char *file)
 	while (i < rules->inpmap.map_height_len[1])
 		rules->inpmap.map[i++] = malloc(sizeof(char *) * rules->inpmap.map_height_len[0] + 1);
 	fd = open(file, 'r');
-	rules->inpmap.map[i]= NULL;
+	rules->inpmap.map[i] = NULL;
 	write_matrix(rules, fd);
 }
 
@@ -130,6 +129,7 @@ void	ft_parsing(char *input, t_rules *rules)
 {
 	int			fd;
 	char		*buf;
+
 	fd = open(input, 'r');
 	if (fd < 0)
 		ft_exit("can't open the file");
