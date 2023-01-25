@@ -6,7 +6,7 @@
 #    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/01/25 19:12:09 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/01/25 19:14:58 by mruizzo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ $(NAME): $(OBJS)
 
 clean:
 	@printf "removing Object files...\n"
-	@/bin/rm -f $(OBJS)
+	@/bin/rm -f 
 	@printf "\033[0;35mObject files removed!\n"
 	@echo "\033[0;37m"
 
@@ -38,5 +38,11 @@ fclean: clean
 	@/bin/rm -rf bin
 	@printf "\033[0;35mExecutable removed!\n"
 	@echo "\033[0;37m"
+	
+git:
+	make fclean
+	git add .
+	git commit -m cub3d
+	git push
 
 re: fclean all
