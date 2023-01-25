@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 13:22:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 17:17:57 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -210,5 +210,6 @@ void    find_player(t_rules *rules);
 void	bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
 void	moves(t_rules *rules, char d);
 void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
+int		colliding(t_rules *rules, float rcos, float rsin, int plus);
 
 #endif
