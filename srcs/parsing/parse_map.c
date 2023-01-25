@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 15:11:37 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:48:28 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void    init_player_pos(t_rules *rules, int i, int j, char pos)
         rules->player.dir = 0;
     rules->inpmap.map[i][j] = '0';
     rules->player.x = ++j * rules->inpmap.block_width
-        - (rules->inpmap.block_width / 2); //se non funziona ++j
+        - (rules->inpmap.block_width / 2);
     rules->player.y = ++i * rules->inpmap.block_width
         - (rules->inpmap.block_width / 2);
     rules->player.d_x = cos(rules->player.dir);

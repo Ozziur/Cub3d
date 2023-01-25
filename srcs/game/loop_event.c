@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 17:20:11 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:58:27 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	let_keys_aux(t_rules *rules)
  		moves(rules, 'w');
  	if (rules->keys.shift_pressed)
  		rules->player.speed = SPEED * 2;
- 	if (!rules->keys.shift_pressed)
+ 	else// (!rules->keys.shift_pressed)
  		rules->player.speed = SPEED;
  	let_keys_aux(rules);
  }

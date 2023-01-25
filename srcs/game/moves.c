@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:22:50 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 15:25:36 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 16:09:13 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ static void	move_left(t_rules *rules, float rcos, float rsin)
 
 	//res1 = colliding(rules, ray_cos, 0, 1);
 	//res2 = colliding(rules, 0, ray_sin, 1);
-	rules->player.x += rules->player.d_x * rules->player.speed;
-	rules->player.y -= rules->player.d_y * rules->player.speed;
+	rules->player.x += rules->player.d_y * rules->player.speed;
+	rules->player.y -= rules->player.d_x * rules->player.speed;
 }
 
 static void	move_right(t_rules *rules, float rcos, float rsin)
@@ -54,8 +54,8 @@ static void	move_right(t_rules *rules, float rcos, float rsin)
 
 	//res1 = colliding(rules, ray_cos, 0, 1);
 	//res2 = colliding(rules, 0, ray_sin, 1);
-	rules->player.x -= rules->player.d_x * rules->player.speed;
-	rules->player.y += rules->player.d_y * rules->player.speed;
+	rules->player.x -= rules->player.d_y * rules->player.speed;
+	rules->player.y += rules->player.d_x * rules->player.speed;
 }
 
 
