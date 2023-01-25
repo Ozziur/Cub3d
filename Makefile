@@ -1,31 +1,30 @@
-CC = @gcc
-CFLAGS = -g -O# -I -Wall -Werror -Wextra
-READLINE_FLAGS = -lmlx -framework OpenGL -framework AppKit
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
+#    Updated: 2023/01/25 19:12:09 by mruizzo          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-INCLUDES = $(shell find . -name "*.h" -print)
+OBJS	= libs/Get_Next_Line/get_next_line_utils.o libs/Get_Next_Line/get_next_line.o libs/string.o srcs/game/bres_algo.o srcs/game/colliding.o srcs/game/events.o srcs/game/game.o srcs/game/loop_event.o srcs/game/minimap.o srcs/game/moves.o srcs/game/raycast_calc.o srcs/game/raycast.o srcs/game/render.o srcs/parsing/check.o srcs/parsing/get_rules.o srcs/parsing/parse_map.o srcs/utils/choose.o srcs/utils/easy_math.o srcs/utils/error_and_debug.o srcs/utils/img_utils.o srcs/utils/init.o srcs/utils/math_stuff.o srcs/main.o
+SOURCE	= libs/Get_Next_Line/get_next_line_utils.c libs/Get_Next_Line/get_next_line.c libs/string.c srcs/game/bres_algo.c srcs/game/colliding.c srcs/game/events.c srcs/game/game.c srcs/game/loop_event.c srcs/game/minimap.c srcs/game/moves.c srcs/game/raycast_calc.c srcs/game/raycast.c srcs/game/render.c srcs/parsing/check.c srcs/parsing/get_rules.c srcs/parsing/parse_map.c srcs/utils/choose.c srcs/utils/easy_math.c srcs/utils/error_and_debug.c srcs/utils/img_utils.c srcs/utils/init.c srcs/utils/math_stuff.c srcs/main.c
+HEADER	= incl/cub3d.h incl/get_next_line.h incl/libft.h
+NAME	= cub3d
+CC 		= @gcc
+CFLAGS 	= -g -O -I -Wall -Werror -Wextra
+MLXFLAG = -lmlx -framework OpenGL -framework AppKit
 
-OBJS_DIR = bin
-OBJS_NOPREFIX = $(shell find . -name "*.c" -print | sed 's/\.c/\.o/g' | sed 's/\.\///')# last cmd removes ./ at the beginning of each file
-OBJS = $(addprefix $(OBJS_DIR)/, $(OBJS_NOPREFIX))
-
-NAME = cub3d
-
-all: .BUILD
-
-bonus: .BUILD
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(READLINE_FLAGS)
-	@printf "\033[1m\033[32mCub3d Compiled!\n"
-	@echo "\033[0;37m"
+	$(CC) -o $@ $^ $(CFLAGS) $(MLXFLAG)
 
-#
-#	this rule compiles sources in <path>.c and puts them in <obj_dir>/<path>.o
-#
-#
-$(shell echo $(OBJS_DIR))/%.o: %.c $(INCLUDES)
-	@mkdir -p '$(@D)'
-	$(CC) -c $(CFLAGS) $< -o $@
+%.o: %.c $(HEADER)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 clean:
 	@printf "removing Object files...\n"
@@ -41,18 +40,3 @@ fclean: clean
 	@echo "\033[0;37m"
 
 re: fclean all
-
-git:
-	make fclean
-	git add .
-	git commit -m cub3d
-	git push
-
-.BUILD:
-	@printf "\033[1m\033[33mMaking Project...\033[0m\n"
-	@$(MAKE) $(NAME)
-
-OBJS_DIR = bin
-OBJS_NOPREFIX = $(shell find . -name "*.c" -print | sed 's/\.c/\.o/g' | sed 's/\.\///')# last cmd removes ./ at the beginning of each file
-OBJS = $(addprefix $(OBJS_DIR)/, $(OBJS_NOPREFIX))
-
