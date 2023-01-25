@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:22:16 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 17:17:47 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 17:25:15 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	verify(t_rules *rules, int next[2])
 		|| next[0] > rules->inpmap.map_height_len[0]
 		|| next[1] > rules->inpmap.map_height_len[1])
 		return (1);
-	if (rules->inpmap.map[next[1]][next[0]])
+	if (rules->inpmap.map[next[1]][next[0]] == '1')
 		return (1);
 	return (0);
 }
