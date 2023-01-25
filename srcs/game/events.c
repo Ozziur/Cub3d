@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 16:01:12 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:11:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,13 @@ static int	release(int key, t_rules *rules)
 		rules->keys.r_pressed = 0;
 	if (key == 257 || key == 258)
 		rules->keys.shift_pressed = 0;
+	//print_moves(rules, key);
 	return (0);
 }
 
 static int	eexit(t_rules *rules)
 {
-	mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
+	//mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
 	exit(0);
 	return (0);
 }

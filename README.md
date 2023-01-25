@@ -31,3 +31,6 @@ quindi cercherà di capire come non far sbattere il nostro giocatore ai muri, ch
 Giorno 6:
 Oggi é stata una giornata fruttosa e finalmente vediamo qualcosa.Non qualcosa di troppo bello ma io sono un pirata, non un pittore.
 Stiamo riuscendo a chiudere le giornate con dei risultati ogni volta, il cantante e lo sciamano fanno salti puntuali dandoci spesso una mano e tutto prosegue per il meglio. Probabilmente la legnata sta prendendo la rincorsa per farci sputare i denti piú tardi.
+
+*-------------------- TESTIMONIANZA TERZA DEL MAGO ----------------------*
+Si sa, la magia non ha confini, e nemmeno l'uso della RAM. Attualmente ho sperimentato, sulla pelle del computer, che a 100 GB ci arriva senza crashare,

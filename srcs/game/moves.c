@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:22:50 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 17:22:18 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 15:25:36 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ static void	move_up(t_rules *rules, float rcos, float rsin)
 	//int	res1;
 	//int	res2;
 
-	//res1 = colliding(rules, ray_cos, 0, 1);
-	//res2 = colliding(rules, 0, ray_sin, 1);
-	rules->player.x += rules->player.d_x * rules->player.speed;
-	rules->player.y += rules->player.d_y * rules->player.speed;
+	//res1 = colliding(rules, rcos, 0, 1);
+	//res2 = colliding(rules, 0, rsin, 1);
+	//if (!res1)
+		rules->player.x += rules->player.d_x * rules->player.speed;
+	//if (!res2)
+		rules->player.y += rules->player.d_y * rules->player.speed;
 }
 
 static void	move_down(t_rules *rules, float rcos, float rsin)

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:29:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 13:25:04 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/25 13:25:28 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,10 @@ void	ft_exit(char *str)
 	write(2, str, ft_strlen(str));
 	write(1, "\n", 1);
 	exit(1);
+}
+
+void	print_moves(t_rules *rules, int key)
+{
+	printf(YELLOW "[DEBUG] -----------------------------------\n" RESET "posx: %lf\nposy: %lf\nkeycode: %d\n",
+	rules->player.x, rules->player.y, key);
 }
