@@ -6,7 +6,7 @@
 #    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/01/25 19:51:04 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/01/26 02:29:43 by mruizzo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME_B	= cub3d_bonus
 
 SRCS	= libs/Get_Next_Line/get_next_line_utils.c libs/Get_Next_Line/get_next_line.c \
 		 libs/string.c srcs/game/bres_algo.c srcs/game/colliding.c srcs/game/events.c \
-		 srcs/game/game.c srcs/game/loop_event.c srcs/game/minimap.c srcs/game/moves.c \
+		 srcs/game/game.c srcs/game/loop_event.c srcs/game/moves.c \
 		 srcs/game/raycast_calc.c srcs/game/raycast.c srcs/game/render.c srcs/parsing/check.c \
 		 srcs/parsing/get_rules.c srcs/parsing/parse_map.c srcs/utils/choose.c srcs/utils/easy_math.c \
 		 srcs/utils/error_and_debug.c srcs/utils/img_utils.c srcs/utils/init.c srcs/utils/math_stuff.c srcs/main.c
