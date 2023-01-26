@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/25 18:38:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:50:28 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,6 @@ void	game(t_rules *rules)
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, view.img, 0, 0);
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win,
 		minimap.img, 0, 0);
+	mlx_destroy_image(rules->mlx.mlx, view.img);
+	mlx_destroy_image(rules->mlx.mlx, minimap.img);
 }

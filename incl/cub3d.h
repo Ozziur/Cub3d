@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 17:17:57 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/26 16:36:34 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@
 
 # define _USE_MATH_DEFINES
 
-# define ANGLE_UNIT 0.00174 //capire
+# define ANGLE_UNIT 0.00174 //capire 0.00174
 # define SPEED 5
 
 typedef struct s_ray
