@@ -6,13 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 18:54:11 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/26 16:06:35 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
-
-void	minimap2d(t_rules *rules, t_image *minimap);
 
 void	game(t_rules *rules)
 {
@@ -25,6 +23,6 @@ void	game(t_rules *rules)
 		rules->inpmap.map_height_len[1] * rules->inpmap.mini_block_width);
 	raycast(rules, &view, &minimap);
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, view.img, 0, 0);
-	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win,
-		minimap.img, 0, 0);
+	// mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win,
+	// 	minimap.img, 0, 0);
 }
