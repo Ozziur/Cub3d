@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/26 16:36:34 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/27 14:38:42 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,6 +178,7 @@ int				choose_y(int var, t_draw_info *info);
 /*		PARSING    */
 //	parse_map.c
 void			ft_parsing(char *input, t_rules *rules);
+void			find_player(t_rules *rules);
 //	get_rules.c
 void			save_rule(char *buf, t_rules *rules);
 
@@ -193,6 +194,14 @@ int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int di
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
 					t_image *view, t_image *minimap);
+//bres_algo.c
+void			bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
+//move.c
+void			moves(t_rules *rules, char d);
+//render.c
+void			draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
+// colliding.c
+int				colliding(t_rules *rules, float rcos, float rsin, int plus);
 //			debug
 void			debug(char *s);
 void			ft_exit(char *str);
@@ -202,14 +211,5 @@ void			printrules(t_rules *rules);
 void			ultimate_check(t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
-
-
-
-////test alla veloce
-void    find_player(t_rules *rules);
-void	bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
-void	moves(t_rules *rules, char d);
-void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
-int		colliding(t_rules *rules, float rcos, float rsin, int plus);
 
 #endif

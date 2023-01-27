@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 22:42:09 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/27 14:32:32 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,10 @@ void	raycast(t_rules *rules, t_image *view, t_image *minimap)
 
 	data.ray_angle = increment_angle(rules->player.dir,
 			rules->mlx.win_width / 2);
-	data.x = 0;
+	data.x = -1;
 	data.color = 0x00FFFFFF;
 	draw_floor(rules, view);
 	draw_ceiling(rules, view);
-	while (data.x++ < rules->mlx.win_width - 1)
+	while (++data.x < rules->mlx.win_width)
 		raycast_calc(&data, rules, view, minimap);
 }
