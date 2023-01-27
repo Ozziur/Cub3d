@@ -6,7 +6,7 @@
 #    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/01/26 02:29:43 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/01/27 11:27:34 by mruizzo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ B_SRCS	= libs/Get_Next_Line/get_next_line_utils.c libs/Get_Next_Line/get_next_li
 HEADER	= incl/cub3d.h incl/get_next_line.h incl/libft.h
 
 CC 		= @gcc
-CFLAGS 	= -g -O -I -Wall -Werror -Wextra
+CFLAGS 	= -g -O3 -I -Wall -Werror -Wextra
 MLXFLAG = -lmlx -framework OpenGL -framework AppKit
 
 SRCS_DIR		= ./srcs
