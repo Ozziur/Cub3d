@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/27 15:00:12 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/27 15:44:54 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static int	press(int key, t_rules *rules)
 {
