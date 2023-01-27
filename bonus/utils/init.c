@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/26 18:07:48 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/27 12:44:57 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	init_keys(t_rules *rules)
 void	init_rules(t_rules *rules)
 {
 	rules->mlx.win_width = 1024;
-	rules->mlx.win_height = 768;
+	rules->mlx.win_height = 720;
 	rules->n_frames = 1;
 	inpmap_init(rules);
 	init_keys(rules);
