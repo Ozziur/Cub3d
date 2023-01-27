@@ -1,3 +1,5 @@
+aggiungere plane nel bonus e storia divertente al riguardo
+
 *----------------- TESTIMONIANZE DEL MAGO ------------------*
 
 Giorno 1:
