@@ -45,8 +45,7 @@ re: fclean all
 p: all
 	./$(NAME) ../maps/test.cub 
 
-git:
-	make fclean
+git: fclean
 	git add .
 	git commit -m cub3d
 	git push
