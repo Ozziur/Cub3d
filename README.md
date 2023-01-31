@@ -35,4 +35,8 @@ Oggi é stata una giornata fruttosa e finalmente vediamo qualcosa.Non qualcosa d
 Stiamo riuscendo a chiudere le giornate con dei risultati ogni volta, il cantante e lo sciamano fanno salti puntuali dandoci spesso una mano e tutto prosegue per il meglio. Probabilmente la legnata sta prendendo la rincorsa per farci sputare i denti piú tardi.
 
 *-------------------- TESTIMONIANZA TERZA DEL MAGO ----------------------*
-Si sa, la magia non ha confini, e nemmeno l'uso della RAM. Attualmente ho sperimentato, sulla pelle del computer, che a 100 GB ci arriva senza crashare,
+Si sa, la magia non ha confini, e nemmeno l'uso della RAM. Attualmente ho sperimentato, sulla pelle del computer, che a 100 GB ci arriva senza crashare.
+Diversi giorni dopo...
+Tutto ok, il pirata ha risolto diversi problemi mentre io, la maga, combattevo contro altri mostri come exam03.
+Oggi proveremo a dare vita al nostro estro artistico disegnando i muri con le idee che ho buttato in pentola per fare il parsing... avrei dovuto tenermene almeno una. 
+Il pirata sembra ubriaco e mi chiede di fare cose impossibili per un mago, penso che paghero' un paio di essenze blu (LEAGUE OF LEGEND VALUE) a qualche artista.
