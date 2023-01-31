@@ -1,8 +1,3 @@
-WE ./textures/wallS.xpm
-NO ./textures/64/moss-wall.xpm
-SO ./textures/64/moss-wall.xpm
-
-EA ./textures/64/moss-wall.xpm
 
 
 F 30, 200,70
