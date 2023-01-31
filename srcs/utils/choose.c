@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/31 17:29:03 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/01/31 17:29:32 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_image	*choose_texture(t_rules *rules, t_bres_data *d)
 	else
 		ft_exit("fra non lo so facci passare pls");
 	return (NULL);
+}
 
 int	choose_x(t_draw_info *info, float ref, t_rules *rules)
 {
