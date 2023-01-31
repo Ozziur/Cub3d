@@ -1,3 +1,8 @@
+WE ./textures/64/EW.xpm
+NO ./textures/64/moss-wall.xpm
+SO ./textures/wallS.xpm
+
+EA ./textures/64/EW.xpm
 
 
 F 30, 200,70
