@@ -1,0 +1,524 @@
+bonus/game/bres_algo.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  84, col:   1):	Expected newline after brace
+bonus/game/colliding.c: Error!
+Error: LINE_TOO_LONG        (line:  46, col:  82):	line too long
+Error: BRACE_SHOULD_EOL     (line:  86, col:   1):	Expected newline after brace
+bonus/game/events.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  71, col:   1):	Expected newline after brace
+bonus/game/loop_event.c: Error!
+Error: SPC_BEFORE_NL        (line:  25, col:  53):	Space before newline
+Error: SPACE_REPLACE_TAB    (line:  28, col:   2):	Found space when expecting tab
+Error: SPACE_EMPTY_LINE     (line:  29, col:   2):	Space on empty line
+Error: TOO_FEW_TAB          (line:  30, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  30, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  31, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  31, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  32, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  32, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  33, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  33, col:   2):	Found space when expecting tab
+Error: TAB_INSTEAD_SPC      (line:  33, col:  27):	Found tab when expecting space
+Error: TOO_FEW_TAB          (line:  34, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  34, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  35, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  35, col:   2):	Found space when expecting tab
+Error: TAB_INSTEAD_SPC      (line:  35, col:  27):	Found tab when expecting space
+Error: TOO_FEW_TAB          (line:  36, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  36, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  37, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  37, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  38, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  38, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  39, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  40, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  40, col:   2):	Found space when expecting tab
+Error: WRONG_SCOPE_COMMENT  (line:  40, col:   9):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  40, col:   9):	Comment is invalid in this scope
+Error: SPACE_REPLACE_TAB    (line:  41, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  42, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  42, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  43, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  43, col:   2):	Space on empty line
+bonus/game/minimap.c: Error!
+Error: LINE_TOO_LONG        (line:   4, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:   4, col:  84):	line too long
+Error: SPC_AFTER_PAR        (line:  17, col:  18):	Missing space after parenthesis (brace/bracket)
+Error: WRONG_SCOPE_COMMENT  (line:  17, col:  19):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  17, col:  19):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  21, col:   5):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  22, col:   5):	Comment is invalid in this scope
+bonus/game/mouse.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:  15, col:  12):	space before function name
+Error: BRACE_SHOULD_EOL     (line:  42, col:   1):	Expected newline after brace
+bonus/game/moves.c: Error!
+Error: CONSECUTIVE_NEWLINES (line:  67, col:   1):	Consecutive newlines
+Error: LINE_TOO_LONG        (line:  68, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  68, col: 126):	line too long
+Error: SPACE_REPLACE_TAB    (line:  69, col:   2):	Found space when expecting tab
+Error: SPACE_EMPTY_LINE     (line:  70, col:   2):	Space on empty line
+Error: TOO_FEW_TAB          (line:  71, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  71, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  72, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  72, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  74, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  75, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  76, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  76, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  77, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  77, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  78, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  78, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  79, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  79, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  80, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  80, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  81, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  81, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  82, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  82, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  83, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  83, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  84, col:   1):	Missing tabs for indent level
+Error: BRACE_SHOULD_EOL     (line:  84, col:   2):	Expected newline after brace
+Error: SPACE_REPLACE_TAB    (line:  84, col:   2):	Found space when expecting tab
+bonus/game/raycast_calc.c: Error!
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  23, col: 242):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  52, col: 112):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 102, col: 130):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 128, col: 119):	line too long
+bonus/game/render.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  58, col:   1):	Expected newline after brace
+bonus/parsing/check.c: Error!
+Error: LINE_TOO_LONG        (line:  17, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  61, col:  83):	line too long
+Error: LINE_TOO_LONG        (line:  62, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  63, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  64, col:  82):	line too long
+Error: TOO_MANY_TAB         (line:  84, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  85, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  86, col:   1):	Extra tabs for indent level
+bonus/parsing/get_rules.c: Error!
+Error: LINE_TOO_LONG        (line:  84, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  86, col:  82):	line too long
+bonus/parsing/parse_map.c: Error!
+Error: CONSECUTIVE_SPC      (line:  59, col:   5):	Two or more consecutives spaces
+Error: SPACE_BEFORE_FUNC    (line:  59, col:   8):	space before function name
+Error: TOO_FEW_TAB          (line:  61, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  61, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  62, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  63, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  63, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  64, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  65, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  65, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  66, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  67, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  67, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  68, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  69, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  70, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  71, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  71, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  71, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  72, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  73, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  73, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  73, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  74, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  75, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  75, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  76, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  77, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  77, col:   5):	Space on empty line
+Error: SPACE_REPLACE_TAB    (line:  78, col:   9):	Found space when expecting tab
+Error: CONSECUTIVE_SPC      (line:  81, col:   5):	Two or more consecutives spaces
+Error: SPACE_BEFORE_FUNC    (line:  81, col:   8):	space before function name
+Error: TOO_FEW_TAB          (line:  83, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  83, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  83, col:   8):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  84, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  84, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  84, col:   8):	Found space when expecting tab
+Error: NL_AFTER_VAR_DECL    (line:  85, col:   1):	Variable declarations must be followed by a newline
+Error: SPACE_REPLACE_TAB    (line:  85, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  86, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  86, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  87, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  87, col:   5):	Space on empty line
+Error: SPACE_REPLACE_TAB    (line:  88, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  89, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  89, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  90, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  90, col:   9):	Space on empty line
+Error: TOO_FEW_TAB          (line:  91, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  91, col:  13):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  92, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  93, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  94, col:  17):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  95, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  95, col:  13):	Space on empty line
+Error: TOO_FEW_TAB          (line:  96, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  96, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  97, col:  17):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  98, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  98, col:  13):	Space on empty line
+Error: TOO_FEW_TAB          (line:  99, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  99, col:   9):	Space on empty line
+Error: TOO_FEW_TAB          (line: 100, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line: 100, col:   5):	Space on empty line
+Error: NEWLINE_PRECEDES_FUNC (line: 102, col:   1):	Functions must be separated by a newline
+Error: TOO_MANY_FUNCS       (line: 102, col:   1):	Too many functions in file
+Error: MIXED_SPACE_TAB      (line: 105, col:   8):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line: 105, col:   8):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line: 105, col:  25):	Missing tabs for indent level
+Error: TOO_MANY_INSTR       (line: 105, col:  25):	Too many instructions on a single line
+Error: SPACE_REPLACE_TAB    (line: 105, col:  28):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line: 105, col:  29):	Misaligned variable declaration
+Error: DECL_ASSIGN_LINE     (line: 105, col:  30):	Declaration and assignation on a single line
+Error: SPC_AFTER_OPERATOR   (line: 105, col:  30):	missing space after operator
+Error: SPC_BFR_OPERATOR     (line: 105, col:  30):	missing space before operator
+Error: TOO_MANY_FUNCS       (line: 131, col:   1):	Too many functions in file
+Error: SPACE_REPLACE_TAB    (line: 133, col:   8):	Found space when expecting tab
+Error: LINE_TOO_LONG        (line: 136, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 141, col:  86):	line too long
+Error: TOO_MANY_FUNCS       (line: 147, col:   1):	Too many functions in file
+bonus/utils/choose.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  43, col:   1):	Expected newline after brace
+bonus/utils/door_utils.c: Error!
+Error: SPACE_EMPTY_LINE     (line:  18, col:   1):	Space on empty line
+Error: LINE_TOO_LONG        (line:  24, col:  90):	line too long
+Error: TOO_FEW_TAB          (line:  25, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  29, col:   1):	Missing tabs for indent level
+Error: LINE_TOO_LONG        (line:  34, col:  89):	line too long
+Error: TOO_FEW_TAB          (line:  35, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  39, col:   1):	Missing tabs for indent level
+bonus/utils/error_and_debug.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:  15, col:   5):	space before function name
+Error: COMMA_START_LINE     (line:  17, col:  84):	Comma at line start
+Error: LINE_TOO_LONG        (line:  17, col:  84):	line too long
+Error: NO_SPC_BFR_OPR       (line:  18, col:  35):	extra space before operator
+Error: COMMA_START_LINE     (line:  18, col:  60):	Comma at line start
+Error: NO_SPC_BFR_OPR       (line:  19, col:  31):	extra space before operator
+Error: TOO_MANY_TAB         (line:  24, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  25, col:   1):	Extra tabs for indent level
+Error: LINE_TOO_LONG        (line:  49, col: 106):	line too long
+Error: TOO_FEW_TAB          (line:  50, col:   1):	Missing tabs for indent level
+Error: BRACE_SHOULD_EOL     (line:  51, col:   1):	Expected newline after brace
+incl/cub3d.h: Error!
+Error: PREPROC_BAD_INDENT   (line:  26, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  27, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  28, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  29, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  30, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  31, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  32, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  33, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  34, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  35, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  36, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  37, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  38, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  39, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  40, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  41, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  42, col:   1):	Bad preprocessor indentation
+Error: WRONG_SCOPE_COMMENT  (line:  63, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  63, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  64, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  64, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  82, col:  18):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  82, col:  18):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  83, col:  26):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  83, col:  26):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  84, col:  21):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  84, col:  21):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 112, col:  34):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 112, col:  34):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 113, col:  39):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 113, col:  39):	Comment is invalid in this scope
+Error: MISALIGNED_VAR_DECL  (line: 149, col:  21):	Misaligned variable declaration
+Error: LINE_TOO_LONG        (line: 192, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 193, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 198, col:  86):	line too long
+Error: LINE_TOO_LONG        (line: 202, col:  82):	line too long
+incl/cub3d_bonus.h: Error!
+Error: PREPROC_BAD_INDENT   (line:  26, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  27, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  28, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  29, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  30, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  31, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  32, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  33, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  34, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  35, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  36, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  37, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  38, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  39, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  40, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  41, col:   1):	Bad preprocessor indentation
+Error: PREPROC_BAD_INDENT   (line:  42, col:   1):	Bad preprocessor indentation
+Error: WRONG_SCOPE_COMMENT  (line:  63, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  63, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  64, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  64, col:  20):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  83, col:  18):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  83, col:  18):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  84, col:  26):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  84, col:  26):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  85, col:  21):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  85, col:  21):	Comment is invalid in this scope
+Error: USER_DEFINED_TYPEDEF (line: 103, col:  17):	User defined typedef must start with t_
+Error: CONSECUTIVE_NEWLINES (line: 105, col:   1):	Consecutive newlines
+Error: WRONG_SCOPE_COMMENT  (line: 113, col:   1):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 122, col:  34):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 122, col:  34):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 123, col:  39):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line: 123, col:  39):	Comment is invalid in this scope
+Error: LINE_TOO_LONG        (line: 214, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 215, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 220, col:  86):	line too long
+Error: LINE_TOO_LONG        (line: 224, col:  82):	line too long
+srcs/game/bres_algo.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  84, col:   1):	Expected newline after brace
+srcs/game/colliding.c: Error!
+Error: LINE_TOO_LONG        (line:  46, col:  82):	line too long
+Error: BRACE_SHOULD_EOL     (line:  86, col:   1):	Expected newline after brace
+srcs/game/events.c: Error!
+Error: WRONG_SCOPE_COMMENT  (line:  55, col:   5):	Comment is invalid in this scope
+Error: BRACE_SHOULD_EOL     (line:  71, col:   1):	Expected newline after brace
+srcs/game/loop_event.c: Error!
+Error: SPC_BEFORE_NL        (line:  25, col:  53):	Space before newline
+Error: SPACE_REPLACE_TAB    (line:  28, col:   2):	Found space when expecting tab
+Error: SPACE_EMPTY_LINE     (line:  29, col:   2):	Space on empty line
+Error: TOO_FEW_TAB          (line:  30, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  30, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  31, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  31, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  32, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  32, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  33, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  33, col:   2):	Found space when expecting tab
+Error: TAB_INSTEAD_SPC      (line:  33, col:  27):	Found tab when expecting space
+Error: TOO_FEW_TAB          (line:  34, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  34, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  35, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  35, col:   2):	Found space when expecting tab
+Error: TAB_INSTEAD_SPC      (line:  35, col:  27):	Found tab when expecting space
+Error: TOO_FEW_TAB          (line:  36, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  36, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  37, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  37, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  38, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  38, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  39, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  40, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  40, col:   2):	Found space when expecting tab
+Error: WRONG_SCOPE_COMMENT  (line:  40, col:   9):	Comment is invalid in this scope
+Error: WRONG_SCOPE_COMMENT  (line:  40, col:   9):	Comment is invalid in this scope
+Error: SPACE_REPLACE_TAB    (line:  41, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  42, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  42, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  43, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  43, col:   2):	Space on empty line
+srcs/game/moves.c: Error!
+Error: CONSECUTIVE_NEWLINES (line:  67, col:   1):	Consecutive newlines
+Error: LINE_TOO_LONG        (line:  68, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  68, col: 126):	line too long
+Error: SPACE_REPLACE_TAB    (line:  69, col:   2):	Found space when expecting tab
+Error: SPACE_EMPTY_LINE     (line:  70, col:   2):	Space on empty line
+Error: TOO_FEW_TAB          (line:  71, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  71, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  72, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  72, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  74, col:   2):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  75, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  76, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  76, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  77, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  77, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  78, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  78, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  79, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  79, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  80, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  80, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  81, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  81, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  82, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  82, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  83, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  83, col:   2):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  84, col:   1):	Missing tabs for indent level
+Error: BRACE_SHOULD_EOL     (line:  84, col:   2):	Expected newline after brace
+Error: SPACE_REPLACE_TAB    (line:  84, col:   2):	Found space when expecting tab
+srcs/game/raycast_calc.c: Error!
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  15, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  23, col: 242):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  47, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  52, col: 112):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line:  98, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 102, col: 130):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 124, col:   1):	line too long
+Error: LINE_TOO_LONG        (line: 128, col: 119):	line too long
+srcs/game/render.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  58, col:   1):	Expected newline after brace
+srcs/parsing/check.c: Error!
+Error: LINE_TOO_LONG        (line:  61, col:  83):	line too long
+Error: LINE_TOO_LONG        (line:  62, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  63, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  64, col:  82):	line too long
+Error: TOO_MANY_TAB         (line:  84, col:   1):	Extra tabs for indent level
+Error: LINE_TOO_LONG        (line:  84, col:  82):	line too long
+Error: SPC_BEFORE_NL        (line:  85, col:  54):	Space before newline
+Error: LINE_TOO_LONG        (line:  86, col:  82):	line too long
+Error: TOO_MANY_TAB         (line:  88, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  89, col:   1):	Extra tabs for indent level
+srcs/parsing/get_rules.c: Error!
+Error: LINE_TOO_LONG        (line:  84, col:  82):	line too long
+Error: LINE_TOO_LONG        (line:  86, col:  82):	line too long
+srcs/parsing/parse_map.c: Error!
+Error: CONSECUTIVE_SPC      (line:  58, col:   5):	Two or more consecutives spaces
+Error: SPACE_BEFORE_FUNC    (line:  58, col:   8):	space before function name
+Error: TOO_FEW_TAB          (line:  60, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  60, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  61, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  62, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  62, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  63, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  64, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  64, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  65, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  66, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  66, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  67, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  68, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  69, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  70, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  70, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  70, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  71, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  72, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:  72, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  72, col:   9):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  73, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  74, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  74, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  75, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  76, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  76, col:   5):	Space on empty line
+Error: SPACE_REPLACE_TAB    (line:  77, col:   9):	Found space when expecting tab
+Error: CONSECUTIVE_SPC      (line:  80, col:   5):	Two or more consecutives spaces
+Error: SPACE_BEFORE_FUNC    (line:  80, col:   8):	space before function name
+Error: TOO_FEW_TAB          (line:  82, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  82, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  82, col:   8):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  83, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  83, col:   5):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  83, col:   8):	Found space when expecting tab
+Error: NL_AFTER_VAR_DECL    (line:  84, col:   1):	Variable declarations must be followed by a newline
+Error: SPACE_REPLACE_TAB    (line:  84, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  85, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  85, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  86, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  86, col:   5):	Space on empty line
+Error: SPACE_REPLACE_TAB    (line:  87, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  88, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  88, col:   9):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  89, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  89, col:   9):	Space on empty line
+Error: TOO_FEW_TAB          (line:  90, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  90, col:  13):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  91, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  92, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  93, col:  17):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  94, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  94, col:  13):	Space on empty line
+Error: TOO_FEW_TAB          (line:  95, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  95, col:  17):	Found space when expecting tab
+Error: SPACE_REPLACE_TAB    (line:  96, col:  17):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  97, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  97, col:  13):	Space on empty line
+Error: TOO_FEW_TAB          (line:  98, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  98, col:   9):	Space on empty line
+Error: TOO_FEW_TAB          (line:  99, col:   1):	Missing tabs for indent level
+Error: SPACE_EMPTY_LINE     (line:  99, col:   5):	Space on empty line
+Error: NEWLINE_PRECEDES_FUNC (line: 101, col:   1):	Functions must be separated by a newline
+Error: TOO_MANY_FUNCS       (line: 101, col:   1):	Too many functions in file
+Error: MIXED_SPACE_TAB      (line: 104, col:   8):	Mixed spaces and tabs
+Error: SPACE_REPLACE_TAB    (line: 104, col:   8):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line: 104, col:  25):	Missing tabs for indent level
+Error: TOO_MANY_INSTR       (line: 104, col:  25):	Too many instructions on a single line
+Error: SPACE_REPLACE_TAB    (line: 104, col:  28):	Found space when expecting tab
+Error: MISALIGNED_VAR_DECL  (line: 104, col:  29):	Misaligned variable declaration
+Error: DECL_ASSIGN_LINE     (line: 104, col:  30):	Declaration and assignation on a single line
+Error: SPC_AFTER_OPERATOR   (line: 104, col:  30):	missing space after operator
+Error: SPC_BFR_OPERATOR     (line: 104, col:  30):	missing space before operator
+Error: TOO_MANY_FUNCS       (line: 130, col:   1):	Too many functions in file
+Error: SPACE_REPLACE_TAB    (line: 132, col:   8):	Found space when expecting tab
+Error: LINE_TOO_LONG        (line: 135, col:  82):	line too long
+Error: LINE_TOO_LONG        (line: 140, col:  86):	line too long
+Error: TOO_MANY_FUNCS       (line: 146, col:   1):	Too many functions in file
+srcs/utils/choose.c: Error!
+Error: BRACE_SHOULD_EOL     (line:  43, col:   1):	Expected newline after brace
+srcs/utils/error_and_debug.c: Error!
+Error: SPACE_BEFORE_FUNC    (line:  15, col:   5):	space before function name
+Error: COMMA_START_LINE     (line:  17, col:  84):	Comma at line start
+Error: LINE_TOO_LONG        (line:  17, col:  84):	line too long
+Error: NO_SPC_BFR_OPR       (line:  18, col:  35):	extra space before operator
+Error: COMMA_START_LINE     (line:  18, col:  60):	Comma at line start
+Error: NO_SPC_BFR_OPR       (line:  19, col:  31):	extra space before operator
+Error: TOO_MANY_TAB         (line:  24, col:   1):	Extra tabs for indent level
+Error: TOO_MANY_TAB         (line:  25, col:   1):	Extra tabs for indent level
+Error: LINE_TOO_LONG        (line:  49, col: 106):	line too long
+Error: TOO_FEW_TAB          (line:  50, col:   1):	Missing tabs for indent level
+Error: BRACE_SHOULD_EOL     (line:  51, col:   1):	Expected newline after brace
+srcs/utils/init.c: Error!
+Error: SPC_AFTER_OPERATOR   (line:  25, col:  64):	missing space after operator
