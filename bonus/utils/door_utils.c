@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 21:08:37 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/02 21:25:08 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:23:06 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_image	*init_door(int index, t_rules *rules)
 		return (NULL);
 	if (index == 0)
 	{
-		image->img = mlx_xpm_file_to_image(rules->mlx.mlx, "textures/64/door-close.xpm",
+		image->img = mlx_xpm_file_to_image(rules->mlx.mlx, "./textures/64/door-close.xpm",
 			&image->width, &image->height);
 		if (!image->img)
 			ft_exit("Error: can't open xpm file");
@@ -30,5 +30,13 @@ t_image	*init_door(int index, t_rules *rules)
 		return (image);
 	}
 	else
-		return (NULL);
+	{
+		image->img = mlx_xpm_file_to_image(rules->mlx.mlx, "./textures/64/door-open.xpm",
+			&image->width, &image->height);
+		if (!image->img)
+			ft_exit("Error: can't open xpm file");
+		image->addr = mlx_get_data_addr(image->img, &image->bpp,
+			&image->line_length, &image->endian);
+		return (image);
+	}
 }

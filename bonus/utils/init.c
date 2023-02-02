@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 21:19:59 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:22:30 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,12 @@ void	init_rules(t_rules *rules)
 {
 	rules->mlx.win_width = 1024;
 	rules->mlx.win_height = 720;
+	init_mlx(&rules->mlx);
 	rules->n_frames = 1;
 	inpmap_init(rules);
 	init_keys(rules);
-	// rules->inpmap.door_image[0] = init_door(0, rules);
-	//rules->inpmap.door_image[1] = init_door(1, rules);
+	rules->inpmap.door_image[0] = init_door(0, rules);
+	rules->inpmap.door_image[1] = init_door(1, rules);
 }
 
 void	init_mlx(t_mlx *mlx)
