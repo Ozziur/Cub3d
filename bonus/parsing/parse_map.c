@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 14:54:39 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 17:07:49 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	is_map(char *line)
 			&& line[i] != 'N' && line[i] != 'S' && line[i] != 'W'
 			&& line[i] != 'E' && line[i] != ' ' && line[i] != '\n'
 			&& line[i] != 'D' && line[i] != 'T' && line[i] != 'C')
-			return (0);
+			ft_exit("Map not valid");
 	}
 	return (1);
 }
