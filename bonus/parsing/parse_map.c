@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 17:07:49 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 18:37:24 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ static int	is_map(char *line)
 		if (line[i] != '0' && line[i] != '1'
 			&& line[i] != 'N' && line[i] != 'S' && line[i] != 'W'
 			&& line[i] != 'E' && line[i] != ' ' && line[i] != '\n'
-			&& line[i] != 'D' && line[i] != 'T' && line[i] != 'C')
-			ft_exit("Map not valid");
+			&& line [i] != 'D')
+			ft_exit("Map is invalid\n");
 	}
 	return (1);
 }

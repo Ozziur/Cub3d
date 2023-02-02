@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 13:36:41 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/27 12:44:57 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d_bonus.h"
+#include "../../incl/cub3d.h"
 
 static void	inpmap_init(t_rules *rules)
 {
@@ -20,7 +20,6 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.west_wall = NULL;
 	rules->inpmap.ceiling = 0;
 	rules->inpmap.floor = 0;
-	rules->inpmap.doors = 0;
 	rules->inpmap.line_offset = 0;
 	rules->inpmap.block_width = 64;
 	rules->inpmap.mini_block_width = rules->inpmap.block_width / 4;
@@ -28,7 +27,6 @@ static void	inpmap_init(t_rules *rules)
 
 static void	init_keys(t_rules *rules)
 {
-	rules->keys.p_pressed = 0;
 	rules->keys.w_pressed = 0;
 	rules->keys.a_pressed = 0;
 	rules->keys.s_pressed = 0;

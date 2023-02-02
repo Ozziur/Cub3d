@@ -43,7 +43,7 @@ fclean: clean
 re: fclean all
 
 p: all
-	./$(NAME) ../maps/test.cub 
+	./$(NAME) maps/test.cub 
 
 git: fclean
 	git add .
