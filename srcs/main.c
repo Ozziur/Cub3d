@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 19:13:47 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 16:39:16 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	main(int ac, char **av)
 	init_mlx(&rules.mlx);
 	ft_parsing(av[1], &rules);
 	ultimate_check(&rules);
+	debug("mannaggina\n");
 	events(&rules);
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
 	mlx_loop(rules.mlx.mlx);

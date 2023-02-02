@@ -6,11 +6,16 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:32:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 13:37:10 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:35:37 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d_bonus.h"
+
+//int	is_a_door(t_rules *rules)
+//{
+//	int	
+//}
 
 //void	doors(t_rules *rules)
 //{

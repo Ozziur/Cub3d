@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 14:50:21 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:34:18 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ typedef struct s_keys
 	int	d_pressed;
 	int	l_pressed; //freccia sinistra
 	int	r_pressed; //freccia destra
-	int	p_pressed;
+	int	f_pressed;
 	int	shift_pressed;
 }				t_keys;
 
@@ -96,10 +96,11 @@ typedef struct s_bres_data
 	double			ray_angle;
 }				t_bres_data;
 
-//typedef struct t_exit
-//{
-
-//}
+typedef struct t_exit
+{
+	t_image	exit_xpm[3];
+	bool	open;
+}				s_exit;
 
 
 typedef struct s_inputmap
@@ -109,7 +110,7 @@ typedef struct s_inputmap
 	t_image			*east_wall;
 	t_image			*west_wall;
 	t_image			door_image[2];
-	//t_exit			exit;
+	t_exit			exit;
 	unsigned char	f_color[3];
 	unsigned char	c_color[3];
 	bool			floor;
