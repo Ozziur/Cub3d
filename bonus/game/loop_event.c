@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/26 15:43:16 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 13:37:14 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 void	let_keys_aux(t_rules *rules)
 {
+	//if (rules->keys.p_pressed)
+	//	doors(rules);
 	if (rules->keys.l_pressed)
 		rules->player.dir = increment_angle(rules->player.dir, 40);
 	if (rules->keys.r_pressed)
@@ -37,7 +39,7 @@ void	let_keys_aux(t_rules *rules)
  		moves(rules, 'w');
  	if (rules->keys.shift_pressed)
  		rules->player.speed = SPEED * 2;
- 	else// (!rules->keys.shift_pressed)
+ 	else(!rules->keys.shift_pressed)
  		rules->player.speed = SPEED;
  	let_keys_aux(rules);
  }

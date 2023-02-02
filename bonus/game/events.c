@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 12:28:25 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 13:30:04 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ static int	release(int key, t_rules *rules)
 static int	eexit(t_rules *rules)
 {
 	mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
-	write(1, "GGWP\n", 5);
 	exit(0);
 	return (0);
 }

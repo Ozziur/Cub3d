@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 12:26:40 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:50:21 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,16 +96,24 @@ typedef struct s_bres_data
 	double			ray_angle;
 }				t_bres_data;
 
+//typedef struct t_exit
+//{
+
+//}
+
+
 typedef struct s_inputmap
 {
 	t_image			*north_wall;
 	t_image			*south_wall;
 	t_image			*east_wall;
 	t_image			*west_wall;
+	t_image			door_image[2];
+	//t_exit			exit;
 	unsigned char	f_color[3];
 	unsigned char	c_color[3];
 	bool			floor;
-	bool			ceiling;	
+	bool			ceiling;
 	char			**map;
 	int				map_height_len[2];
 	int				line_offset;

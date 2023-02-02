@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 13:22:42 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:43:47 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ int	one_player(t_rules *rules)
 
 int near_door(t_rules *rules, int i, int j)
 {
-	if (((rules->inpmap.map[i + 1][j] != '2' && rules->inpmap.map[i + 1][j] != '3')
-		&& (rules->inpmap.map[i - 1][j] != '2' && rules->inpmap.map[i - 1][j] != '3')
-		&& (rules->inpmap.map[i][j + 1] != '2' && rules->inpmap.map[i][j + 1] != '3')
-		&& (rules->inpmap.map[i][j - 1] != '2' && rules->inpmap.map[i][j - 1] != '3')))
+	if (((rules->inpmap.map[i + 1][j] != 'D' && rules->inpmap.map[i + 1][j] != 'C' && rules->inpmap.map[i + 1][j] != 'T')
+		&& (rules->inpmap.map[i - 1][j] != 'D' && rules->inpmap.map[i - 1][j] != 'C' && rules->inpmap.map[i - 1][j] != 'T')
+		&& (rules->inpmap.map[i][j + 1] != 'D' && rules->inpmap.map[i][j + 1] != 'C' && rules->inpmap.map[i][j + 1] != 'T')
+		&& (rules->inpmap.map[i][j - 1] != 'D' && rules->inpmap.map[i][j - 1] != 'C' && rules->inpmap.map[i][j - 1] != 'T')))
 			return (0);
 	return (1);
 }
