@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/24 22:37:05 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:13:05 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static char	*get_path(char *str)
 {
@@ -73,7 +73,7 @@ static int	get_color(char *str, unsigned char rgb[3])
 	}
 	if (j != 3)
 		ft_exit("Invalid color format");
-	return (1);
+	return (true);
 }
 
 void	save_rule(char *buf, t_rules *rules)

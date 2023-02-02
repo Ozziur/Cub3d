@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:22:50 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 17:23:25 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:14:54 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static void	move_up(t_rules *rules, float rcos, float rsin)
 {

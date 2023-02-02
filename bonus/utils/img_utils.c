@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:10:38 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 15:57:43 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:26 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 void	easy_pxl(t_image *image, int x, int y, int color)
 {

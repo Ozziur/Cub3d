@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:34:35 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 22:48:21 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:03 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static void	adjust_var(double var[2], t_rules *rules)
 {

@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/27 14:32:32 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:01 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 int	virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir)
 {

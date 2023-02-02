@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_calc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:42:27 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/25 14:07:33 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:14:57 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 /*Questa funzione statica definisce i valori del raggio e dell'offset per un raggio che colpisce i muri verticali. La funzione prende in input un puntatore alla struttura dati "t_rules", un puntatore alla struttura dati "t_ray", un valore double chiamato "n_tan" e un array di float chiamato "xy".
 La funzione utilizza una condizione if per determinare se l'angolo del raggio è inferiore a M_PI/2 o maggiore di 3M_PI/2. In caso affermativo, imposta il valore x del raggio come la posizione x del giocatore più la larghezza del blocco (che è l'altezza del muro) meno il valore restituito dalla funzione "our_modulo" (che fornisce il resto della divisione tra la posizione x del giocatore e la larghezza del blocco).

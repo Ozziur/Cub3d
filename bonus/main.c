@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/26 13:44:36 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:44 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/cub3d.h"
+#include "../incl/cub3d_bonus.h"
 
 int	arg_check(int ac, char **av)
 {

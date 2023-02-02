@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   colliding.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:22:16 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 17:25:15 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:14:41 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 /*
 next_c -> minimappa

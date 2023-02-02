@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   error_and_debug.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:29:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/25 13:25:28 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:21 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 void printrules(t_rules *rules)
 {

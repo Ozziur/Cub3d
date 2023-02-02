@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 17:08:37 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 21:19:38 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ typedef struct s_inputmap
 	t_image			*south_wall;
 	t_image			*east_wall;
 	t_image			*west_wall;
-	t_image			door_image[2];
+	t_image			*door_image[2];
 //	t_exit			exit;
 	unsigned char	f_color[3];
 	unsigned char	c_color[3];
@@ -182,6 +182,8 @@ double			increment_angle(double angle, int t);
 double			final_length(float start_x, float start_y, float rxy[2]);
 double			final_length_double(double start_x,
 					double start_y, double rxy[2]);
+//door_utils
+t_image			*init_door(int index, t_rules *rules);
 //easy_math.c
 int				get_abs(int n);
 double			get_abs_double(double n);

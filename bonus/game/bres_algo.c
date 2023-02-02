@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   bres_algo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:10:25 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/25 14:16:38 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:14:07 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static void	bres_swap(double *delta_x, double *delta_y, int *swap)
 {

@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 18:23:43 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:12 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 t_image	*choose_texture(t_rules *rules, t_bres_data *d)
 {

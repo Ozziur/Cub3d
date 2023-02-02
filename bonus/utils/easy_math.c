@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   easy_math.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 20:16:23 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 13:23:24 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 int	get_abs(int n)
 {

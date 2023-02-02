@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:09:30 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/26 18:32:10 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:14:44 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 void	minimap2d(t_rules *rules, t_image *minimap);
 

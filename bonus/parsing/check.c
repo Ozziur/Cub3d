@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 18:38:05 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:08 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 int	valid_zero(char c)
 {

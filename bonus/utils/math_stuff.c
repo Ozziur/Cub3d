@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   math_stuff.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:31:28 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/24 13:25:25 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:15:28 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 double	decrement_angle(double angle, int t)
 {

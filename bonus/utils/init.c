@@ -6,11 +6,11 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/27 12:44:57 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/02 21:19:59 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../incl/cub3d.h"
+#include "../../incl/cub3d_bonus.h"
 
 static void	inpmap_init(t_rules *rules)
 {
@@ -43,6 +43,8 @@ void	init_rules(t_rules *rules)
 	rules->n_frames = 1;
 	inpmap_init(rules);
 	init_keys(rules);
+	// rules->inpmap.door_image[0] = init_door(0, rules);
+	//rules->inpmap.door_image[1] = init_door(1, rules);
 }
 
 void	init_mlx(t_mlx *mlx)
