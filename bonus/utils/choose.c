@@ -6,13 +6,13 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/03 15:02:46 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 15:34:35 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d_bonus.h"
 
-static t_image* door_or_wall(int x, int y, t_rules *rules, t_image *wall)
+static t_image* ret_tex(int x, int y, t_rules *rules, t_image *wall)
 {
 	if (rules->inpmap.map[y][x] == 'D')
 		return (rules->inpmap.door_image[0]);
@@ -24,18 +24,20 @@ t_image	*choose_texture(t_rules *rules, t_bres_data *d)
 {
 	if (!our_modulo(d->xy2[0], rules->inpmap.block_width)
 		&& (d->ray_angle < M_PI_2 || d->ray_angle > 3 * M_PI_2))
-		return (door_or_wall((int)(d->xy2[0] / rules->inpmap.block_width),
+		return (ret_tex((int)(d->xy2[0] / rules->inpmap.block_width),
 			(int)(d->xy2[1] / rules->inpmap.block_width), rules, rules->inpmap.east_wall));
 	else if (!our_modulo(d->xy2[0], rules->inpmap.block_width)
-		&& (d->ray_angle >= M_PI_2 || d->ray_angle <= 3 * M_PI_2))
-		return (door_or_wall((int)(d->xy2[0] / rules->inpmap.block_width) - 1,
+		&& (d->ray_angle >= M_PI_2 && d->ray_angle <= 3 * M_PI_2))
+		return (ret_tex((int)(d->xy2[0] / rules->inpmap.block_width) - 1,
 			(int)(d->xy2[1] / rules->inpmap.block_width), rules, rules->inpmap.west_wall));
 	else if (!our_modulo(d->xy2[1], rules->inpmap.block_width)
-		&& (d->ray_angle <= M_PI || d->ray_angle >= 0))
-		return (rules->inpmap.south_wall);
+		&& (d->ray_angle <= M_PI && d->ray_angle >= 0))
+		return (ret_tex((int)(d->xy2[0] / rules->inpmap.block_width),
+			(int)(d->xy2[1] / rules->inpmap.block_width) - 1, rules, rules->inpmap.south_wall));
 	else if (!our_modulo(d->xy2[1], rules->inpmap.block_width)
-		&& (d->ray_angle > M_PI || d->ray_angle <= 2 * M_PI))
-		return (rules->inpmap.north_wall);
+		&& (d->ray_angle > M_PI && d->ray_angle <= 2 * M_PI))
+		return (ret_tex((int)(d->xy2[0] / rules->inpmap.block_width),
+			(int)(d->xy2[1] / rules->inpmap.block_width), rules, rules->inpmap.north_wall));
 	else
 		ft_exit("fra non lo so facci passare pls");
 	return (NULL);
