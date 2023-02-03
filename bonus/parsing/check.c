@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 22:15:08 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:48:35 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	valid_zero(char c)
 {
-	if (c != 'N' && c != 'E' && c != 'S' && c != 'W' && c != '1' && c != '0' && c != 'D')
+	if (c != 'N' && c != 'E' && c != 'S' && c != 'W'
+		&& c != '1' && c != '0' && c != 'D')
 		return (0);
 	return (1);
 }
@@ -58,10 +59,14 @@ int	one_player(t_rules *rules)
 
 int	check_player(t_rules *rules, int i, int j)
 {
-	if (((rules->inpmap.map[i + 1][j] != '0' && rules->inpmap.map[i + 1][j] != '1')
-	&& (rules->inpmap.map[i - 1][j] != '0' && rules->inpmap.map[i - 1][j] != '1')
-	&& (rules->inpmap.map[i][j + 1] != '0' && rules->inpmap.map[i][j + 1] != '1')
-	&& (rules->inpmap.map[i][j - 1] != '0' && rules->inpmap.map[i][j - 1] != '1'))
+	if (((rules->inpmap.map[i + 1][j] != '0'
+			&& rules->inpmap.map[i + 1][j] != '1')
+	&& (rules->inpmap.map[i - 1][j] != '0'
+		&& rules->inpmap.map[i - 1][j] != '1')
+	&& (rules->inpmap.map[i][j + 1] != '0'
+		&& rules->inpmap.map[i][j + 1] != '1')
+	&& (rules->inpmap.map[i][j - 1] != '0'
+		&& rules->inpmap.map[i][j - 1] != '1'))
 	|| !one_player(rules))
 		return (0);
 	return (1);
@@ -81,9 +86,9 @@ void	ultimate_check(t_rules *rules)
 			if (j == rules->inpmap.map_height_len[0])
 				if (ft_strchr_gnl(rules->inpmap.map[i], '0'))
 					ft_exit("utlimate_check1: map not valid");
-				if (rules->inpmap.map[i][j] == '0')
-					if (!check_zero(rules, i, j) || !check_player(rules, i, j))
-						ft_exit("utlimate_check2: map not valid");
+			if (rules->inpmap.map[i][j] == '0')
+				if (!check_zero(rules, i, j) || !check_player(rules, i, j))
+					ft_exit("utlimate_check2: map not valid");
 			j++;
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 21:30:14 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:49:56 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,53 +56,55 @@ void	save_len(int fd, t_rules *rules)
 	close(fd);
 }
 
-void    init_player_pos(t_rules *rules, int i, int j, char pos)
+void	init_player_pos(t_rules *rules, int i, int j, char pos)
 {
-    if (pos == 'N')
-        rules->player.dir = M_PI / 2;
-    else if (pos == 'W')
-        rules->player.dir = M_PI;
-    else if (pos == 'S')
-        rules->player.dir = M_PI * 3 / 2;
-    else if (pos == 'E')
-        rules->player.dir = 0;
-    rules->inpmap.map[i][j] = '0';
-    rules->player.x = ++j * rules->inpmap.block_width
-        - (rules->inpmap.block_width / 2);
-    rules->player.y = ++i * rules->inpmap.block_width
-        - (rules->inpmap.block_width / 2);
-    rules->player.d_x = cos(rules->player.dir);
-    if (rules->player.dir == (double)M_PI)
-        rules->player.d_y = 0;
-    else
-        rules->player.d_y = -sin(rules->player.dir);
+	if (pos == 'N')
+		rules->player.dir = M_PI / 2;
+	else if (pos == 'W')
+		rules->player.dir = M_PI;
+	else if (pos == 'S')
+		rules->player.dir = M_PI * 3 / 2;
+	else if (pos == 'E')
+		rules->player.dir = 0;
+	rules->inpmap.map[i][j] = '0';
+	rules->player.x = ++j * rules->inpmap.block_width
+		- (rules->inpmap.block_width / 2);
+	rules->player.y = ++i * rules->inpmap.block_width
+		- (rules->inpmap.block_width / 2);
+	rules->player.d_x = cos(rules->player.dir);
+	if (rules->player.dir == (double)M_PI)
+		rules->player.d_y = 0;
+	else
+		rules->player.d_y = -sin(rules->player.dir);
 }
 
-void    find_player(t_rules *rules)
+void	find_player(t_rules *rules)
 {
-    int i;
-    int j;
-    i = -1;
-    while (rules->inpmap.map[++i])
-    {
-        j = -1;
-        while (rules->inpmap.map[i][++j])
-        {
-            if (rules->inpmap.map[i][j] == 'N'
-                || rules->inpmap.map[i][j] == 'W'
-                || rules->inpmap.map[i][j] == 'S'
-                || rules->inpmap.map[i][j] == 'E')
-            {
-                init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
-                rules->player.speed = SPEED;
-            }
-        }
-    }
+	int	i;
+	int	j;
+
+	i = -1;
+	while (rules->inpmap.map[++i])
+	{
+		j = -1;
+		while (rules->inpmap.map[i][++j])
+		{
+			if (rules->inpmap.map[i][j] == 'N'
+				|| rules->inpmap.map[i][j] == 'W'
+				|| rules->inpmap.map[i][j] == 'S'
+				|| rules->inpmap.map[i][j] == 'E')
+			{
+				init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
+				rules->player.speed = SPEED;
+			}
+		}
+	}
 }
+
 static void	write_matrix(t_rules *rules, int fd)
 {
 	int		j;
-	int 	i;			int x=0;
+	int		i;
 	char	*buf;
 
 	i = 0;
@@ -130,15 +132,17 @@ static void	write_matrix(t_rules *rules, int fd)
 
 void	save_map(int fd, t_rules *rules, char *file)
 {
-	int i;
+	int	i;
 
 	save_len(fd, rules);
-	rules->inpmap.map = malloc(sizeof(char *) * rules->inpmap.map_height_len[1] + 1);
+	rules->inpmap.map = malloc(sizeof(char *)
+			* rules->inpmap.map_height_len[1] + 1);
 	if (!rules->inpmap.map)
 		ft_exit("can't allocate");
 	i = 0;
 	while (i < rules->inpmap.map_height_len[1])
-		rules->inpmap.map[i++] = malloc(sizeof(char *) * rules->inpmap.map_height_len[0] + 1);
+		rules->inpmap.map[i++] = malloc(sizeof(char *)
+				* rules->inpmap.map_height_len[0] + 1);
 	fd = open(file, 'r');
 	rules->inpmap.map[i] = NULL;
 	write_matrix(rules, fd);

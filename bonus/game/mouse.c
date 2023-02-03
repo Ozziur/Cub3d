@@ -6,13 +6,13 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 15:00:40 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/27 15:49:26 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:46:25 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d_bonus.h"
 
-static void move_mouse(int x, int y, t_rules *rules)
+static void	move_mouse(int x, int y, t_rules *rules)
 {
 	if (x < rules->mouse.x)
 		rules->player.dir = increment_angle(rules->player.dir,

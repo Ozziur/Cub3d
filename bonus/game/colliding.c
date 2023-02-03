@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 15:22:16 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/03 15:37:03 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:44:50 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ static void	get_next(t_rules *rules, float sin_cos[2], int next[2], int flag)
 	}
 }
 
-static void	get_next_c(t_rules *rules, float sin_cos[2], int next_c[2], int flag)
+static void	get_next_c(t_rules *rules, float sin_cos[2],
+	int next_c[2], int flag)
 {
 	if (flag)
 	{

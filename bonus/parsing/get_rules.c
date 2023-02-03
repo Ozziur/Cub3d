@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:47:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 22:13:05 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:47:50 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,14 @@ void	save_rule(char *buf, t_rules *rules)
 	if (ft_strncmp(buf, "WE", 2) == 0)
 		rules->inpmap.west_wall = get_rule(buf, rules, rules->inpmap.west_wall);
 	else if (ft_strncmp(buf, "SO", 2) == 0)
-		rules->inpmap.south_wall = get_rule(buf, rules, rules->inpmap.south_wall);
+		rules->inpmap.south_wall
+			= get_rule(buf, rules, rules->inpmap.south_wall);
 	else if (ft_strncmp(buf, "NO", 2) == 0)
-		rules->inpmap.north_wall = get_rule(buf, rules, rules->inpmap.north_wall);
+		rules->inpmap.north_wall
+			= get_rule(buf, rules, rules->inpmap.north_wall);
 	else if (ft_strncmp(buf, "EA", 2) == 0)
-		rules->inpmap.east_wall = get_rule(buf, rules, rules->inpmap.east_wall);
+		rules->inpmap.east_wall
+			= get_rule(buf, rules, rules->inpmap.east_wall);
 	else if (ft_strncmp(buf, "C", 1) == 0)
 		rules->inpmap.ceiling = get_color(buf, rules->inpmap.c_color);
 	else if (ft_strncmp(buf, "F", 1) == 0)
