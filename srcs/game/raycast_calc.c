@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_calc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 18:42:27 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/01/25 14:07:33 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:34:33 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d.h"
 
-/*Questa funzione statica definisce i valori del raggio e dell'offset per un raggio che colpisce i muri verticali. La funzione prende in input un puntatore alla struttura dati "t_rules", un puntatore alla struttura dati "t_ray", un valore double chiamato "n_tan" e un array di float chiamato "xy".
+/*Questa funzione statica definisce i valori del raggio e dell'offset per un raggio che colpisce i muri verticali. 
+La funzione prende in input un puntatore alla struttura dati "t_rules", un puntatore alla struttura dati "t_ray", un valore double chiamato "n_tan" e un array di float chiamato "xy".
 La funzione utilizza una condizione if per determinare se l'angolo del raggio è inferiore a M_PI/2 o maggiore di 3M_PI/2. In caso affermativo, imposta il valore x del raggio come la posizione x del giocatore più la larghezza del blocco (che è l'altezza del muro) meno il valore restituito dalla funzione "our_modulo" (che fornisce il resto della divisione tra la posizione x del giocatore e la larghezza del blocco).
 Imposta il valore y del raggio come la posizione y del giocatore meno (la posizione x del giocatore meno il valore x del raggio) moltiplicato per la tangente negativa.
 Imposta i valori dell'offset x e y come la larghezza del blocco e la larghezza del blocco moltiplicato per la tangente negativa.

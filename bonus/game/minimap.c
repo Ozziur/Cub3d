@@ -14,12 +14,12 @@
 
 static unsigned int	choose_color(char c)
 {
-	if (c == '0' )//|| c == '3' || c == '4' || c == '5' || c == '6' || c == '7')
-		return (0x00FFFF33);
+	if (c == '0')
+		return (0x4F4F4F);
 	else if (c == '1' || c == ' ')
-		return (0x00996600);
-	// else if (c == '2')
-	// 	return (0x00EDB415);
+		return (0X2F2F2F);
+	else if (c == 'D' || c == 'd')
+		return (0X654321);
 	return (0x0);
 }
 

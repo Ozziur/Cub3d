@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/27 14:29:50 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 18:30:39 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ static int	release(int key, t_rules *rules)
 		rules->keys.r_pressed = 0;
 	if (key == 257 || key == 258)
 		rules->keys.shift_pressed = 0;
-	//print_moves(rules, key);
 	return (0);
 }
 

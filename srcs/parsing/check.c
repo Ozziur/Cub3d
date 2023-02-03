@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 16:42:37 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:36:23 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,14 @@ int	one_player(t_rules *rules)
 
 int	check_player(t_rules *rules, int i, int j)
 {
-	if (((rules->inpmap.map[i + 1][j] != '0' && rules->inpmap.map[i + 1][j] != '1')
-	&& (rules->inpmap.map[i - 1][j] != '0' && rules->inpmap.map[i - 1][j] != '1')
-	&& (rules->inpmap.map[i][j + 1] != '0' && rules->inpmap.map[i][j + 1] != '1')
-	&& (rules->inpmap.map[i][j - 1] != '0' && rules->inpmap.map[i][j - 1] != '1'))
+	if (((rules->inpmap.map[i + 1][j] != '0'
+			&& rules->inpmap.map[i + 1][j] != '1')
+	&& (rules->inpmap.map[i - 1][j] != '0'
+		&& rules->inpmap.map[i - 1][j] != '1')
+	&& (rules->inpmap.map[i][j + 1] != '0'
+		&& rules->inpmap.map[i][j + 1] != '1')
+	&& (rules->inpmap.map[i][j - 1] != '0'
+		&& rules->inpmap.map[i][j - 1] != '1'))
 	|| !one_player(rules))
 		return (0);
 	return (1);
@@ -81,12 +85,13 @@ void	ultimate_check(t_rules *rules)
 			if (j == rules->inpmap.map_height_len[0])
 				if (ft_strchr_gnl(rules->inpmap.map[i], '0'))
 					ft_exit("utlimate_check1: map not valid");
-				if (rules->inpmap.map[i][j] == '0' || rules->inpmap.map[i][j] == 'W'
-					|| rules->inpmap.map[i][j] == 'E' 
-					|| rules->inpmap.map[i][j] == 'N' || rules->inpmap.map[i][j] == 'S'
-					|| rules->inpmap.map[i][j] == 'D')
-					if (!check_zero(rules, i, j) || !check_player(rules, i, j))
-						ft_exit("utlimate_check2: map not valid");
+			if (rules->inpmap.map[i][j] == '0' || rules->inpmap.map[i][j] == 'W'
+				|| rules->inpmap.map[i][j] == 'E'
+				|| rules->inpmap.map[i][j] == 'N'
+				|| rules->inpmap.map[i][j] == 'S'
+				|| rules->inpmap.map[i][j] == 'D')
+				if (!check_zero(rules, i, j) || !check_player(rules, i, j))
+					ft_exit("utlimate_check2: map not valid");
 			j++;
 		}
 		i++;
