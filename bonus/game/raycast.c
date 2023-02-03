@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:05:11 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/02 22:15:01 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/03 14:56:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir)
 		|| map_x > rules->inpmap.map_height_len[0] - 1
 		|| map_y > rules->inpmap.map_height_len[1] - 1)
 		return (1);
-	if (rules->inpmap.map[map_y][map_x] == '1')
+	if (rules->inpmap.map[map_y][map_x] == '1'
+		|| rules->inpmap.map[map_y][map_x] == 'D')
 		return (1);
 	return (0);
 }
@@ -45,7 +46,8 @@ int	virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir)
 		|| map_x > rules->inpmap.map_height_len[0] - 1
 		|| map_y > rules->inpmap.map_height_len[1] - 1)
 		return (1);
-	if (rules->inpmap.map[map_y][map_x] == '1')
+	if (rules->inpmap.map[map_y][map_x] == '1'
+		|| rules->inpmap.map[map_y][map_x] == 'D')
 		return (1);
 	return (0);
 }
