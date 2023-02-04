@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/03 18:45:45 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/04 17:43:53 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,18 @@
 void	let_keys_aux(t_rules *rules)
 {
 	if (rules->keys.l_pressed)
+	{
 		rules->player.dir = increment_angle(rules->player.dir, 40);
+		rules->player.plane = increment_angle(rules->player.plane, 40);
+	}
 	if (rules->keys.r_pressed)
+	{
 		rules->player.dir = decrement_angle(rules->player.dir, 40);
+		rules->player.plane = decrement_angle(rules->player.plane, 40);
+	}
 	rules->player.d_x = cos(rules->player.dir);
+	rules->player.plane_x = -cos(rules->player.plane);
+	rules->player.plane_y = sin(rules->player.plane);
 	if (rules->player.dir == (double)M_PI)
 		rules->player.d_y = 0;
 	else

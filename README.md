@@ -1,7 +1,5 @@
 mappa bonus accetta porte sui bordi e non dovrebbe. trovare la fantasia per scrivere una storia divertente
 
-aggiungere plane nel bonus e storia divertente al riguardo
-
 *----------------- TESTIMONIANZE DEL MAGO ------------------*
 
 Giorno 1:

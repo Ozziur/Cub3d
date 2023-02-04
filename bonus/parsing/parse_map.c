@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/03 18:49:56 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/04 17:49:22 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,9 @@ void	init_player_pos(t_rules *rules, int i, int j, char pos)
 		rules->player.dir = M_PI * 3 / 2;
 	else if (pos == 'E')
 		rules->player.dir = 0;
+	rules->player.plane = rules->player.dir + M_PI / 2;
+	if (rules->player.dir == M_PI_2 * 3)
+		rules->player.plane = 0;
 	rules->inpmap.map[i][j] = '0';
 	rules->player.x = ++j * rules->inpmap.block_width
 		- (rules->inpmap.block_width / 2);
@@ -96,6 +99,8 @@ void	find_player(t_rules *rules)
 			{
 				init_player_pos(rules, i, j, rules->inpmap.map[i][j]);
 				rules->player.speed = SPEED;
+				rules->player.plane_x = -cos(rules->player.plane);
+				rules->player.plane_y = sin(rules->player.plane);
 			}
 		}
 	}
