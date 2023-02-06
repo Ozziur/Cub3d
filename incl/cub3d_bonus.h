@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 14:17:52 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:37:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -239,5 +239,7 @@ void			ultimate_check(t_rules *rules);
 void			ft_doors(t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
+// 			strings.c
+char			*ft_strchr(const char *s, int c);
 
 #endif

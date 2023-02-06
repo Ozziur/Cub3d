@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 12:24:05 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/26 13:49:47 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 15:34:40 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,13 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (res);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	while (*s != '\0' && (unsigned char)c != *s)
+		s++;
+	if ((unsigned char)c == *s)
+		return ((char *)s);
+	return (0);
 }
