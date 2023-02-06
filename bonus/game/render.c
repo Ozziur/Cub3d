@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:34:35 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/03 18:47:17 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 20:36:40 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,11 @@ static void	draw_walls(double var[2], t_rules *rules, t_draw_info *info)
 void	draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex)
 {
 	t_draw_info	info;
-	double		dist;
 	double		var[2];
 
-	dist = get_dist(rules, d);
-	info.l_h = rules->inpmap.block_width * rules->mlx.win_height / dist;
+	rules->dist_array[d->x] = get_dist(rules, d);
+	info.l_h = rules->inpmap.block_width * rules->mlx.win_height
+		/ rules->dist_array[d->x];
 	var[0] = rules->mlx.win_height / 2 - info.l_h / 2;
 	var[1] = info.l_h + var[0];
 	info.off = var[0];

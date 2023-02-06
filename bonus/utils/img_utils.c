@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:10:38 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/02 22:15:26 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 20:25:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,15 @@ unsigned int	color_pxl(t_image *tex, int x, int y, t_rules *rules)
 unsigned int	get_color_arr(unsigned char arr[3])
 {
 	return (((arr[0] & 0xff) << 16) + ((arr[1] & 0xff) << 8) + (arr[2] & 0xff));
+}
+
+unsigned int	get_sprite_color(t_image *tex, int x, int y, t_rules *rules)
+{
+	if ((x > 0 || x < rules->mlx.win_width
+			|| y > 0 || y < rules->mlx.win_height)
+		&& *(unsigned int *)(tex->addr + (4 * (tex->width * y + x))))
+	{
+		return (*(unsigned int *)(tex->addr + (4 * (tex->width * y + x))));
+	}
+	return (0x0);
 }

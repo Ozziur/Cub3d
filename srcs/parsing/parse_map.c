@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 17:48:25 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 19:48:56 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void	init_player_pos(t_rules *rules, int i, int j, char pos)
 {
 	if (pos == 'N')
 		rules->player.dir = M_PI / 2;
-	else if (pos == 'E')
+	else if (pos == 'W')
 		rules->player.dir = M_PI;
 	else if (pos == 'S')
 		rules->player.dir = M_PI * 3 / 2;
-	else if (pos == 'W')
+	else if (pos == 'E')
 		rules->player.dir = 0;
 	rules->inpmap.map[i][j] = '0';
 	rules->player.x = ++j * rules->inpmap.block_width

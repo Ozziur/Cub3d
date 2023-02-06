@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 19:16:03 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 20:33:21 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,7 +179,24 @@ typedef struct s_rules
 	t_mouse		mouse;
 	t_sprite	spr[2];
 	t_sprite	**sort_spr;
+	double		*dist_array;
 }				t_rules;
+
+typedef struct s_draw_coord
+{
+	double			start_x;
+	double			end_x;
+	double			start_y;
+	double			end_y;
+	double			width;
+	double			height;
+	double			bench_x;
+	double			bench_y;
+	unsigned int	color;
+	int				t_x;
+	int				t_y;
+	t_image			*sprite;
+}				t_draw_coord;
 
 /*     UTILS      */
 //	init.c
@@ -211,6 +228,7 @@ double			get_fix(double angle);
 t_image			*choose_texture(t_rules *rules, t_bres_data *d);
 int				choose_x(t_draw_info *info, float ref, t_rules *rules);
 int				choose_y(int var, t_draw_info *info);
+unsigned int	get_sprite_color(t_image *tex, int x, int y, t_rules *rules);
 
 /*		PARSING    */
 //	parse_map.c
