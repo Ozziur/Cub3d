@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 15:44:02 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 18:47:19 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ typedef struct s_keys
 	int	l_pressed; //freccia sinistra
 	int	r_pressed; //freccia destra
 	int	f_pressed;
+	int	space_pressed;
 	int	shift_pressed;
 }				t_keys;
 
@@ -99,13 +100,6 @@ typedef struct s_bres_data
 	double			ray_angle;
 }				t_bres_data;
 
-typedef struct t_exit
-{
-	t_image	exit_xpm[4];
-	bool	open;
-}				s_exit;
-
-
 typedef struct s_inputmap
 {
 	t_image			*north_wall;
@@ -113,7 +107,9 @@ typedef struct s_inputmap
 	t_image			*east_wall;
 	t_image			*west_wall;
 	t_image			*door_image[2];
-//	t_exit			exit;
+	t_image			exit_xpm[4];
+	bool			hat;
+	bool			skull;
 	unsigned char	f_color[3];
 	unsigned char	c_color[3];
 	bool			floor;

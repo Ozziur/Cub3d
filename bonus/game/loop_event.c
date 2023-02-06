@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 14:23:37 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:10:20 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	let_keys_aux(t_rules *rules)
 	}
 	if (rules->keys.f_pressed)
 		ft_doors(rules);
+	if (rules->keys.space_pressed)
+		ft_openexit(rules);
 	rules->player.d_x = cos(rules->player.dir);
 	rules->player.plane_x = -cos(rules->player.plane);
 	rules->player.plane_y = sin(rules->player.plane);

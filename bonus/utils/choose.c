@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 14:26:44 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:52:42 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ static t_image	*ret_tex(int x, int y, t_rules *rules, t_image *wall)
 {
 	if (rules->inpmap.map[y][x] == 'D')
 		return (rules->inpmap.door_image[0]);
-	else if (rules->inpmap.map[y][x] == 'd')
+	else if (rules->inpmap.map[y][x] == 'd' || rules->inpmap.map[y][x] == '*')
 		return (rules->inpmap.door_image[1]);
+	else if (rules->inpmap.map[y][x] == '*')
+		return (rules->inpmap.door_image[1]);	
 	else
 		return (wall);
 }
