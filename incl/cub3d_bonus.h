@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/04 17:23:44 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 14:17:52 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,6 +168,7 @@ typedef struct s_rules
 	t_player	player;
 	int			n_frames;
 	t_mouse		mouse;
+	int			door_time;
 }				t_rules;
 
 /*     UTILS      */
@@ -219,13 +220,13 @@ int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int di
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
 					t_image *view, t_image *minimap);
-//bres_algo.c
+//			bres_algo.c
 void			bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
-//move.c
+//			move.c
 void			moves(t_rules *rules, char d);
-//render.c
+//			render.c
 void			draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
-// colliding.c
+//			colliding.c
 int				colliding(t_rules *rules, float rcos, float rsin, int plus);
 //			debug
 void			debug(char *s);
@@ -234,6 +235,8 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+//			doors.c
+void			ft_doors(t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
 

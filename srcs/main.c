@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/02 16:39:16 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 12:05:36 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	main(int ac, char **av)
 	ultimate_check(&rules);
 	debug("mannaggina\n");
 	events(&rules);
+
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
 	mlx_loop(rules.mlx.mlx);
 }

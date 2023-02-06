@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/04 17:43:53 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 14:19:37 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	let_keys_aux(t_rules *rules)
 		rules->player.dir = decrement_angle(rules->player.dir, 40);
 		rules->player.plane = decrement_angle(rules->player.plane, 40);
 	}
+	if (rules->keys.f_pressed)
+		ft_doors(rules);
 	rules->player.d_x = cos(rules->player.dir);
 	rules->player.plane_x = -cos(rules->player.plane);
 	rules->player.plane_y = sin(rules->player.plane);
@@ -57,6 +59,7 @@ int	loop_events(t_rules *rules)
 		let_keys_work(rules);
 		game(rules);
 		rules->n_frames++;
+		rules->door_time++;
 	}
 	else
 		rules->n_frames++;

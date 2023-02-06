@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/03 18:44:56 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 11:41:09 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static int	press(int key, t_rules *rules)
 	}
 	if (key == 13)
 		rules->keys.w_pressed = 1;
+	if (key == 3)
+		rules->keys.f_pressed = 1;
 	if (key == 0)
 		rules->keys.a_pressed = 1;
 	if (key == 1)
@@ -40,6 +42,8 @@ static int	release(int key, t_rules *rules)
 {
 	if (key == 13)
 		rules->keys.w_pressed = 0;
+	if (key == 3)
+		rules->keys.f_pressed = 0;
 	if (key == 0)
 		rules->keys.a_pressed = 0;
 	if (key == 1)
