@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 18:48:31 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:53:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 static int	is_open(t_rules *rules, int x, int y)
 {
-	if (rules->inpmap.map[x][y] == '*' && rules->skull && rules->hat)
-		return 
+	if (rules->inpmap.map[x][y] == '*' && rules->flag_hat && rules->flag_skull)
+		return (1);
+	return (0);
 }
 
 void	ft_open_exit(t_rules *rules)

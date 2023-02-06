@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 18:50:54 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:53:26 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,8 +108,6 @@ typedef struct s_inputmap
 	t_image			*west_wall;
 	t_image			*door_image[2];
 	t_image			exit_xpm[4];
-	bool			hat;
-	bool			skull;
 	unsigned char	f_color[3];
 	unsigned char	c_color[3];
 	bool			floor;
@@ -174,6 +172,8 @@ typedef struct s_rules
 	t_inputmap	inpmap;
 	t_image		*skull[2];
 	t_image		*mage[2];
+	bool		flag_hat;
+	bool		flag_skull;
 	t_player	player;
 	int			n_frames;
 	t_mouse		mouse;
