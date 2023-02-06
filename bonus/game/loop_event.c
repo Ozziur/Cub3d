@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 14:19:37 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:23:37 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,10 @@ int	loop_events(t_rules *rules)
 		let_keys_work(rules);
 		game(rules);
 		rules->n_frames++;
-		rules->door_time++;
+		if (rules->door_time < 10000)
+			rules->door_time++;
+		else
+			rules->door_time = 0;
 	}
 	else
 		rules->n_frames++;

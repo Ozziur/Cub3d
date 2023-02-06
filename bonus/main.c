@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 14:01:57 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:27:23 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	main(int ac, char **av)
 	init_rules(&rules);
 	ft_parsing(av[1], &rules);
 	ultimate_check(&rules);
-	printf("Culo \n");
 	// caricare animazioni delle sprite
 	events(&rules);
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
