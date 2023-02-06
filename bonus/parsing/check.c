@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 15:40:20 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:52:35 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	valid_zero(char c)
 {
 	if (c != 'N' && c != 'E' && c != 'S' && c != 'W'
-		&& c != '1' && c != '0' && c != 'D')
+		&& c != '1' && c != '0' && c != 'D' && c != 'H' && c != 'T')
 		return (0);
 	return (1);
 }
@@ -81,17 +81,23 @@ void	ultimate_check(t_rules *rules)
 	while (i < rules->inpmap.map_height_len[1] - 1)
 	{
 		if (ft_strchr(rules->inpmap.map[0], '0')
-			|| ft_strchr(rules->inpmap.map[0], 'D'))
+			|| ft_strchr(rules->inpmap.map[0], 'D')
+			|| ft_strchr(rules->inpmap.map[0], 'H')
+			|| ft_strchr(rules->inpmap.map[0], 'T'))
 			ft_exit("utlimate_check: map not valid");
 		j = 0;
 		while (j < rules->inpmap.map_height_len[0])
 		{
 			if (j == rules->inpmap.map_height_len[0])
 				if (ft_strchr(rules->inpmap.map[i], '0')
-					|| ft_strchr(rules->inpmap.map[i], 'D'))
+					|| ft_strchr(rules->inpmap.map[i], 'D')
+					|| ft_strchr(rules->inpmap.map[i], 'T')
+					|| ft_strchr(rules->inpmap.map[i], 'H'))
 					ft_exit("utlimate_check1: map not valid");
 			if (rules->inpmap.map[i][j] == '0'
-				|| rules->inpmap.map[i][j] == 'D')
+				|| rules->inpmap.map[i][j] == 'D'
+				|| rules->inpmap.map[i][j] == 'T'
+				|| rules->inpmap.map[i][j] == 'H')
 				if (!check_zero(rules, i, j) || !check_player(rules, i, j))
 					ft_exit("utlimate_check2: map not valid");
 			j++;
@@ -99,7 +105,9 @@ void	ultimate_check(t_rules *rules)
 		i++;
 	}
 	if (ft_strchr(rules->inpmap.map[rules->inpmap.map_height_len[1] - 1], '0')
-		|| ft_strchr(rules->inpmap.map[rules->inpmap.map_height_len[1] - 1], 'D'))
+		|| ft_strchr(rules->inpmap.map[rules->inpmap.map_height_len[1] - 1], 'D')
+		|| ft_strchr(rules->inpmap.map[rules->inpmap.map_height_len[1] - 1], 'T')
+		|| ft_strchr(rules->inpmap.map[rules->inpmap.map_height_len[1] - 1], 'H'))
 		ft_exit("utlimate_check3: map not valid");
 	find_player(rules);
 }
