@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 15:52:35 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 16:48:08 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,34 @@ int	one_player(t_rules *rules)
 	return (1);
 }
 
+int	one_coll(t_rules *rules)
+{
+	int	i;
+	int	j;
+	int	flagH;
+	int	flagT;
+
+	i = 0;
+	flagH = 0;
+	flagT = 0;
+	while (i < rules->inpmap.map_height_len[1])
+	{
+		j = 0;
+		while (j < rules->inpmap.map_height_len[0])
+		{
+			if (rules->inpmap.map[i][j] == 'H')
+				flagH++;
+			else if (rules->inpmap.map[i][j] == 'T')
+				flagT++;
+			j++;
+		}
+	i++;
+	}
+	if (flagT != 1 || flagH != 1)
+		return (0);
+	return (1);
+}
+
 int	check_player(t_rules *rules, int i, int j)
 {
 	if (((rules->inpmap.map[i + 1][j] != '0'
@@ -67,7 +95,7 @@ int	check_player(t_rules *rules, int i, int j)
 		&& rules->inpmap.map[i][j + 1] != '1')
 	&& (rules->inpmap.map[i][j - 1] != '0'
 		&& rules->inpmap.map[i][j - 1] != '1'))
-	|| !one_player(rules))
+	|| !one_player(rules) || !one_coll(rules))
 		return (0);
 	return (1);
 }
