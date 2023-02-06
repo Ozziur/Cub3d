@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:19:06 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 14:19:18 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 19:15:49 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,11 @@ void	change_door(int x, int y, t_rules *rules)
 {
 	if (rules->inpmap.map[y][x] == 'D')
 	{
-		rules->door_time = 0;
 		rules->inpmap.map[y][x] = 'd';
 		init_door(1, rules);
 	}
 	else if (rules->inpmap.map[y][x] == 'd')
 	{
-		rules->door_time = 0;
 		rules->inpmap.map[y][x] = 'D';
 		init_door(0, rules);
 	}
@@ -52,6 +50,9 @@ void	ft_doors(t_rules *rules)
 	if (rules->player.dir > M_PI - M_PI / 4
 		&& rules->player.dir < M_PI + M_PI / 4)
 		x--;
-	if (is_door(x, y, rules) && rules->door_time > 10)
+	if (is_door(x, y, rules))
+	{
 		change_door(x, y, rules);
+		rules->keys.f_pressed = 0;
+	}
 }
