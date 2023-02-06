@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 14:17:52 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 15:37:24 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,6 @@ typedef struct s_inputmap
 	char			**map;
 	int				map_height_len[2];
 	int				line_offset;
-
 	float			block_width; //parametro float per rayc
 	float			mini_block_width; //parametro float per rayc della minimappa
 }				t_inputmap;
@@ -165,6 +164,8 @@ typedef struct s_rules
 	t_keys		keys;
 	t_mlx		mlx;
 	t_inputmap	inpmap;
+	t_image		*skull[2];
+	t_image		*mage[2];
 	t_player	player;
 	int			n_frames;
 	t_mouse		mouse;
@@ -188,6 +189,8 @@ double			final_length_double(double start_x,
 					double start_y, double rxy[2]);
 //door_utils
 t_image			*init_door(int index, t_rules *rules);
+//sprite
+void			init_sprite(t_rules *rules);
 //easy_math.c
 int				get_abs(int n);
 double			get_abs_double(double n);
