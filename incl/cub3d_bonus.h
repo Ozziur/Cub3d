@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 18:47:19 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:50:54 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,18 @@ typedef struct s_mouse
 	int	moved;
 }				t_mouse;
 
+typedef struct s_sprite
+{
+	double	x;
+	double	y;
+	int		mini_x;
+	int		mini_y;
+	double	dist;
+	int		state;
+	int		type;
+	int		counter;
+}				t_sprite;
+
 typedef struct s_rules
 {
 	t_keys		keys;
@@ -166,6 +178,8 @@ typedef struct s_rules
 	int			n_frames;
 	t_mouse		mouse;
 	int			door_time;
+	t_sprite	spr[2];
+	t_sprite	**sort_spr;
 }				t_rules;
 
 /*     UTILS      */
@@ -187,6 +201,7 @@ double			final_length_double(double start_x,
 t_image			*init_door(int index, t_rules *rules);
 //sprite
 void			init_sprite(t_rules *rules);
+void			sort_sprites(t_rules *rules);
 //easy_math.c
 int				get_abs(int n);
 double			get_abs_double(double n);
