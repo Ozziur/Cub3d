@@ -23,6 +23,8 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.line_offset = 0;
 	rules->inpmap.block_width = 64;
 	rules->inpmap.mini_block_width = rules->inpmap.block_width / 4;
+	rules->flag_skull = 0;
+	rules->flag_hat = 0;
 }
 
 static void	init_keys(t_rules *rules)
