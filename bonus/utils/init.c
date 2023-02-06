@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 15:49:44 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/06 18:59:16 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.line_offset = 0;
 	rules->inpmap.block_width = 64;
 	rules->inpmap.mini_block_width = rules->inpmap.block_width / 4;
-	rules->flag_skull = 0;
-	rules->flag_hat = 0;
 }
 
 static void	init_keys(t_rules *rules)
@@ -48,6 +46,9 @@ void	init_rules(t_rules *rules)
 	init_keys(rules);
 	rules->inpmap.door_image[0] = init_door(0, rules);
 	rules->inpmap.door_image[1] = init_door(1, rules);
+	rules->flag_skull = 0;
+	rules->flag_hat = 0;
+
 }
 
 void	init_mlx(t_mlx *mlx)

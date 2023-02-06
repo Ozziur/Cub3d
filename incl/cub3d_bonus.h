@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 18:53:26 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/06 19:16:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,6 @@ typedef struct s_rules
 	t_player	player;
 	int			n_frames;
 	t_mouse		mouse;
-	int			door_time;
 	t_sprite	spr[2];
 	t_sprite	**sort_spr;
 }				t_rules;
