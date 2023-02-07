@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 20:47:57 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:12:02 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	save_sprites(t_rules *rules)
 	}
 }
 
-void init_sprite(t_rules *rules)
+void	init_sprite(t_rules *rules)
 {
 		//da qui
 	clear_sprites(rules, rules->spr);

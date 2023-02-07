@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 20:33:21 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:23:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct s_keys
 	int	a_pressed;
 	int	s_pressed;
 	int	d_pressed;
-	int	l_pressed; //freccia sinistra
-	int	r_pressed; //freccia destra
+	int	l_pressed;
+	int	r_pressed;
 	int	f_pressed;
 	int	space_pressed;
 	int	shift_pressed;
@@ -174,6 +174,7 @@ typedef struct s_rules
 	t_image		*mage[2];
 	bool		flag_hat;
 	bool		flag_skull;
+	bool		win_flag;
 	t_player	player;
 	int			n_frames;
 	t_mouse		mouse;
@@ -246,17 +247,21 @@ int				loop_events(t_rules *rules);
 void			game(t_rules *rules);
 //			raycast.c
 void			raycast(t_rules *rules, t_image *view, t_image *minimap);
-int				virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
-int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
+int				virtual_vertical_colliding(int ray_x, int ray_y,
+					t_rules *rules, int dir);
+int				virtual_horizontal_colliding(int ray_x, int ray_y,
+					t_rules *rules, int dir);
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
 					t_image *view, t_image *minimap);
 //			bres_algo.c
-void			bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
+void			bresenham(t_bres_data *d, t_image *min,
+					t_image *view, t_rules *rules);
 //			move.c
 void			moves(t_rules *rules, char d);
 //			render.c
-void			draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
+void			draw_view(t_bres_data *d, t_image *view,
+					t_rules *rules, t_image *tex);
 //			colliding.c
 int				colliding(t_rules *rules, float rcos, float rsin, int plus);
 //			debug
@@ -266,11 +271,20 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+// 			check_utils
+int				is_map(char *line);
+int				rules_status(t_rules *rules);
+void			save_len(int fd, t_rules *rules);
+int				check_zero(t_rules *rules, int i, int j);
 //			doors.c
 void			ft_doors(t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
 // 			strings.c
 char			*ft_strchr(const char *s, int c);
+//			win.c
+void			collect(t_rules *rules);
+void			ft_openexit(t_rules *rules);
+int				pick(t_rules *rules, int x, int y);
 
 #endif

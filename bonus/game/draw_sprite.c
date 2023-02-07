@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 20:41:53 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 13:09:36 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,13 +77,14 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	int				var[2];
 
 	var[0] = 0;
-	var[1] = s_x;	
+	var[1] = s_x;
+	info->sprite->height = 6;
 	info = malloc(sizeof(t_draw_coord));
 	if (!info)
 		ft_exit("Malloc error");
 	info->sprite = rules->skull[0];
-	info->height = (rules->mlx.win_height / trans_y)
-		* (info->sprite->height / 10);
+	info->height = ((rules->mlx.win_height / trans_y)
+			* (info->sprite->height / 10));
 	if (rules->sort_spr[i]->type == 0)
 		var[0] = info->height / 3;
 	info->start_y = rules->mlx.win_height / 2 - info->height / 2;

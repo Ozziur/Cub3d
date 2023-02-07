@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:22:50 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/06 11:39:08 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 13:37:43 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static void	move_up(t_rules *rules, float rcos, float rsin)
 		rules->player.x += rules->player.d_x * rules->player.speed;
 	if (!res2)
 		rules->player.y += rules->player.d_y * rules->player.speed;
+	collect(rules);
 }
 
 static void	move_down(t_rules *rules, float rcos, float rsin)
@@ -36,6 +37,7 @@ static void	move_down(t_rules *rules, float rcos, float rsin)
 		rules->player.x -= rules->player.d_x * rules->player.speed;
 	if (!res2)
 		rules->player.y -= rules->player.d_y * rules->player.speed;
+	collect(rules);
 }
 
 static void	move_left(t_rules *rules, float rcos, float rsin)
@@ -49,6 +51,7 @@ static void	move_left(t_rules *rules, float rcos, float rsin)
 		rules->player.x += rules->player.d_y * rules->player.speed;
 	if (!res2)
 		rules->player.y -= rules->player.d_x * rules->player.speed;
+	collect(rules);
 }
 
 static void	move_right(t_rules *rules, float rcos, float rsin)
@@ -62,6 +65,7 @@ static void	move_right(t_rules *rules, float rcos, float rsin)
 		rules->player.x -= rules->player.d_y * rules->player.speed;
 	if (!res2)
 		rules->player.y += rules->player.d_x * rules->player.speed;
+	collect(rules);
 }
 
 /*calcolati i valori del coseno e del seno dell'angolo di visuale del 

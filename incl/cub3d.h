@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/27 14:38:42 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 14:19:52 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,27 +23,27 @@
 # include <stdbool.h>
 # include <limits.h>
 
-#define RESET       "\033[0m"
-#define BLACK       "\033[30m"
-#define RED         "\033[31m"
-#define GREEN       "\033[32m"
-#define YELLOW      "\033[33m"
-#define BLUE        "\033[34m"
-#define MAGENTA     "\033[35m"
-#define CYAN        "\033[36m"
-#define WHITE       "\033[37m"
-#define BOLDBLACK   "\033[1m\033[30m"
-#define BOLDRED     "\033[1m\033[31m"
-#define BOLDGREEN   "\033[1m\033[32m"
-#define BOLDYELLOW  "\033[1m\033[33m"
-#define BOLDBLUE    "\033[1m\033[34m"
-#define BOLDMAGENTA "\033[1m\033[35m"
-#define BOLDCYAN    "\033[1m\033[36m"
-#define BOLDWHITE   "\033[1m\033[37m"
+# define RESET       "\033[0m"
+# define BLACK       "\033[30m"
+# define RED         "\033[31m"
+# define GREEN       "\033[32m"
+# define YELLOW      "\033[33m"
+# define BLUE        "\033[34m"
+# define MAGENTA     "\033[35m"
+# define CYAN        "\033[36m"
+# define WHITE       "\033[37m"
+# define BOLDBLACK   "\033[1m\033[30m"
+# define BOLDRED     "\033[1m\033[31m"
+# define BOLDGREEN   "\033[1m\033[32m"
+# define BOLDYELLOW  "\033[1m\033[33m"
+# define BOLDBLUE    "\033[1m\033[34m"
+# define BOLDMAGENTA "\033[1m\033[35m"
+# define BOLDCYAN    "\033[1m\033[36m"
+# define BOLDWHITE   "\033[1m\033[37m"
 
 # define _USE_MATH_DEFINES
 
-# define ANGLE_UNIT 0.00174 //capire 0.00174
+# define ANGLE_UNIT 0.00174
 # define SPEED 5
 
 typedef struct s_ray
@@ -60,8 +60,8 @@ typedef struct s_keys
 	int	a_pressed;
 	int	s_pressed;
 	int	d_pressed;
-	int	l_pressed; //freccia sinistra
-	int	r_pressed; //freccia destra
+	int	l_pressed;
+	int	r_pressed;
 	int	shift_pressed;
 }				t_keys;
 
@@ -79,9 +79,9 @@ typedef struct s_image
 {
 	void	*img;
 	char	*addr;
-	int		bpp; //mlx_get_data_addr
-	int		line_length; //mlx_get_data_addr
-	int		endian; //mlx_get_data_addr
+	int		bpp;
+	int		line_length;
+	int		endian;
 	int		width;
 	int		height;
 }				t_image;
@@ -109,8 +109,8 @@ typedef struct s_inputmap
 	int				map_height_len[2];
 	int				line_offset;
 
-	float			block_width; //parametro float per rayc
-	float			mini_block_width; //parametro float per rayc della minimappa
+	float			block_width;
+	float			mini_block_width;
 }				t_inputmap;
 
 typedef struct s_mlx
@@ -146,7 +146,7 @@ typedef struct s_rules
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_player	player;
-	int				n_frames;
+	int			n_frames;
 }				t_rules;
 
 /*     UTILS      */
@@ -189,17 +189,21 @@ int				loop_events(t_rules *rules);
 void			game(t_rules *rules);
 //			raycast.c
 void			raycast(t_rules *rules, t_image *view, t_image *minimap);
-int				virtual_vertical_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
-int				virtual_horizontal_colliding(int ray_x, int ray_y, t_rules *rules, int dir);
+int				virtual_vertical_colliding(int ray_x, int ray_y,
+					t_rules *rules, int dir);
+int				virtual_horizontal_colliding(int ray_x, int ray_y,
+					t_rules *rules, int dir);
 //			raycastcalc
 void			raycast_calc(t_bres_data *data, t_rules *rules,
 					t_image *view, t_image *minimap);
 //bres_algo.c
-void			bresenham(t_bres_data *d, t_image *min, t_image *view, t_rules *rules);
+void			bresenham(t_bres_data *d, t_image *min,
+					t_image *view, t_rules *rules);
 //move.c
 void			moves(t_rules *rules, char d);
 //render.c
-void			draw_view(t_bres_data *d, t_image *view, t_rules *rules, t_image *tex);
+void			draw_view(t_bres_data *d, t_image *view,
+					t_rules *rules, t_image *tex);
 // colliding.c
 int				colliding(t_rules *rules, float rcos, float rsin, int plus);
 //			debug
@@ -209,6 +213,10 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+//			check_utils.c
+int				is_map(char *line);
+int				rules_status(t_rules *rules);
+void			save_len(int fd, t_rules *rules);
 //			events.c
 void			events(t_rules *rules);
 
