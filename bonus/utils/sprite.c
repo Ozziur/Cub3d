@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 14:46:36 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:03:41 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	init_xpm_img(t_rules *rules, t_image **img, char *path)
 {
 	(*img) = malloc(sizeof(t_image));
 	if (!(*img))
-		die("Malloc error");
+		ft_exit("Malloc error");
 	(*img)->img = mlx_xpm_file_to_image(rules->mlx.mlx, path,
 			&(*img)->width, &(*img)->height);
 	if (!(*img)->img)
-		die("Error initializing image");
+		ft_exit("Error initializing image");
 	(*img)->addr = mlx_get_data_addr((*img)->img, &(*img)->bpp,
 			&(*img)->line_length, &(*img)->endian);
 }
@@ -80,7 +80,14 @@ void	save_sprites(t_rules *rules)
 
 void	init_sprite(t_rules *rules)
 {
-		//da qui
+	rules->animations = malloc(sizeof(t_image *) * 5);
+	if (!rules->animations)
+		ft_exit("Malloc error");
+	init_xpm_img(rules, &rules->animations[0], "textures/64/coll/skull-0.xpm");
+	init_xpm_img(rules, &rules->animations[1], "textures/64/coll/skull-1.xpm");
+	init_xpm_img(rules, &rules->animations[2], "textures/64/coll/mage-0.xpm");
+	init_xpm_img(rules, &rules->animations[3], "textures/64/coll/mage-1.xpm");
+	rules->animations[5] = NULL;
 	clear_sprites(rules, rules->spr);
 	save_sprites(rules);
 	sort_sprites(rules);
