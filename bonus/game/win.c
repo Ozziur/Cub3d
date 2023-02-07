@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 17:15:32 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:42:39 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,13 @@ void	collect(t_rules *rules)
 	y = (int)(rules->player.y / rules->inpmap.block_width);
 	if (pick(rules, x, y) == 1)
 	{
+		reload_sprites(rules);
 		rules->flag_hat = 1;
 		rules->inpmap.map[y][x] = '0';
 	}
 	else if (pick(rules, x, y) == 2)
 	{
+		reload_sprites(rules);
 		rules->flag_skull = 1;
 		rules->inpmap.map[y][x] = '0';
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 15:43:29 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:31:15 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	init_rules(t_rules *rules)
 	rules->inpmap.door_image[1] = init_door(1, rules);
 	rules->flag_skull = 0;
 	rules->flag_hat = 0;
+	rules->win_flag = 0;
 	rules->dist_array = malloc(sizeof(double) * (rules->mlx.win_width + 1));
 	if (!rules->dist_array)
 		ft_exit("Malloc error");

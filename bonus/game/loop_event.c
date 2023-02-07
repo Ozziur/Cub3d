@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 18:04:05 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:24:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	let_keys_aux(t_rules *rules)
 		rules->player.d_y = -sin(rules->player.dir);
 	rules->player.plane_x = -cos(rules->player.plane);
 	rules->player.plane_y = sin(rules->player.plane);
-	reload_sprites(rules);
+	
 }
 
 void	let_keys_work(t_rules *rules)

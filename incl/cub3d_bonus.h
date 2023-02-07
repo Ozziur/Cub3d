@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 17:57:36 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:38:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,6 +177,7 @@ typedef struct s_rules
 	bool		win_flag;
 	t_player	player;
 	int			n_frames;
+	int			n_sprites;
 	t_mouse		mouse;
 	t_sprite	spr[2];
 	t_sprite	**sort_spr;

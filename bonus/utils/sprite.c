@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 17:59:46 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:44:13 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ int	save_sprites_supp(t_rules *rules, int i, int ind, int j)
 		rules->spr[ind].mini_y = i;
 		rules->spr[ind].counter = 1;
 		if (rules->inpmap.map[i][j] == 'T')
-			rules->spr[ind++].type = 1;
-		else
 			rules->spr[ind++].type = 0;
+		else
+			rules->spr[ind++].type = 2;
 	}
 	return (ind);
 }
@@ -78,6 +78,27 @@ void	save_sprites(t_rules *rules)
 	}
 }
 
+int	count_sprites(t_inputmap map)
+{
+	int	ret;
+	int	i;
+	int	j;
+
+	ret = 0;
+	j = -1;
+	while (++j < map.map_height_len[0])
+	{
+		i = 0;
+		while (map.map[i] && map.map[i][j])
+		{
+			if (map.map[i][j] == 'T' || map.map[i][j] == 'H')
+				ret++;
+			i++;
+		}
+	}
+	return (ret);
+}
+
 void	init_sprite(t_rules *rules)
 {
 	rules->animations = malloc(sizeof(t_image *) * 6);
@@ -89,6 +110,7 @@ void	init_sprite(t_rules *rules)
 	init_xpm_img(rules, &rules->animations[3], "textures/64/coll/mage-1.xpm");
 	init_xpm_img(rules, &rules->animations[4], "textures/mruizzo_Pirate_and_Mage_Spending_Time_Together_in_the_Tower_In__191e48ae-1889-4d5a-9136-8cbb1ef0a863.xpm");
 	rules->animations[5] = NULL;
+	rules->n_sprites = count_sprites(rules->inpmap);
 	clear_sprites(rules, rules->spr);
 	save_sprites(rules);
 	sort_sprites(rules);
@@ -133,7 +155,7 @@ void	update_sprites(t_rules *rules)
 
 void	reload_sprites(t_rules *rules)
 {
-	update_sprites(rules);
+	// update_sprites(rules);
 	clear_sorted_sprites(rules, rules->sort_spr);
 	free(rules->sort_spr);
 	sort_sprites(rules);

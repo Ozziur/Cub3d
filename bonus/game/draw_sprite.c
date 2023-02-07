@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 18:01:08 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:39:29 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,20 +61,20 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	int				var[2];
 
 	var[0] = 0;
-		var[1] = s_x;	
-		info = malloc(sizeof(t_draw_coord));
-		if (!info)
-			ft_exit("Malloc error");
-		info->sprite = rules->animations[rules->sort_spr[i]->type];
-		info->height = (rules->mlx.win_height / trans_y)
-			* (info->sprite->height);
-		if (rules->sort_spr[i]->type == 0)
-			var[0] = info->height / 3;
-		info->start_y = rules->mlx.win_height / 2 - info->height / 2;
-		if (var[0])
-			info->start_y += var[0];
-		define_sprite_info_deep(rules, info, var, trans_y);
-		return (info);
+	var[1] = s_x;	
+	info = malloc(sizeof(t_draw_coord));
+	if (!info)
+		ft_exit("Malloc error");
+	info->sprite = rules->animations[rules->sort_spr[i]->type];
+	info->height = (rules->mlx.win_height / trans_y)
+		* (info->sprite->height);
+	if (rules->sort_spr[i]->type == 0)
+		var[0] = info->height / 3;
+	info->start_y = rules->mlx.win_height / 2 - info->height / 2;
+	if (var[0])
+		info->start_y += var[0];
+	define_sprite_info_deep(rules, info, var, trans_y);
+	return (info);
 }
 
 void	draw_sprites_2(t_rules *rules, int num[2], double var[5])
@@ -100,7 +100,7 @@ void	draw_sprites(t_rules *rules, t_image *view)
 	int				num[2];
 
 	num[0] = 0;
-	while (num[0] < 2)
+	while (num[0] < rules->n_sprites)
 	{
 		if (rules->sort_spr[num[0]]->state && rules->sort_spr[num[0]]->dist // seconda condizione controlla se sei troppo vicino
 			> rules->inpmap.block_width / 2)
