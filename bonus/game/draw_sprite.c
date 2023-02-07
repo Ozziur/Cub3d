@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 13:09:36 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:51:15 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,20 +78,16 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 
 	var[0] = 0;
 	var[1] = s_x;
-	info->sprite->height = 6;
-	info = malloc(sizeof(t_draw_coord));
-	if (!info)
-		ft_exit("Malloc error");
-	info->sprite = rules->skull[0];
-	info->height = ((rules->mlx.win_height / trans_y)
-			* (info->sprite->height / 10));
-	if (rules->sort_spr[i]->type == 0)
-		var[0] = info->height / 3;
-	info->start_y = rules->mlx.win_height / 2 - info->height / 2;
-	if (var[0])
-		info->start_y += var[0];
-	define_sprite_info_deep(rules, info, var, trans_y);
-	return (info);
+	info->sprite = rules->animations[0];
+		info->height = (rules->mlx.win_height / trans_y)
+			* (info->sprite->height / 10);
+		if (rules->sort_spr[i]->type == 0)
+			var[0] = info->height / 3;
+		info->start_y = rules->mlx.win_height / 2 - info->height / 2;
+		if (var[0])
+			info->start_y += var[0];
+		define_sprite_info_deep(rules, info, var, trans_y);
+		return (info);
 }
 
 void	draw_sprites(t_rules *rules, t_image *view)

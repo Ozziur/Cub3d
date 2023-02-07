@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 14:43:35 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:06:22 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	let_keys_aux(t_rules *rules)
 {
 	if (rules->keys.l_pressed)
-	{
+	{										printf("dio cane");
 		rules->player.dir = increment_angle(rules->player.dir, 40);
 		rules->player.plane = increment_angle(rules->player.plane, 40);
 	}
@@ -61,8 +61,8 @@ int	loop_events(t_rules *rules)
 		let_keys_work(rules);
 		if (rules->win_flag == 0)
 			game(rules);
-		else
-			ft_win();
+		// else
+		// 	ft_win();
 		rules->n_frames++;
 	}
 	else
