@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 14:51:15 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:46:14 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	define_sprite_info_deep(t_rules *rules, t_draw_coord *info,
 	if (info->end_y > rules->mlx.win_height)
 		info->end_y = rules->mlx.win_height;
 	info->width = get_abs_double((rules->mlx.win_height / trans_y))
-		* (info->sprite->width / 10);
+		* (info->sprite->width);
 	info->start_x = -info->width / 2 + var[1];
 	info->bench_x = info->start_x;
 	if (info->start_x < 0)
@@ -78,16 +78,19 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 
 	var[0] = 0;
 	var[1] = s_x;
-	info->sprite = rules->animations[0];
-		info->height = (rules->mlx.win_height / trans_y)
-			* (info->sprite->height / 10);
-		if (rules->sort_spr[i]->type == 0)
-			var[0] = info->height / 3;
-		info->start_y = rules->mlx.win_height / 2 - info->height / 2;
-		if (var[0])
-			info->start_y += var[0];
-		define_sprite_info_deep(rules, info, var, trans_y);
-		return (info);
+	info = malloc(sizeof(t_draw_coord));
+	if (!info)
+			ft_exit("Malloc error");
+	info->sprite = rules->animations[rules->sort_spr[i]->type];
+	info->height = (rules->mlx.win_height / trans_y)
+		* (info->sprite->height);
+	if (rules->sort_spr[i]->type == 0)
+		var[0] = info->height / 3;
+	info->start_y = rules->mlx.win_height / 2 - info->height / 2;
+	if (var[0])
+		info->start_y += var[0];
+	define_sprite_info_deep(rules, info, var, trans_y);
+	return (info);
 }
 
 void	draw_sprites(t_rules *rules, t_image *view)

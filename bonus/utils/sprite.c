@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 16:12:35 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:20:11 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ int	save_sprites_supp(t_rules *rules, int i, int ind, int j)
 		rules->spr[ind].mini_y = i;
 		rules->spr[ind].counter = 1;
 		if (rules->inpmap.map[i][j] == 'T')
-			rules->spr[ind++].type = 'T';
+			rules->spr[ind++].type = 1;
 		else
-			rules->spr[ind++].type = 'S';
+			rules->spr[ind++].type = 0;
 	}
 	return (ind);
 }

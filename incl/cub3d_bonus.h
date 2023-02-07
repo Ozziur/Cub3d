@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 15:55:51 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:18:53 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,6 +257,8 @@ void			raycast_calc(t_bres_data *data, t_rules *rules,
 //			bres_algo.c
 void			bresenham(t_bres_data *d, t_image *min,
 					t_image *view, t_rules *rules);
+//sprite
+void			draw_sprites(t_rules *rules, t_image *view);
 //			move.c
 void			moves(t_rules *rules, char d);
 //			render.c
