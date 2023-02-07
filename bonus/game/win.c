@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 15:27:23 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:39:09 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_win(t_rules *rules)
 {
 	debug ("ft_win\n");
-	init_xpm_img(rules, rules->win_screen, "bonus/textures/exit_win.xpm");
+	init_xpm_img(rules, &(rules->win_screen), "bonus/textures/exit_win.xpm");
 	debug ("ft_win1\n");
 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, rules->win_screen, rules->mlx.win_width, rules->mlx.win_height);
 	debug ("ft_win2\n");
