@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 15:14:46 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:30:00 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,6 +171,7 @@ typedef struct s_rules
 	t_mlx		mlx;
 	t_inputmap	inpmap;
 	t_image		**animations;
+	t_image		*win_screen;
 	bool		flag_hat;
 	bool		flag_skull;
 	bool		win_flag;
