@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 15:00:40 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/04 17:40:44 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 17:03:20 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ static void	move_mouse(int x, int y, t_rules *rules)
 
 int	mouse(int x, int y, t_rules *rules)
 {
+	if (x < 0 || y < 0 || x > rules->mlx.win_width || y > rules->mlx.win_height)
+		return (0);
 	if (!rules->mouse.moved)
 	{
 		rules->mouse.moved = 1;

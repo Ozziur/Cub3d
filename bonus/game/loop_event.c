@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 15:29:55 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 17:06:25 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void	let_keys_aux(t_rules *rules)
 	if (rules->keys.space_pressed)
 		ft_openexit(rules);
 	rules->player.d_x = cos(rules->player.dir);
-	rules->player.plane_x = -cos(rules->player.plane);
-	rules->player.plane_y = sin(rules->player.plane);
 	if (rules->player.dir == (double)M_PI)
 		rules->player.d_y = 0;
 	else
 		rules->player.d_y = -sin(rules->player.dir);
+	rules->player.plane_x = -cos(rules->player.plane);
+	rules->player.plane_y = sin(rules->player.plane);
 }
 
 void	let_keys_work(t_rules *rules)
