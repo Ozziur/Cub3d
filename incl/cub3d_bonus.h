@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 14:23:30 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:10:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -170,8 +170,7 @@ typedef struct s_rules
 	t_keys		keys;
 	t_mlx		mlx;
 	t_inputmap	inpmap;
-	t_image		*skull[2];
-	t_image		*mage[2];
+	t_image		**animations;
 	bool		flag_hat;
 	bool		flag_skull;
 	bool		win_flag;
@@ -283,6 +282,7 @@ void			events(t_rules *rules);
 // 			strings.c
 char			*ft_strchr(const char *s, int c);
 //			win.c
+void			ft_win(t_rules *rules);
 void			collect(t_rules *rules);
 void			ft_openexit(t_rules *rules);
 int				pick(t_rules *rules, int x, int y);

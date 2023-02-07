@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 14:46:13 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:11:34 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ int	loop_events(t_rules *rules)
 		let_keys_work(rules);
 		if (rules->win_flag == 0)
 			game(rules);
-		else
-			ft_win(rules);
+		// else
+		// 	ft_win();
 		rules->n_frames++;
 	}
 	else
