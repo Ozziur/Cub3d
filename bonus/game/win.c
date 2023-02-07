@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 16:18:39 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:13:27 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,8 @@
 
 void	ft_win(t_rules *rules)
 {
-
-	debug ("ft_win\n");
-	rules->win_screen = malloc(sizeof(t_image));
-	if (!rules->win_screen)
-		ft_exit("Malloc error");
-	rules->win_screen->img = mlx_xpm_file_to_image(rules->mlx.mlx, "bonus/textures/exit_win.xpm",
-			&rules->mlx.win_width, &rules->mlx.win_height);
-	//if (!(*img)->img)
-	//init_xpm_img(rules, &rules->win_screen, "bonus/textures/exit_win.xpm");
-	debug ("ft_win1\n");
-	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, rules->win_screen->img, rules->mlx.win_width, rules->mlx.win_height);
-	
-	system("read -n 1 -s -p \"Press any key to continue...\"");
-	debug ("ft_win3\n");
+	while ()
+		mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, rules->animations[4]->img, 0, 0);
 	//ft_exit("GGWP\n");
 }
 

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 16:20:11 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:10:29 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,14 @@ void	save_sprites(t_rules *rules)
 
 void	init_sprite(t_rules *rules)
 {
-	rules->animations = malloc(sizeof(t_image *) * 5);
+	rules->animations = malloc(sizeof(t_image *) * 6);
 	if (!rules->animations)
 		ft_exit("Malloc error");
 	init_xpm_img(rules, &rules->animations[0], "textures/64/coll/skull-0.xpm");
 	init_xpm_img(rules, &rules->animations[1], "textures/64/coll/skull-1.xpm");
 	init_xpm_img(rules, &rules->animations[2], "textures/64/coll/mage-0.xpm");
 	init_xpm_img(rules, &rules->animations[3], "textures/64/coll/mage-1.xpm");
+	init_xpm_img(rules, &rules->animations[4], "textures/mruizzo_Pirate_and_Mage_Spending_Time_Together_in_the_Tower_In__191e48ae-1889-4d5a-9136-8cbb1ef0a863.xpm");
 	rules->animations[5] = NULL;
 	clear_sprites(rules, rules->spr);
 	save_sprites(rules);
