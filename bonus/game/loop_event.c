@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 15:06:22 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:08:29 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	let_keys_aux(t_rules *rules)
 {
 	if (rules->keys.l_pressed)
-	{										printf("dio cane");
+	{
 		rules->player.dir = increment_angle(rules->player.dir, 40);
 		rules->player.plane = increment_angle(rules->player.plane, 40);
 	}
