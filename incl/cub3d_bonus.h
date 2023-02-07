@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 17:13:59 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 17:15:05 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,6 +218,7 @@ double			final_length_double(double start_x,
 t_image			*init_door(int index, t_rules *rules);
 //sprite
 void			init_sprite(t_rules *rules);
+void			init_xpm_img(t_rules *rules, t_image **img, char *path);
 void			sort_sprites(t_rules *rules);
 void			init_xpm_img(t_rules *rules, t_image **img, char *path);
 //easy_math.c

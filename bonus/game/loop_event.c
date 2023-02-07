@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 17:06:25 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 17:15:12 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int	loop_events(t_rules *rules)
 			game(rules);
 		 else
 		 {
-			debug ("loop_events1\n");
 		 	ft_win(rules);
 						debug ("loop_events2\n");
 		 }
