@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 17:10:29 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 17:59:46 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,50 @@ void	init_sprite(t_rules *rules)
 	rules->animations[5] = NULL;
 	clear_sprites(rules, rules->spr);
 	save_sprites(rules);
+	sort_sprites(rules);
+}
+
+void	clear_sorted_sprites(t_rules *rules, t_sprite **sort_spr)
+{
+	int	i;
+
+	i = -1;
+	while (++i < 2)
+		sort_spr[i] = NULL;
+}
+
+double	get_sprite_dist(t_rules *rules, t_sprite *spr)
+{
+	double	spr_xy[2];
+
+	spr_xy[0] = spr->mini_x * rules->inpmap.block_width
+		+ rules->inpmap.block_width / 2;
+	spr_xy[1] = spr->mini_y * rules->inpmap.block_width
+		+ rules->inpmap.block_width / 2;
+	spr->x = spr_xy[0];
+	spr->y = spr_xy[1];
+	return (final_length_double(rules->player.x, rules->player.y, spr_xy));
+}
+
+void	update_sprites(t_rules *rules)
+{
+	int	i;
+
+	i = -1;
+	while (++i < 2)
+	{
+		rules->spr[i].dist = get_sprite_dist(rules, &rules->spr[i]);
+		if (rules->spr[i].type)
+		{
+			rules->spr[i].counter++;
+		}
+	}
+}
+
+void	reload_sprites(t_rules *rules)
+{
+	update_sprites(rules);
+	clear_sorted_sprites(rules, rules->sort_spr);
+	free(rules->sort_spr);
 	sort_sprites(rules);
 }
