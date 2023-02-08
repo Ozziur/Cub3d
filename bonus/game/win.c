@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 13:40:23 by mruizzo          ###   ########.fr       */
+/*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
+/*   Updated: 2023/02/08 13:41:03 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,4 @@ void	ft_openexit(t_rules *rules)
 		x--;
 	if (is_open(rules, x, y))
 		rules->win_flag = 1;
-	//ft_exit("u win\n");
 }
