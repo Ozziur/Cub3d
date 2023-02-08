@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 15:46:14 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/07 19:39:29 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,6 @@ void	draw_sprite_col(t_rules *rules, t_draw_coord *info,
 			info->start_y++;
 		}
 	}
-}
-
-void	draw_sprites_2(t_rules *rules, int num[2], double var[5])
-{
-	var[0] = rules->sort_spr[num[0]]->x - rules->player.x;
-	if (!var[0])
-		var[0] = 1;
-	var[1] = rules->sort_spr[num[0]]->y - rules->player.y;
-	var[2] = 1.0 / (rules->player.plane_x * rules->player.d_y
-			- rules->player.d_x * rules->player.plane_y);
-	var[3] = var[2] * (rules->player.d_y * var[0]
-			- rules->player.d_x * var[1])
-		* (854 * 2.6 / (float)rules->mlx.win_width);
-	var[4] = var[2] * (-rules->player.plane_y
-			* var[0] + rules->player.plane_x * var[1]);
-	num[1] = (int)((rules->mlx.win_width / 2) * (1 + var[3] / var[4]));
 }
 
 static void	define_sprite_info_deep(t_rules *rules, t_draw_coord *info,
@@ -77,10 +61,10 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	int				var[2];
 
 	var[0] = 0;
-	var[1] = s_x;
+	var[1] = s_x;	
 	info = malloc(sizeof(t_draw_coord));
 	if (!info)
-			ft_exit("Malloc error");
+		ft_exit("Malloc error");
 	info->sprite = rules->animations[rules->sort_spr[i]->type];
 	info->height = (rules->mlx.win_height / trans_y)
 		* (info->sprite->height);
@@ -93,6 +77,22 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	return (info);
 }
 
+void	draw_sprites_2(t_rules *rules, int num[2], double var[5])
+{
+	var[0] = rules->sort_spr[num[0]]->x - rules->player.x;
+	if (!var[0])
+		var[0] = 1;
+	var[1] = rules->sort_spr[num[0]]->y - rules->player.y;
+	var[2] = 1.0 / (rules->player.plane_x * rules->player.d_y
+			- rules->player.d_x * rules->player.plane_y);
+	var[3] = var[2] * (rules->player.d_y * var[0]
+			- rules->player.d_x * var[1])
+		* (854 * 2.6 / (float)rules->mlx.win_width);
+	var[4] = var[2] * (-rules->player.plane_y
+			* var[0] + rules->player.plane_x * var[1]);
+	num[1] = (int)((rules->mlx.win_width / 2) * (1 + var[3] / var[4]));
+}
+
 void	draw_sprites(t_rules *rules, t_image *view)
 {
 	t_draw_coord	*info;
@@ -100,9 +100,9 @@ void	draw_sprites(t_rules *rules, t_image *view)
 	int				num[2];
 
 	num[0] = 0;
-	while (num[0] < 2)
+	while (num[0] < rules->n_sprites)
 	{
-		if (rules->sort_spr[num[0]]->state && rules->sort_spr[num[0]]->dist
+		if (rules->sort_spr[num[0]]->state && rules->sort_spr[num[0]]->dist // seconda condizione controlla se sei troppo vicino
 			> rules->inpmap.block_width / 2)
 		{
 			draw_sprites_2(rules, num, var);

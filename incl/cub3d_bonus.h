@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 16:26:42 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 19:38:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,6 +177,7 @@ typedef struct s_rules
 	bool		win_flag;
 	t_player	player;
 	int			n_frames;
+	int			n_sprites;
 	t_mouse		mouse;
 	t_sprite	spr[2];
 	t_sprite	**sort_spr;
@@ -218,8 +219,9 @@ double			final_length_double(double start_x,
 t_image			*init_door(int index, t_rules *rules);
 //sprite
 void			init_sprite(t_rules *rules);
-void			init_xpm_img(t_rules *rules, t_image **img, char *path);
+void			reload_sprites(t_rules *rules);
 void			sort_sprites(t_rules *rules);
+void			init_xpm_img(t_rules *rules, t_image **img, char *path);
 //easy_math.c
 int				get_abs(int n);
 double			get_abs_double(double n);

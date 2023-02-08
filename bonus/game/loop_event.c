@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 16:20:45 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/07 19:24:18 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,13 @@ void	let_keys_aux(t_rules *rules)
 	if (rules->keys.space_pressed)
 		ft_openexit(rules);
 	rules->player.d_x = cos(rules->player.dir);
-	rules->player.plane_x = -cos(rules->player.plane);
-	rules->player.plane_y = sin(rules->player.plane);
 	if (rules->player.dir == (double)M_PI)
 		rules->player.d_y = 0;
 	else
 		rules->player.d_y = -sin(rules->player.dir);
+	rules->player.plane_x = -cos(rules->player.plane);
+	rules->player.plane_y = sin(rules->player.plane);
+	
 }
 
 void	let_keys_work(t_rules *rules)
@@ -62,10 +63,7 @@ int	loop_events(t_rules *rules)
 		if (rules->win_flag == 0)
 			game(rules);
 		 else
-		 {
 		 	ft_win(rules);
-						debug ("loop_events2\n");
-		 }
 		rules->n_frames++;
 	}
 	else
