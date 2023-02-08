@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 15:05:17 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:08:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -223,7 +223,12 @@ t_image			*init_door(int index, t_rules *rules);
 void			init_sprite(t_rules *rules);
 void			reload_sprites(t_rules *rules);
 void			sort_sprites(t_rules *rules);
+//		sprite_utils
+void			save_sprites(t_rules *rules);
+int				count_sprites(t_inputmap map);
+void			clear_sprites(t_rules *rules, t_sprite *spr);
 void			init_xpm_img(t_rules *rules, t_image **img, char *path);
+int				save_sprites_supp(t_rules *rules, int i, int ind, int j);
 //easy_math.c
 int				get_abs(int n);
 double			get_abs_double(double n);
@@ -278,11 +283,13 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			check.c
 void			ultimate_check(t_rules *rules);
+int				check_player(t_rules *rules, int i, int j);
 // 			check_utils
 int				is_map(char *line);
 int				rules_status(t_rules *rules);
 void			save_len(int fd, t_rules *rules);
 int				check_zero(t_rules *rules, int i, int j);
+int				check_long(t_rules *rules, int i, int j);
 //			doors.c
 void			ft_doors(t_rules *rules);
 //			events.c
