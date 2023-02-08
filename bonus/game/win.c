@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 12:54:52 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:29:11 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_win(t_rules *rules)
 int	pick(t_rules *rules, int x, int y)
 {
 	if (rules->inpmap.map[y][x] == 'H')
-		return (1);
-	else if (rules->inpmap.map[y][x] == 'T')
 		return (2);
+	else if (rules->inpmap.map[y][x] == 'T')
+		return (1);
 	return (0);
 }
 
@@ -39,12 +39,16 @@ void	collect(t_rules *rules)
 		reload_sprites(rules);
 		rules->flag_hat = 1;
 		rules->inpmap.map[y][x] = '0';
+		rules->animations[0] = NULL;
+		rules->animations[1] = NULL;
 	}
 	else if (pick(rules, x, y) == 2)
 	{
 		reload_sprites(rules);
 		rules->flag_skull = 1;
 		rules->inpmap.map[y][x] = '0';
+		rules->animations[2] = NULL;
+		rules->animations[3] = NULL;
 	}
 }
 

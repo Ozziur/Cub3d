@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 19:39:29 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:27:20 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,11 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	if (!info)
 		ft_exit("Malloc error");
 	info->sprite = rules->animations[rules->sort_spr[i]->type];
+	if (info->sprite ==NULL)
+	{
+		free(info);
+		return (0);
+	}
 	info->height = (rules->mlx.win_height / trans_y)
 		* (info->sprite->height);
 	if (rules->sort_spr[i]->type == 0)
@@ -107,6 +112,8 @@ void	draw_sprites(t_rules *rules, t_image *view)
 		{
 			draw_sprites_2(rules, num, var);
 			info = define_sprite_info(rules, var[4], num[1], num[0]);
+			if (info != 0)
+			{
 			while (info->start_x < info->end_x)
 			{
 				info->t_x = (int)((info->start_x - info->bench_x)
@@ -115,6 +122,7 @@ void	draw_sprites(t_rules *rules, t_image *view)
 				info->start_x++;
 			}
 			free(info);
+			}
 		}
 		num[0]++;
 	}
