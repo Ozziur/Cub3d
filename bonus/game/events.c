@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 12:59:03 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:11:09 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,35 @@ static int	release(int key, t_rules *rules)
 		rules->keys.shift_pressed = 0;
 	return (0);
 }
+
+void	free_mat(char **mat)
+{
+	int	i;
+
+	i = 0;
+	while (mat[i])
+	{
+		free(mat[i]);
+	}
+}
+
+//void	free_all(t_rules *rules)
+//{
+//	free(rules->inpmap.exit);
+//	free(rules->animations);
+//	free(rules->win_screen);
+//	free(rules->spr);
+//	free(rules->sort_spr);
+//	free_mat(rules->inpmap.map);
+//	free(rules->inpmap.east_wall);
+//	free(rules->inpmap.north_wall);
+//	free(rules->inpmap.west_wall);
+//	free(rules->inpmap.south_wall);
+//	free(rules->inpmap.south_wall);
+//	free(rules->inpmap.south_wall);
+//	free(rules->inpmap.door_image[0]);
+//	free(rules->inpmap.door_image[1]);
+//}
 
 static int	eexit(t_rules *rules)
 {

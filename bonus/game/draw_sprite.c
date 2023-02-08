@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 13:27:20 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/08 15:24:37 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	if (!info)
 		ft_exit("Malloc error");
 	info->sprite = rules->animations[rules->sort_spr[i]->type];
-	if (info->sprite ==NULL)
+	if (info->sprite == NULL)
 	{
 		free(info);
 		return (0);
@@ -104,6 +104,7 @@ void	draw_sprites(t_rules *rules, t_image *view)
 	double			var[5];
 	int				num[2];
 
+	reload_sprites(rules);
 	num[0] = 0;
 	while (num[0] < rules->n_sprites)
 	{

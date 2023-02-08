@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 13:17:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:05:17 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -183,6 +183,7 @@ typedef struct s_rules
 	t_sprite	spr[2];
 	t_sprite	**sort_spr;
 	double		*dist_array;
+	int			won;
 }				t_rules;
 
 typedef struct s_draw_coord
