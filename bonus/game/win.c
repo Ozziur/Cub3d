@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 17:13:27 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:45:50 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_win(t_rules *rules)
 {
-	while ()
-		mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, rules->animations[4]->img, 0, 0);
-	//ft_exit("GGWP\n");
+	init_xpm_img(rules, &rules->win_screen, "textures/mruizzo_Pirate_and_Mage_Spending_Time_Together_in_the_Tower_In__191e48ae-1889-4d5a-9136-8cbb1ef0a863.xpm");
+ 	mlx_put_image_to_window(rules->mlx.mlx, rules->mlx.mlx_win, rules->win_screen->img, 0, 0);
 }
 
 int	pick(t_rules *rules, int x, int y)
