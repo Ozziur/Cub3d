@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 13:29:40 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:37:59 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ static void	inpmap_init(t_rules *rules)
 	rules->inpmap.line_offset = 0;
 	rules->inpmap.block_width = 64;
 	rules->inpmap.mini_block_width = rules->inpmap.block_width / 4;
-	init_xpm_img(rules, rules->inpmap.exit[0], "textures/exit-close.xpm")
-	init_xpm_img(rules, rules->inpmap.exit[1], "textures/exit_finale.xpm")
-	init_xpm_img(rules, rules->inpmap.exit[2], "textures/exit-only-mage.xpm")
-	init_xpm_img(rules, rules->inpmap.exit[3], "/textures/exit-only-skull.xpm")
+	init_xpm_img(rules, &rules->inpmap.exit[0], "textures/exit-close.xpm");
+	init_xpm_img(rules, &rules->inpmap.exit[1], "textures/exit_finale.xpm");
+	init_xpm_img(rules, &rules->inpmap.exit[2], "textures/exit-only-mage.xpm");
+	init_xpm_img(rules, &rules->inpmap.exit[3], "textures/exit-only-skull.xpm");
 }
 
 static void	init_keys(t_rules *rules)
