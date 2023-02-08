@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 18:10:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 13:29:11 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:40:23 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	collect(t_rules *rules)
 	if (pick(rules, x, y) == 1)
 	{
 		reload_sprites(rules);
-		rules->flag_hat = 1;
+		rules->flag_skull = 1;
 		rules->inpmap.map[y][x] = '0';
 		rules->animations[0] = NULL;
 		rules->animations[1] = NULL;
@@ -45,7 +45,7 @@ void	collect(t_rules *rules)
 	else if (pick(rules, x, y) == 2)
 	{
 		reload_sprites(rules);
-		rules->flag_skull = 1;
+		rules->flag_hat = 1;
 		rules->inpmap.map[y][x] = '0';
 		rules->animations[2] = NULL;
 		rules->animations[3] = NULL;
