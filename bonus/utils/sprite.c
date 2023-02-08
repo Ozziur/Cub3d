@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 17:14:26 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/08 17:50:34 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	clear_sorted_sprites(t_rules *rules, t_sprite **sort_spr)
 	i = -1;
 	while (++i < 2)
 		sort_spr[i] = NULL;
+	(void) rules;
 }
 
 double	get_sprite_dist(t_rules *rules, t_sprite *spr)

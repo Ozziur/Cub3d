@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:46:31 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 15:59:01 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:50:04 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	clear_sprites(t_rules *rules, t_sprite *spr)
 {
 	int	i;
 
+	(void) rules;
 	i = -1;
 	while (++i < 2)
 	{
