@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:34:31 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 15:47:29 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:14:26 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	update_sprites(t_rules *rules)
 
 void	reload_sprites(t_rules *rules)
 {
-	// update_sprites(rules);
+	update_sprites(rules);
 	clear_sorted_sprites(rules, rules->sort_spr);
 	free(rules->sort_spr);
 	sort_sprites(rules);

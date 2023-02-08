@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 15:00:40 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 15:32:46 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:18:36 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ static void	move_mouse(int x, int y, t_rules *rules)
 	if (x < rules->mouse.x)
 	{
 		rules->player.dir = increment_angle(rules->player.dir,40);
-		rules->player.plane = increment_angle(rules->player.dir,40);
+		rules->player.plane = increment_angle(rules->player.plane,40);
 	}
 	else if (x > rules->mouse.x)
 	{
 		rules->player.dir = decrement_angle(rules->player.dir,40);
-		rules->player.plane = decrement_angle(rules->player.dir,40);
+		rules->player.plane = decrement_angle(rules->player.plane,40);
 	}
 	rules->mouse.x = x;
 	rules->mouse.y = y;

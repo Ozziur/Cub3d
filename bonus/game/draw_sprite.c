@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 15:24:37 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:29:19 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,15 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 {
 	t_draw_coord	*info;
 	int				var[2];
+	static int counter = 0;
+	static bool flag = 0;
 
 	var[0] = 0;
 	var[1] = s_x;	
 	info = malloc(sizeof(t_draw_coord));
 	if (!info)
 		ft_exit("Malloc error");
-	info->sprite = rules->animations[rules->sort_spr[i]->type];
+	info->sprite = rules->animations[rules->sort_spr[i]->type + flag];
 	if (info->sprite == NULL)
 	{
 		free(info);
@@ -79,6 +81,15 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	if (var[0])
 		info->start_y += var[0];
 	define_sprite_info_deep(rules, info, var, trans_y);
+	
+	counter++;
+	if (counter == 25)
+		flag =1; 
+	if (counter == 50)
+	{
+		flag = 0;
+		counter = 0;
+	}	 
 	return (info);
 }
 

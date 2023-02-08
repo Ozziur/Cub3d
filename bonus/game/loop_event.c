@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 15:05:56 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:04:14 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	let_keys_aux(t_rules *rules)
 		rules->player.d_y = -sin(rules->player.dir);
 	rules->player.plane_x = -cos(rules->player.plane);
 	rules->player.plane_y = sin(rules->player.plane);
-	
 }
 
 void	let_keys_work(t_rules *rules)
