@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   choose.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 14:26:13 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/07 18:38:42 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/08 13:30:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ static t_image	*ret_tex(int x, int y, t_rules *rules, t_image *wall)
 	else if (rules->inpmap.map[y][x] == 'd')
 		return (rules->inpmap.door_image[1]);
 	else if (rules->inpmap.map[y][x] == '*')
+	{
+		if (rules->)
 		return (rules->inpmap.door_image[1]);
+	}
 	else
 		return (wall);
 }
