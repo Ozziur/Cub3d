@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:29:23 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 14:03:34 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:51:13 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ void	ft_parsing(char *input, t_rules *rules)
 
 	fd = open(input, 'r');
 	if (fd < 0)
-		ft_exit("can't open the file");
+		ft_exit("can't open the file 2");
 	buf = get_next_line(fd);
 	while (buf && !rules_status(rules))
 	{

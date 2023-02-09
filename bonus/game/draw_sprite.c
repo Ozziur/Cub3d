@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/08 17:29:19 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 12:15:09 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 {
 	t_draw_coord	*info;
 	int				var[2];
-	static int counter = 0;
-	static bool flag = 0;
+	static int		counter = 0;
+	static bool		flag = 0;
 
 	var[0] = 0;
-	var[1] = s_x;	
+	var[1] = s_x;
 	info = malloc(sizeof(t_draw_coord));
 	if (!info)
 		ft_exit("Malloc error");
@@ -81,15 +81,14 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	if (var[0])
 		info->start_y += var[0];
 	define_sprite_info_deep(rules, info, var, trans_y);
-	
 	counter++;
 	if (counter == 25)
-		flag =1; 
+		flag = 1;
 	if (counter == 50)
 	{
 		flag = 0;
 		counter = 0;
-	}	 
+	}
 	return (info);
 }
 
@@ -119,21 +118,21 @@ void	draw_sprites(t_rules *rules, t_image *view)
 	num[0] = 0;
 	while (num[0] < rules->n_sprites)
 	{
-		if (rules->sort_spr[num[0]]->state && rules->sort_spr[num[0]]->dist // seconda condizione controlla se sei troppo vicino
-			> rules->inpmap.block_width / 2)
+		if (rules->sort_spr[num[0]]->state
+			&& rules->sort_spr[num[0]]->dist > rules->inpmap.block_width / 2)
 		{
 			draw_sprites_2(rules, num, var);
 			info = define_sprite_info(rules, var[4], num[1], num[0]);
 			if (info != 0)
 			{
-			while (info->start_x < info->end_x)
-			{
-				info->t_x = (int)((info->start_x - info->bench_x)
-						* info->sprite->width / info->width);
-				draw_sprite_col(rules, info, view, var[4]);
-				info->start_x++;
-			}
-			free(info);
+				while (info->start_x < info->end_x)
+				{
+					info->t_x = (int)((info->start_x - info->bench_x)
+							* info->sprite->width / info->width);
+					draw_sprite_col(rules, info, view, var[4]);
+					info->start_x++;
+				}
+				free(info);
 			}
 		}
 		num[0]++;

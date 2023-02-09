@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 16:08:48 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:10:46 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,9 @@ typedef struct s_image
 {
 	void	*img;
 	char	*addr;
-	int		bpp; //mlx_get_data_addr
-	int		line_length; //mlx_get_data_addr
-	int		endian; //mlx_get_data_addr
+	int		bpp;
+	int		line_length;
+	int		endian;
 	int		width;
 	int		height;
 }				t_image;
@@ -116,8 +116,8 @@ typedef struct s_inputmap
 	char			**map;
 	int				map_height_len[2];
 	int				line_offset;
-	float			block_width; //parametro float per rayc
-	float			mini_block_width; //parametro float per rayc della minimappa
+	float			block_width;
+	float			mini_block_width;
 }				t_inputmap;
 
 typedef struct s_mlx

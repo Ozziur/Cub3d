@@ -1,5 +1,5 @@
 CC = @gcc
-CFLAGS = -g -O# -I -Wall -Werror -Wextra
+CFLAGS = -g -O -fsanitize=address # -I -Wall -Werror -Wextra
 READLINE_FLAGS = -lmlx -framework OpenGL -framework AppKit
 
 INCLUDES = $(shell find . -name "*.h" -print)

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:18:58 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 16:08:07 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:08:00 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,18 +114,6 @@ void	ultimate_check(t_rules *rules)
 		{
 			if (!check_long(rules, i, j))
 				ft_exit("Ultimate check: map not valid\n");
-			//if (j == rules->inpmap.map_height_len[0])
-			//	if (ft_strchr(rules->inpmap.map[i], '0')
-			//		|| ft_strchr(rules->inpmap.map[i], 'D')
-			//		|| ft_strchr(rules->inpmap.map[i], 'T')
-			//		|| ft_strchr(rules->inpmap.map[i], 'H'))
-			//		ft_exit("utlimate_check1: map not valid");
-			//if (rules->inpmap.map[i][j] == '0'
-			//	|| rules->inpmap.map[i][j] == 'D'
-			//	|| rules->inpmap.map[i][j] == 'T'
-			//	|| rules->inpmap.map[i][j] == 'H')
-			//	if (!check_zero(rules, i, j) || !check_player(rules, i, j))
-			//		ft_exit("utlimate_check2: map not valid");
 			j++;
 		}
 		i++;
