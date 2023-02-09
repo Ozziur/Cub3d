@@ -6,7 +6,7 @@
 #    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/02/08 17:48:30 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/02/09 14:41:26 by mruizzo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,4 +92,5 @@ git:
 	git commit -m cub3d
 	git push
 re: fclean all
+bre: fclean bonus
 my: all clean
