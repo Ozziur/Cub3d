@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 12:10:46 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:53:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -281,6 +281,8 @@ void			debug(char *s);
 void			ft_exit(char *str);
 void			print_mat(char **mat);
 void			printrules(t_rules *rules);
+//			draw_spite_utils.c
+int				flag(void);
 //			check.c
 void			ultimate_check(t_rules *rules);
 int				check_player(t_rules *rules, int i, int j);

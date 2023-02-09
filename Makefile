@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+         #
+#    By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/02/09 14:41:26 by mruizzo          ###   ########.fr        #
+#    Updated: 2023/02/09 14:53:45 by anovelli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,8 @@ B_SRCS  = 	bonus/utils/choose.c \
 			bonus/game/raycast_calc.c \
 			bonus/game/raycast.c \
 			bonus/game/render.c \
-			bonus/game/win.c 
+			bonus/game/win.c    \
+			bonus/game/draw_sprite_utils.c \
 
 
 CC      = @gcc

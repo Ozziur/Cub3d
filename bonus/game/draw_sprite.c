@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 14:45:07 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 15:06:10 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,21 +59,18 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 {
 	t_draw_coord	*info;
 	int				var[2];
-	static int		counter = 0;
-	static bool		flag = 0;
 
 	var[0] = 0;
 	var[1] = s_x;
 	info = malloc(sizeof(t_draw_coord));
 	if (!info)
 		ft_exit("Malloc error");
-	info->sprite = rules->animations[rules->sort_spr[i]->type + flag];
+	info->sprite = rules->animations[rules->sort_spr[i]->type + flag()];
 	if (info->sprite == NULL)
 	{
 		free(info);
 		return (0);
 	}
-	counter = define_sprite_info_aux();
 	info->height = (rules->mlx.win_height / trans_y)
 		* (info->sprite->height);
 	if (rules->sort_spr[i]->type == 0)
@@ -82,14 +79,6 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 	if (var[0])
 		info->start_y += var[0];
 	define_sprite_info_deep(rules, info, var, trans_y);
-	counter++;
-	if (counter == 25)
-		flag = 1;
-	if (counter == 50)
-	{
-		flag = 0;
-		counter = 0;
-	}
 	return (info);
 }
 
@@ -107,6 +96,14 @@ void	draw_sprites_2(t_rules *rules, int num[2], double var[5])
 	var[4] = var[2] * (-rules->player.plane_y
 			* var[0] + rules->player.plane_x * var[1]);
 	num[1] = (int)((rules->mlx.win_width / 2) * (1 + var[3] / var[4]));
+}
+
+void draw_sprite_utils(t_rules *rules, t_draw_coord	*info, t_image *view, double *var)
+{
+						info->t_x = (int)((info->start_x - info->bench_x)
+							* info->sprite->width / info->width);
+					draw_sprite_col(rules, info, view, var[4]);
+					info->start_x++;
 }
 
 void	draw_sprites(t_rules *rules, t_image *view)
@@ -127,12 +124,7 @@ void	draw_sprites(t_rules *rules, t_image *view)
 			if (info != 0)
 			{
 				while (info->start_x < info->end_x)
-				{
-					info->t_x = (int)((info->start_x - info->bench_x)
-							* info->sprite->width / info->width);
-					draw_sprite_col(rules, info, view, var[4]);
-					info->start_x++;
-				}
+						draw_sprite_utils(rules, info, view, var);
 				free(info);
 			}
 		}
