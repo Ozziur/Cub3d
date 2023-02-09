@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 18:01:54 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 21:15:15 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,7 @@ void	easter_egg(t_rules *rules)
 					'T', rules->inpmap.map[i][j]))
 				{
 					system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
-					ft_exit("Complimenti se lo hai scoperto da solo,\
-altrimenti sei una pippa\n");
+					ft_exit("Non sei degno della nostra ciurma\n");
 				}
 			}
 			j++;
@@ -80,6 +79,11 @@ int	main(int ac, char **av)
 	init_sprite(&rules);
 	events(&rules);
 	init_xpm_img(&rules, &rules.win_screen, "bonus/textures/winimage.xpm");
-	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
-	mlx_loop(rules.mlx.mlx);
+	if (fork() == 0)
+		system("afplay -v 1.5 mp3/Lilypichu-LavenderTown.mp3");
+	else
+	{
+		mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
+		mlx_loop(rules.mlx.mlx);
+	}
 }
