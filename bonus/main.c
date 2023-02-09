@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 17:23:33 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:42:08 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	arg_check(int ac, char **av)
 	return (1);
 }
 
-
 char	*ft_strchr_start(const char *s, int c, char start)
 {
 	while (*s != start)
@@ -44,7 +43,6 @@ void	easter_egg(t_rules *rules)
 	int	i;
 	int	j;
 
-	printf("porcoddio1\n");
 	i = 0;
 	while (rules->inpmap.map[i])
 	{
@@ -53,10 +51,15 @@ void	easter_egg(t_rules *rules)
 		{
 			if (rules->inpmap.map[i][j] == 'N')
 			{
-				printf("porcoddio\n");
-				if (ft_strchr_start(rules->inpmap.map[i], 'H', rules->inpmap.map[i][j])
-				|| ft_strchr_start(rules->inpmap.map[i], 'T', rules->inpmap.map[i][j]))
-					ft_exit("extdfjksbbb\n");
+				if (ft_strchr_start(rules->inpmap.map[i],
+						'H', rules->inpmap.map[i][j])
+				|| ft_strchr_start(rules->inpmap.map[i],
+					'T', rules->inpmap.map[i][j]))
+				{
+					system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
+					ft_exit("Complimenti se lo hai scoperto da solo,\
+						 altrimenti sei una pippa\n");
+				}
 			}
 			j++;
 		}
@@ -76,7 +79,6 @@ int	main(int ac, char **av)
 	ultimate_check(&rules);
 	init_sprite(&rules);
 	events(&rules);
-	debug("main\n");
 	init_xpm_img(&rules, &rules.win_screen, "bonus/textures/winimage.xpm");
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
 	mlx_loop(rules.mlx.mlx);

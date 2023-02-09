@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loop_event.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 14:06:01 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 15:52:56 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:38:06 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,11 @@ int	loop_events(t_rules *rules)
 {
 	if (!(rules->n_frames % 170))
 	{
-		debug ("1\n");
 		let_keys_work(rules);
-			debug ("3\n");
 		if (rules->win_flag == 0)
 			game(rules);
 		else if (!rules->won)
 			ft_win(rules);
-		debug ("2\n");
 		rules->n_frames++;
 	}
 	else

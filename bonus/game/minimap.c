@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minimap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 18:46:08 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 16:47:23 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:40:06 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static unsigned int	choose_color(char c)
 {
-	if (c == '0' /*|| c == 'T' || c == 'H'*/)
+	if (c == '0' || c == 'T' || c == 'H')
 		return (0x4F4F4F);
 	else if (c == '1' || c == ' ')
 		return (0X2F2F2F);

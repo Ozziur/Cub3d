@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 17:08:38 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:40:32 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ void	draw_sprites_2(t_rules *rules, int num[2], double var[5])
 	num[1] = (int)((rules->mlx.win_width / 2) * (1 + var[3] / var[4]));
 }
 
-void draw_sprite_utils(t_rules *rules, t_draw_coord	*info, t_image *view, double *var)
+void	draw_sprite_utils(t_rules *rules,
+		t_draw_coord	*info, t_image *view, double *var)
 {
 	info->t_x = (int)((info->start_x - info->bench_x)
 			* info->sprite->width / info->width);
@@ -123,8 +124,6 @@ void	draw_sprites(t_rules *rules, t_image *view)
 			info = define_sprite_info(rules, var[4], num[1], num[0]);
 			if (info != 0)
 			{
-				printf("--> %f %f \n",info->start_x, info->end_x);
-				
 				while (info->start_x < info->end_x)
 					draw_sprite_utils(rules, info, view, var);
 				free(info);
