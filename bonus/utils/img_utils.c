@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   img_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 16:10:38 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/06 20:25:18 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 17:00:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ unsigned int	get_sprite_color(t_image *tex, int x, int y, t_rules *rules)
 			|| y > 0 || y < rules->mlx.win_height)
 		&& *(unsigned int *)(tex->addr + (4 * (tex->width * y + x))))
 	{
+		printf("%d\n", y);
 		return (*(unsigned int *)(tex->addr + (4 * (tex->width * y + x))));
 	}
 	return (0x0);
