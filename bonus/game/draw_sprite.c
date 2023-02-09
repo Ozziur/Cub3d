@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 17:40:32 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 18:16:22 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	draw_sprite_col(t_rules *rules, t_draw_coord *info,
 		&& trans_y < rules->dist_array[(int)info->start_x])
 	{
 		info->start_y = info->bench_y;
+		if(info->start_y <= 0)
+			return ;
 		while (info->start_y < info->end_y)
 		{
 			info->t_y = (int)((info->start_y - info->bench_y)

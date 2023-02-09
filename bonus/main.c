@@ -6,7 +6,7 @@
 /*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 17:42:08 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 18:01:54 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	easter_egg(t_rules *rules)
 				{
 					system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
 					ft_exit("Complimenti se lo hai scoperto da solo,\
-						 altrimenti sei una pippa\n");
+altrimenti sei una pippa\n");
 				}
 			}
 			j++;
@@ -75,7 +75,7 @@ int	main(int ac, char **av)
 		return (0);
 	init_rules(&rules);
 	ft_parsing(av[1], &rules);
-	easter_egg(&rules);
+	// easter_egg(&rules);
 	ultimate_check(&rules);
 	init_sprite(&rules);
 	events(&rules);
