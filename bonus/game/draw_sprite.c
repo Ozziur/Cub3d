@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:19:59 by mruizzo           #+#    #+#             */
-/*   Updated: 2023/02/09 12:15:09 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 13:43:30 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ t_draw_coord	*define_sprite_info(t_rules *rules, double trans_y,
 		free(info);
 		return (0);
 	}
+	counter = define_sprite_info_aux();
 	info->height = (rules->mlx.win_height / trans_y)
 		* (info->sprite->height);
 	if (rules->sort_spr[i]->type == 0)

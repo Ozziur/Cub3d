@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 10:19:06 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/07 12:50:38 by anovelli         ###   ########.fr       */
+/*   Created: 2023/02/06 00:19:06 by anovelli          #+#    #+#             */
+/*   Updated: 2023/02/09 13:20:08 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,9 @@ int	is_door(int x, int y, t_rules *rules)
 void	change_door(int x, int y, t_rules *rules)
 {
 	if (rules->inpmap.map[y][x] == 'D')
-	{
 		rules->inpmap.map[y][x] = 'd';
-		init_door(1, rules);
-	}
 	else if (rules->inpmap.map[y][x] == 'd')
-	{
 		rules->inpmap.map[y][x] = 'D';
-		init_door(0, rules);
-	}
 }
 
 void	ft_doors(t_rules *rules)
