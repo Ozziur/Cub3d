@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 14:31:10 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:39:28 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int ac, char **av)
 	ultimate_check(&rules);
 	init_sprite(&rules);
 	events(&rules);
-	init_xpm_img(&rules, &rules.win_screen, "textures/winimage.xpm");
+	init_xpm_img(&rules, &rules.win_screen, "bonus/textures/winimage.xpm");
 	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
 	mlx_loop(rules.mlx.mlx);
 }

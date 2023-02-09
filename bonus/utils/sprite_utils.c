@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sprite_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:46:31 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/08 17:50:04 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 14:38:16 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	init_xpm_img(t_rules *rules, t_image **img, char *path)
 	(*img)->img = mlx_xpm_file_to_image(rules->mlx.mlx, path,
 			&(*img)->width, &(*img)->height);
 	if (!(*img)->img)
-		ft_exit("Error initializing image");
+		ft_exit("Error initializing image 2");
 	(*img)->addr = mlx_get_data_addr((*img)->img, &(*img)->bpp,
 			&(*img)->line_length, &(*img)->endian);
 }

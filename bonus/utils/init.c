@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:23:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 12:20:10 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:38:12 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	init_img(t_rules *rules, t_image *img, int w, int h)
 {
 	img->img = mlx_new_image(rules->mlx.mlx, w, h);
 	if (!img->img)
-		ft_exit("Error initializing image");
+		ft_exit("Error initializing image 1");
 	img->addr = mlx_get_data_addr(img->img, &img->bpp,
 			&img->line_length, &img->endian);
 }
