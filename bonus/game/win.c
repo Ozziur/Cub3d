@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 21:59:39 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/10 10:11:42 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	ft_win(t_rules *rules)
 	{
 		system("killall afplay");
 		if(fork() == 0)
+		{
 			system("afplay mp3/victory.mp3");
+			exit(0);
+		}
 		else
 		x++;
 	}
@@ -51,7 +54,10 @@ void	collect(t_rules *rules)
 	if (pick(rules, x, y) == 1)
 	{
 		if (fork() == 0)
+		{
 			system("afplay mp3/pirate.mp3");
+			exit(0);
+		}
 		else
 		{
 			rules->flag_skull = 1;
@@ -65,7 +71,10 @@ void	collect(t_rules *rules)
 	else if (pick(rules, x, y) == 2)
 	{
 		if (fork() == 0)
+		{
 			system("afplay mp3/magic.mp3");
+			exit(0);
+		}
 		else
 		{
 			rules->flag_hat = 1;
