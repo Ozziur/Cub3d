@@ -1,0 +1,16 @@
+WE ./textures/64/lava-wall.xpm
+NO ./textures/64/moss-wall.xpm
+SO ./textures/wallS.xpm
+
+EA ./textures/64/skull-wall.xpm
+
+
+F 100,100,
+C 0,0,100
+
+
+11111111111111111
+10000000000000101
+10000N00000000001
+11000000000000001
+11111111111111111
