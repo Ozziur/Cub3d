@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 12:12:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:59:39 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,22 @@
 
 void	ft_win(t_rules *rules)
 {
-	mlx_put_image_to_window(rules->mlx.mlx,
-		rules->mlx.mlx_win, rules->win_screen->img, 0, 0);
-	rules->won = 1;
+	static int	x = 0;
+
+	if (x == 0)
+	{
+		system("killall afplay");
+		if(fork() == 0)
+			system("afplay mp3/victory.mp3");
+		else
+		x++;
+	}
+	else
+	{
+		mlx_put_image_to_window(rules->mlx.mlx,
+			rules->mlx.mlx_win, rules->win_screen->img, 0, 0);
+		rules->won = 1;
+	}
 }
 
 int	pick(t_rules *rules, int x, int y)
@@ -37,21 +50,31 @@ void	collect(t_rules *rules)
 	y = (int)(rules->player.y / rules->inpmap.block_width);
 	if (pick(rules, x, y) == 1)
 	{
-		rules->flag_skull = 1;
-		rules->inpmap.map[y][x] = '0';
-		free(rules->animations[0]);
-		free(rules->animations[1]);
-		rules->animations[0] = NULL;
-		rules->animations[1] = NULL;
+		if (fork() == 0)
+			system("afplay mp3/pirate.mp3");
+		else
+		{
+			rules->flag_skull = 1;
+			rules->inpmap.map[y][x] = '0';
+			free(rules->animations[0]);
+			free(rules->animations[1]);
+			rules->animations[0] = NULL;
+			rules->animations[1] = NULL;
+		}
 	}
 	else if (pick(rules, x, y) == 2)
 	{
-		rules->flag_hat = 1;
-		rules->inpmap.map[y][x] = '0';
-		free(rules->animations[2]);
-		free(rules->animations[3]);
-		rules->animations[2] = NULL;
-		rules->animations[3] = NULL;
+		if (fork() == 0)
+			system("afplay mp3/magic.mp3");
+		else
+		{
+			rules->flag_hat = 1;
+			rules->inpmap.map[y][x] = '0';
+			free(rules->animations[2]);
+			free(rules->animations[3]);
+			rules->animations[2] = NULL;
+			rules->animations[3] = NULL;
+		}
 	}
 }
 

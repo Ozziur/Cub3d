@@ -3,19 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 12:42:13 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:12:26 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../incl/cub3d_bonus.h"
 
+void	check_win(t_rules *rules)
+{
+	system("killall afplay");
+	if (rules->won != 1)
+		system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
+}
+
 static int	press(int key, t_rules *rules)
 {
 	if (key == 53)
 	{
+		check_win(rules);
 		mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
 		exit(0);
 	}
@@ -63,19 +71,9 @@ static int	release(int key, t_rules *rules)
 	return (0);
 }
 
-void	free_mat(char **mat)
-{
-	int	i;
-
-	i = 0;
-	while (mat[i])
-	{
-		free(mat[i]);
-	}
-}
-
 static int	eexit(t_rules *rules)
 {
+	check_win(rules);
 	mlx_destroy_window(rules->mlx.mlx, rules->mlx.mlx_win);
 	exit(0);
 	return (0);
