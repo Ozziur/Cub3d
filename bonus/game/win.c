@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 10:11:42 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:09:02 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_win(t_rules *rules)
 	if (x == 0)
 	{
 		system("killall afplay");
-		if(fork() == 0)
+		if (fork() == 0)
 		{
 			system("afplay mp3/victory.mp3");
 			exit(0);
 		}
 		else
-		x++;
+			x++;
 	}
 	else
 	{
@@ -44,6 +44,28 @@ int	pick(t_rules *rules, int x, int y)
 	return (0);
 }
 
+void	collect_aux(t_rules *rules, int x, int y, int flag)
+{
+	if (flag == 1)
+	{
+		rules->flag_skull = 1;
+		rules->inpmap.map[y][x] = '0';
+		free(rules->animations[0]);
+		free(rules->animations[1]);
+		rules->animations[0] = NULL;
+		rules->animations[1] = NULL;
+	}
+	else if (flag == 2)
+	{
+		rules->flag_hat = 1;
+		rules->inpmap.map[y][x] = '0';
+		free(rules->animations[2]);
+		free(rules->animations[3]);
+		rules->animations[2] = NULL;
+		rules->animations[3] = NULL;
+	}
+}
+
 void	collect(t_rules *rules)
 {
 	int	x;
@@ -59,14 +81,7 @@ void	collect(t_rules *rules)
 			exit(0);
 		}
 		else
-		{
-			rules->flag_skull = 1;
-			rules->inpmap.map[y][x] = '0';
-			free(rules->animations[0]);
-			free(rules->animations[1]);
-			rules->animations[0] = NULL;
-			rules->animations[1] = NULL;
-		}
+			collect_aux(rules, x, y, 1);
 	}
 	else if (pick(rules, x, y) == 2)
 	{
@@ -76,14 +91,7 @@ void	collect(t_rules *rules)
 			exit(0);
 		}
 		else
-		{
-			rules->flag_hat = 1;
-			rules->inpmap.map[y][x] = '0';
-			free(rules->animations[2]);
-			free(rules->animations[3]);
-			rules->animations[2] = NULL;
-			rules->animations[3] = NULL;
-		}
+			collect_aux(rules, x, y, 2);
 	}
 }
 
