@@ -6,7 +6,7 @@
 #    By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/25 19:02:32 by mruizzo           #+#    #+#              #
-#    Updated: 2023/02/09 17:23:42 by anovelli         ###   ########.fr        #
+#    Updated: 2023/02/10 12:39:14 by anovelli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,17 +64,23 @@ OBJS            = $(patsubst $(SRCS_DIR)%,$(OBJS_DIR)%,$(SRCS:.c=.o))
 B_OBJS          = $(patsubst $(SRCS_DIR)%,$(OBJS_DIR)%,$(B_SRCS:.c=.o))
 
 %.o: %.c $(HEADER)
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) 
 
 all: $(NAME)
+	@printf "\033[1;32mDone!\033[0m\n"
 
 bonus: $(NAME_B)
+	@printf "\033[1;32mDone!\033[0m\n"
+		
+	
 
 $(NAME): $(OBJS)
 	$(CC) -o $@ $^ $(CFLAGS) $(MLXFLAG)
+	@printf "\033[0;32mCompiling...\033[0m\n"
 
 $(NAME_B): $(B_OBJS)
 	$(CC) -o $@ $^ $(CFLAGS) $(MLXFLAG)
+	@printf "\033[0;32mCompiling Bonus...\033[0m\n"
 
 clean:
 	@rm -f $(OBJS)
