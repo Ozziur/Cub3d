@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 12:46:59 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:55:53 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int ac, char **av)
 	init_xpm_img(&rules, &rules.win_screen, "bonus/textures/winimage.xpm");
 	if (fork() == 0)
 	{
-		system("afplay -v 1.5 mp3/Lilypichu-LavenderTown.mp3");
+		system("afplay -v 1.5 mp3/Lilypichu-LavenderTown.mp3 &");
 		exit(0);
 	}
 	else

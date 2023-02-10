@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 12:32:31 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 12:56:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_win(t_rules *rules)
 		system("killall afplay");
 		if (fork() == 0)
 		{
-			system("afplay mp3/victory.mp3");
+			system("afplay mp3/victory.mp3 &");
 			exit(0);
 		}
 		else
@@ -77,7 +77,7 @@ void	collect(t_rules *rules)
 	{
 		if (fork() == 0)
 		{
-			system("afplay mp3/pirate.mp3");
+			system("afplay mp3/pirate.mp3 &");
 			exit(0);
 		}
 		else
@@ -87,7 +87,7 @@ void	collect(t_rules *rules)
 	{
 		if (fork() == 0)
 		{
-			system("afplay mp3/magic.mp3");
+			system("afplay mp3/magic.mp3 &");
 			exit(0);
 		}
 		else
