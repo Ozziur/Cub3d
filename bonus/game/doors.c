@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 00:19:06 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 13:20:08 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:30:55 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,11 @@ void	ft_doors(t_rules *rules)
 		change_door(x, y, rules);
 		rules->keys.f_pressed = 0;
 	}
+}
+
+int	is_open(t_rules *rules, int x, int y)
+{
+	if (rules->inpmap.map[y][x] == '*' && rules->flag_hat && rules->flag_skull)
+		return (1);
+	return (0);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 13:56:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 12:24:19 by anovelli         ###   ########.fr       */
+/*   Created: 2023/02/10 13:32:18 by anovelli          #+#    #+#             */
+/*   Updated: 2023/02/10 13:32:43 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	check_win(t_rules *rules)
 {
 	(void)rules;
 	system("killall afplay");
-	//if (rules->won != 1)
-	//	system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
+	if (rules->won != 1)
+		system("open https://www.youtube.com/watch?v=Gszen3QmDM4");
 }
 
 static int	press(int key, t_rules *rules)

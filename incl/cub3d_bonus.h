@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 18:34:57 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:30:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -296,6 +296,7 @@ int				check_zero(t_rules *rules, int i, int j);
 int				check_long(t_rules *rules, int i, int j);
 //			doors.c
 void			ft_doors(t_rules *rules);
+int				is_open(t_rules *rules, int x, int y);
 //			events.c
 void			events(t_rules *rules);
 // 			strings.c

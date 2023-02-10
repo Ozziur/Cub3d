@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 13:11:37 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/10 13:33:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,6 @@ void	collect(t_rules *rules)
 		system("afplay mp3/magic.mp3 &");
 		collect_aux(rules, x, y, 2);
 	}
-}
-
-static int	is_open(t_rules *rules, int x, int y)
-{
-	if (rules->inpmap.map[y][x] == '*' && rules->flag_hat && rules->flag_skull)
-		return (1);
-	return (0);
 }
 
 void	ft_openexit(t_rules *rules)
