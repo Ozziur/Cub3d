@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 12:55:53 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:02:42 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,15 +80,8 @@ int	main(int ac, char **av)
 	init_sprite(&rules);
 	events(&rules);
 	init_xpm_img(&rules, &rules.win_screen, "bonus/textures/winimage.xpm");
-	if (fork() == 0)
-	{
-		system("afplay -v 1.5 mp3/Lilypichu-LavenderTown.mp3 &");
-		exit(0);
-	}
-	else
-	{
-		mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
-		mlx_loop(rules.mlx.mlx);
-	}
+	system("afplay -v 1.5 mp3/Lilypichu-LavenderTown.mp3 &");
+	mlx_loop_hook(rules.mlx.mlx, loop_events, &rules);
+	mlx_loop(rules.mlx.mlx);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   win.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:32:08 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/10 12:56:06 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:11:37 by mruizzo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,11 @@
 
 void	ft_win(t_rules *rules)
 {
-	static int	x = 0;
-
-	if (x == 0)
-	{
-		system("killall afplay");
-		if (fork() == 0)
-		{
-			system("afplay mp3/victory.mp3 &");
-			exit(0);
-		}
-		else
-			x++;
-	}
-	else
-	{
-		mlx_put_image_to_window(rules->mlx.mlx,
-			rules->mlx.mlx_win, rules->win_screen->img, 0, 0);
-		rules->won = 1;
-	}
+	system("killall afplay");
+	system("afplay mp3/victory.mp3 &");
+	mlx_put_image_to_window(rules->mlx.mlx,
+		rules->mlx.mlx_win, rules->win_screen->img, 0, 0);
+	rules->won = 1;
 }
 
 int	pick(t_rules *rules, int x, int y)
@@ -75,23 +61,13 @@ void	collect(t_rules *rules)
 	y = (int)(rules->player.y / rules->inpmap.block_width);
 	if (pick(rules, x, y) == 1)
 	{
-		if (fork() == 0)
-		{
-			system("afplay mp3/pirate.mp3 &");
-			exit(0);
-		}
-		else
-			collect_aux(rules, x, y, 1);
+		system("afplay mp3/pirate.mp3 &");
+		collect_aux(rules, x, y, 1);
 	}
 	else if (pick(rules, x, y) == 2)
 	{
-		if (fork() == 0)
-		{
-			system("afplay mp3/magic.mp3 &");
-			exit(0);
-		}
-		else
-			collect_aux(rules, x, y, 2);
+		system("afplay mp3/magic.mp3 &");
+		collect_aux(rules, x, y, 2);
 	}
 }
 
