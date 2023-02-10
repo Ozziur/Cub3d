@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_and_debug.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 15:29:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 21:11:52 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/10 13:09:11 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	print_mat(char **mat)
 
 void	ft_exit(char *str)
 {
-	system("killall afplay");
 	write(2, str, ft_strlen(str));
 	write(1, "\n", 1);
 	exit(1);
