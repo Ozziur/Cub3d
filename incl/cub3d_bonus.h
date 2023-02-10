@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:28 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 17:30:48 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 18:34:57 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,6 +283,8 @@ void			print_mat(char **mat);
 void			printrules(t_rules *rules);
 //			draw_spite_utils.c
 int				flag(void);
+void			draw_sprite_col(t_rules *rules, t_draw_coord *info,
+					t_image *view, double trans_y);
 //			check.c
 void			ultimate_check(t_rules *rules);
 int				check_player(t_rules *rules, int i, int j);

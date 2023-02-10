@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mruizzo <mruizzo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 11:23:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/02/09 18:01:54 by mruizzo          ###   ########.fr       */
+/*   Updated: 2023/02/09 18:36:06 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/cub3d_bonus.h"
+
+		/*easter_egg(&rules);*/
 
 int	arg_check(int ac, char **av)
 {
@@ -75,7 +77,6 @@ int	main(int ac, char **av)
 		return (0);
 	init_rules(&rules);
 	ft_parsing(av[1], &rules);
-	// easter_egg(&rules);
 	ultimate_check(&rules);
 	init_sprite(&rules);
 	events(&rules);
